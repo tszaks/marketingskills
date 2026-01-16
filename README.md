@@ -2,6 +2,10 @@
 
 A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want Claude Code (or similar AI coding assistants) to help with conversion optimization, copywriting, SEO, analytics, and growth engineering.
 
+Built by [Corey Haines](https://corey.co). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co) — Corey's agency for conversion optimization, landing pages, and growth strategy.
+
+**Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
+
 ## What are Skills?
 
 Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, Claude Code can recognize when you're working on a marketing task and apply the right frameworks and best practices.
@@ -121,8 +125,16 @@ You can also invoke skills directly:
 
 ## Contributing
 
-Found a way to improve a skill? PRs welcome.
+Found a way to improve a skill? Have a new skill to suggest? PRs and issues welcome!
 
+**Ideas for contributions:**
+- Improve existing skill instructions or frameworks
+- Add new experiment ideas or best practices
+- Fix typos or clarify confusing sections
+- Suggest new skills (open an issue first to discuss)
+- Add examples or case studies
+
+**How to contribute:**
 1. Fork the repo
 2. Edit the skill file(s)
 3. Submit a PR with a clear description of what you improved
@@ -145,9 +157,3 @@ description: One-line description for skill selection
 ## License
 
 MIT - Use these however you want.
-
-## Author
-
-Built by [Corey Haines](https://corey.co) for the marketing-minded builder who'd rather prompt than point-and-click.
-
-Need hands-on marketing help? Check out [Conversion Factory](https://conversionfactory.co) — Corey's agency for conversion optimization, landing pages, and growth strategy.
