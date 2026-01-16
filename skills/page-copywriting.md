@@ -64,6 +64,115 @@ Gather this context (ask if not provided):
 
 ---
 
+## Writing Style Rules
+
+Follow these rules to write clear, confident, and compelling copy.
+
+### Avoid Jargon
+Jargon confuses readers who aren't familiar with it. Use simple, descriptive language instead.
+
+❌ Revolutionize digital transformation with our all-in-one AI no-code platform
+
+✅ Replace your paper checklist with a smart mobile app
+
+### Avoid Adverbs
+Adverbs sound vague and hollow. You end up telling instead of showing.
+
+❌ Instantly improve your workflow
+
+✅ Eliminate repetitive tasks so you can focus on what really matters
+
+### Avoid Qualifiers
+Qualifiers make your writing sound unsure. Be confident and direct.
+
+❌ Almost unbreakable security
+
+✅ Fort Knox-level protection of your data
+
+### Avoid Vague Words
+Don't use words that sound nice but don't mean anything. Don't make readers interpret.
+
+❌ Streamline your business processes
+
+✅ Reduce the back and forth necessary to get on the same page
+
+### Use Active Voice
+Passive voice weakens your message. Keep everything in active voice.
+
+❌ Personalized reports are generated to fit your needs.
+
+✅ We generate personalized reports to match your unique needs.
+
+### Avoid Exclamation Points and Ellipses
+They weaken your copy and seem unprofessional.
+
+❌ Fort Knox-level protection of your data!
+
+✅ Fort Knox-level protection of your data
+
+### Avoid Run-On Sentences
+Don't write sentences with more than 3 conjunctions. Break them up.
+
+❌ With Slack, you can message your team, and stay updated on project progress, and quickly share files, and integrate with all your favorite tools, and customize notifications so you're always in the loop, no matter where you are.
+
+✅ Like group chat but for work — you'll feel like you're all in the same room even when you're halfway around the world.
+
+### Use Simple Words
+Complex words reduce readability. Always use the simpler alternative.
+
+| Instead of | Use |
+|------------|-----|
+| Utilize | Use |
+| Implement | Set up |
+| Leverage | Use |
+| Facilitate | Help |
+| Optimize | Improve |
+| Innovative | New |
+| Robust | Strong |
+| Seamless | Smooth |
+
+### No Sensational Language
+Don't try to make things sound more exciting than they are.
+
+❌ Seamlessly share files at the speed of light and watch your productivity soar to unimaginable heights!
+
+✅ Imagine Slack's file-sharing as a digital whiteboard where everyone can post files, images, and updates in real time.
+
+### Don't Fabricate
+Never make up statistics, claims, or testimonials. If you're unsure about something, indicate so clearly.
+
+---
+
+## Best Practices
+
+### Be Direct
+Get to the point. Don't bury the value in qualifications.
+
+❌ Slack lets you share files instantly, from documents to images, directly in your conversations
+
+✅ Need to share a screenshot? Send as many documents, images, and audio files as your heart desires.
+
+### Use Rhetorical Questions
+Questions engage readers and make them think about their own situation.
+
+✅ Hate returning stuff to Amazon?
+
+✅ Need to share a screenshot?
+
+✅ Tired of chasing approvals?
+
+### Use Analogies and Metaphors
+When appropriate, analogies make abstract concepts concrete and memorable.
+
+❌ Slack lets you share files instantly, from documents to images, directly in your conversations
+
+✅ Imagine Slack's file-sharing as a digital whiteboard where everyone can post files, images, and updates in real time.
+
+### Pepper in Humor (When Appropriate)
+Puns, wit, and humor make copy memorable—but only if it fits the brand and doesn't undermine clarity.
+
+---
+
 ## Page Structure Framework
 
 ### Above the Fold (First Screen)
@@ -73,8 +182,39 @@ Gather this context (ask if not provided):
 - Should communicate core value proposition
 - Specific > generic
 
-Formulas that work:
-- "[Achieve outcome] without [pain point]"
+**Headline Formulas:**
+
+**{Achieve desirable outcome} without {pain point}**
+*Example: Understand how users are really experiencing your site without drowning in numbers*
+
+**The {opposite of usual process} way to {achieve desirable outcome}**
+*Example: The easiest way to turn your passion into income*
+
+**Never {unpleasant event} again**
+*Example: Never miss a sales opportunity again*
+
+**{Key feature/product type} for {target audience}**
+*Example: Advanced analytics for Shopify e-commerce*
+
+**{Key feature/product type} for {target audience} to {what it's used for}**
+*Example: An online whiteboard for teams to ideate and brainstorm together*
+
+**You don't have to {skills or resources} to {achieve desirable outcome}**
+*Example: With Ahrefs, you don't have to be an SEO pro to rank higher and get more traffic*
+
+**{Achieve desirable outcome} by {how product makes it possible}**
+*Example: Generate more leads by seeing which companies visit your site*
+
+**{Key benefit of your product}**
+*Example: Sound clear in online meetings*
+
+**{Question highlighting the main pain point}**
+*Example: Hate returning stuff to Amazon?*
+
+**Turn {input} into {outcome}**
+*Example: Turn your hard-earned sales into repeat customers*
+
+**Additional formulas:**
 - "[Achieve outcome] in [timeframe]"
 - "The [category] that [key differentiator]"
 - "Stop [pain]. Start [pleasure]."
@@ -165,6 +305,78 @@ Formats:
 - Repeat the primary CTA
 - Add urgency if genuine (deadline, limited availability)
 - Risk reversal (guarantee, free trial, no credit card)
+
+---
+
+## Landing Page Section Variety
+
+A great landing page isn't just a list of features. Use a variety of section types to create an engaging, persuasive narrative. Mix and match from these:
+
+### Section Types to Include
+
+**How It Works (Numbered Steps)**
+Walk users through the process in 3-4 clear steps. Reduces perceived complexity and shows the path to value.
+
+**Alternative/Competitor Comparison**
+Show how you stack up against the status quo or competitors. Tables, side-by-side comparisons, or "Unlike X, we..." sections.
+
+**Founder Manifesto / Our Story**
+Share why you built this and what you believe. Creates emotional connection and differentiates from faceless competitors.
+
+**Testimonials**
+Customer quotes with names, photos, and specific results. Multiple formats: quote cards, video testimonials, tweet embeds.
+
+**Case Studies**
+Deeper stories of customer success. Problem → Solution → Results format with specific metrics.
+
+**Use Cases**
+Show different ways the product is used. Helps visitors self-identify: "This is for people like me."
+
+**Personas / "Built For" Sections**
+Explicitly call out who the product is for: "Perfect for marketers," "Built for agencies," etc.
+
+**Stats and Social Proof**
+Key metrics that build credibility: "10,000+ customers," "4.9/5 rating," "$2M saved for customers."
+
+**Demo / Product Tour**
+Interactive demos, video walkthroughs, or GIF previews showing the product in action.
+
+**FAQ Section**
+Address common objections and questions. Good for SEO and reducing support burden.
+
+**Integrations / Partners**
+Show what tools you connect with. Logos build credibility and answer "Will this work with my stack?"
+
+**Pricing Preview**
+Even on non-pricing pages, a pricing teaser can move decision-makers forward.
+
+**Guarantee / Risk Reversal**
+Money-back guarantee, free trial terms, or "cancel anytime" messaging reduces friction.
+
+### Recommended Section Mix
+
+For a landing page, aim for variety. Don't just stack features:
+
+**Typical Feature-Heavy Page (Weak):**
+1. Hero
+2. Feature 1
+3. Feature 2
+4. Feature 3
+5. Feature 4
+6. CTA
+
+**Varied, Engaging Page (Strong):**
+1. Hero with clear value prop
+2. Social proof bar (logos or stats)
+3. Problem/pain section
+4. How it works (3 steps)
+5. Key benefits (2-3, not 10)
+6. Testimonial
+7. Use cases or personas
+8. Comparison to alternatives
+9. Case study snippet
+10. FAQ
+11. Final CTA with guarantee
 
 ---
 
