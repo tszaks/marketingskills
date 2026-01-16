@@ -29,6 +29,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 | [analytics-tracking](skills/analytics-tracking.md) | Set up tracking and measurement | "tracking," "GA4," "GTM," "events" |
 | [ab-test-setup](skills/ab-test-setup.md) | Plan and implement A/B tests | "A/B test," "split test," "experiment" |
 | [free-tool-strategy](skills/free-tool-strategy.md) | Plan engineering-as-marketing tools | "free tool," "calculator," "lead gen tool" |
+| [marketing-ideas](skills/marketing-ideas.md) | 140 SaaS marketing ideas and strategies | "marketing ideas," "growth ideas," "how to market" |
 
 ## Installation
 
@@ -122,6 +123,9 @@ You can also invoke skills directly:
 
 ### Growth Engineering
 - `free-tool-strategy` - Marketing tools and calculators
+
+### Strategy & Ideas
+- `marketing-ideas` - 140 SaaS marketing ideas
 
 ## Contributing
 
