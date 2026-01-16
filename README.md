@@ -14,52 +14,56 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 | Skill | Description | Triggers |
 |-------|-------------|----------|
-| [ab-test-setup](skills/ab-test-setup.md) | Plan and implement A/B tests | "A/B test," "split test," "experiment" |
-| [analytics-tracking](skills/analytics-tracking.md) | Set up tracking and measurement | "tracking," "GA4," "GTM," "events" |
-| [competitor-alternatives](skills/competitor-alternatives.md) | Competitor comparison and alternative pages | "vs page," "alternative page," "[X] vs [Y]" |
-| [copy-editing](skills/copy-editing.md) | Edit and polish existing copy | "edit this copy," "review my copy," "copy sweep" |
-| [copywriting](skills/copywriting.md) | Write or improve marketing copy | "write copy," "rewrite," "headlines," "CTA copy" |
-| [email-sequence](skills/email-sequence.md) | Build email sequences and drip campaigns | "email sequence," "drip campaign," "nurture" |
-| [form-cro](skills/form-cro.md) | Optimize lead capture and contact forms | "form optimization," "lead form," "contact form" |
-| [free-tool-strategy](skills/free-tool-strategy.md) | Plan engineering-as-marketing tools | "free tool," "calculator," "lead gen tool" |
-| [launch-strategy](skills/launch-strategy.md) | Product launches and feature announcements | "launch," "Product Hunt," "feature release" |
-| [marketing-ideas](skills/marketing-ideas.md) | 140 SaaS marketing ideas and strategies | "marketing ideas," "growth ideas," "how to market" |
-| [marketing-psychology](skills/marketing-psychology.md) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias" |
-| [onboarding-cro](skills/onboarding-cro.md) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
-| [page-cro](skills/page-cro.md) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
-| [paid-ads](skills/paid-ads.md) | Create and optimize paid ad campaigns | "PPC," "Google Ads," "Meta ads," "paid media" |
-| [paywall-upgrade-cro](skills/paywall-upgrade-cro.md) | In-app paywalls and upgrade screens | "paywall," "upgrade screen," "feature gate" |
-| [popup-cro](skills/popup-cro.md) | Create/optimize popups and modals | "popup," "modal," "exit intent" |
-| [pricing-strategy](skills/pricing-strategy.md) | Design pricing, packaging, and monetization | "pricing," "tiers," "freemium," "willingness to pay" |
-| [programmatic-seo](skills/programmatic-seo.md) | Build SEO pages at scale | "programmatic SEO," "template pages," "pages at scale" |
-| [referral-program](skills/referral-program.md) | Design referral and affiliate programs | "referral," "affiliate," "word of mouth," "viral" |
-| [schema-markup](skills/schema-markup.md) | Add structured data and rich snippets | "schema," "JSON-LD," "structured data" |
-| [seo-audit](skills/seo-audit.md) | Audit technical and on-page SEO | "SEO audit," "technical SEO," "not ranking" |
-| [signup-flow-cro](skills/signup-flow-cro.md) | Optimize signup and registration flows | "signup optimization," "registration form" |
-| [social-content](skills/social-content.md) | Create and schedule social media content | "LinkedIn post," "Twitter thread," "social media" |
+| [ab-test-setup](skills/ab-test-setup/) | Plan and implement A/B tests | "A/B test," "split test," "experiment" |
+| [analytics-tracking](skills/analytics-tracking/) | Set up tracking and measurement | "tracking," "GA4," "GTM," "events" |
+| [competitor-alternatives](skills/competitor-alternatives/) | Competitor comparison and alternative pages | "vs page," "alternative page," "[X] vs [Y]" |
+| [copy-editing](skills/copy-editing/) | Edit and polish existing copy | "edit this copy," "review my copy," "copy sweep" |
+| [copywriting](skills/copywriting/) | Write or improve marketing copy | "write copy," "rewrite," "headlines," "CTA copy" |
+| [email-sequence](skills/email-sequence/) | Build email sequences and drip campaigns | "email sequence," "drip campaign," "nurture" |
+| [form-cro](skills/form-cro/) | Optimize lead capture and contact forms | "form optimization," "lead form," "contact form" |
+| [free-tool-strategy](skills/free-tool-strategy/) | Plan engineering-as-marketing tools | "free tool," "calculator," "lead gen tool" |
+| [launch-strategy](skills/launch-strategy/) | Product launches and feature announcements | "launch," "Product Hunt," "feature release" |
+| [marketing-ideas](skills/marketing-ideas/) | 140 SaaS marketing ideas and strategies | "marketing ideas," "growth ideas," "how to market" |
+| [marketing-psychology](skills/marketing-psychology/) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias" |
+| [onboarding-cro](skills/onboarding-cro/) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
+| [page-cro](skills/page-cro/) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
+| [paid-ads](skills/paid-ads/) | Create and optimize paid ad campaigns | "PPC," "Google Ads," "Meta ads," "paid media" |
+| [paywall-upgrade-cro](skills/paywall-upgrade-cro/) | In-app paywalls and upgrade screens | "paywall," "upgrade screen," "feature gate" |
+| [popup-cro](skills/popup-cro/) | Create/optimize popups and modals | "popup," "modal," "exit intent" |
+| [pricing-strategy](skills/pricing-strategy/) | Design pricing, packaging, and monetization | "pricing," "tiers," "freemium," "willingness to pay" |
+| [programmatic-seo](skills/programmatic-seo/) | Build SEO pages at scale | "programmatic SEO," "template pages," "pages at scale" |
+| [referral-program](skills/referral-program/) | Design referral and affiliate programs | "referral," "affiliate," "word of mouth," "viral" |
+| [schema-markup](skills/schema-markup/) | Add structured data and rich snippets | "schema," "JSON-LD," "structured data" |
+| [seo-audit](skills/seo-audit/) | Audit technical and on-page SEO | "SEO audit," "technical SEO," "not ranking" |
+| [signup-flow-cro](skills/signup-flow-cro/) | Optimize signup and registration flows | "signup optimization," "registration form" |
+| [social-content](skills/social-content/) | Create and schedule social media content | "LinkedIn post," "Twitter thread," "social media" |
 
 ## Installation
 
-### Option 1: Copy Individual Skills (Recommended)
+### Option 1: Quick Install (Recommended)
 
-Copy just the skills you need into your project's `.claude/skills/` directory:
+Use [add-skill](https://github.com/vercel-labs/add-skill) to install skills directly:
 
 ```bash
-# Create skills directory if it doesn't exist
-mkdir -p .claude/skills
+# Install all skills
+npx add-skill coreyhaines31/marketingskills
 
-# Copy specific skills you want
-curl -o .claude/skills/page-cro.md https://raw.githubusercontent.com/YOUR_USERNAME/marketingskills/main/skills/page-cro.md
-curl -o .claude/skills/seo-audit.md https://raw.githubusercontent.com/YOUR_USERNAME/marketingskills/main/skills/seo-audit.md
+# Install specific skills
+npx add-skill coreyhaines31/marketingskills --skill page-cro copywriting
+
+# List available skills
+npx add-skill coreyhaines31/marketingskills --list
 ```
 
-### Option 2: Clone All Skills
+This automatically installs to your `.claude/skills/` directory.
+
+### Option 2: Clone and Copy
 
 Clone the entire repo and copy the skills folder:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/marketingskills.git
-cp -r marketingskills/skills .claude/
+git clone https://github.com/coreyhaines31/marketingskills.git
+cp -r marketingskills/skills/* .claude/skills/
 ```
 
 ### Option 3: Git Submodule
@@ -67,7 +71,7 @@ cp -r marketingskills/skills .claude/
 Add as a submodule for easy updates:
 
 ```bash
-git submodule add https://github.com/YOUR_USERNAME/marketingskills.git .claude/marketingskills
+git submodule add https://github.com/coreyhaines31/marketingskills.git .claude/marketingskills
 ```
 
 Then reference skills from `.claude/marketingskills/skills/`.
@@ -162,7 +166,15 @@ Found a way to improve a skill? Have a new skill to suggest? PRs and issues welc
 
 ### Skill File Structure
 
-Each skill follows this format:
+Each skill is a directory containing a `SKILL.md` file:
+
+```
+skills/
+  skill-name/
+    SKILL.md
+```
+
+The `SKILL.md` file follows this format:
 
 ```markdown
 ---
