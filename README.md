@@ -16,6 +16,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 |-------|-------------|----------|
 | [page-cro](skills/page-cro.md) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
 | [page-copywriting](skills/page-copywriting.md) | Write or improve marketing copy | "write copy," "rewrite," "headlines," "CTA copy" |
+| [copy-editing](skills/copy-editing.md) | Edit and polish existing copy | "edit this copy," "review my copy," "copy feedback," "copy sweep" |
 | [signup-flow-cro](skills/signup-flow-cro.md) | Optimize signup and registration flows | "signup optimization," "registration form" |
 | [onboarding-cro](skills/onboarding-cro.md) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
 | [form-cro](skills/form-cro.md) | Optimize lead capture and contact forms | "form optimization," "lead form," "contact form" |
@@ -111,6 +112,7 @@ You can also invoke skills directly:
 
 ### Content & Copy
 - `page-copywriting` - Marketing page copy
+- `copy-editing` - Edit and polish existing copy
 - `email-sequence` - Automated email flows
 
 ### SEO & Discovery
