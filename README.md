@@ -14,25 +14,25 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 | Skill | Description | Triggers |
 |-------|-------------|----------|
-| [page-cro](skills/page-cro.md) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
-| [page-copywriting](skills/page-copywriting.md) | Write or improve marketing copy | "write copy," "rewrite," "headlines," "CTA copy" |
-| [copy-editing](skills/copy-editing.md) | Edit and polish existing copy | "edit this copy," "review my copy," "copy feedback," "copy sweep" |
-| [signup-flow-cro](skills/signup-flow-cro.md) | Optimize signup and registration flows | "signup optimization," "registration form" |
-| [onboarding-cro](skills/onboarding-cro.md) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
-| [form-cro](skills/form-cro.md) | Optimize lead capture and contact forms | "form optimization," "lead form," "contact form" |
-| [popup-cro](skills/popup-cro.md) | Create/optimize popups and modals | "popup," "modal," "exit intent" |
-| [paywall-upgrade-cro](skills/paywall-upgrade-cro.md) | In-app paywalls and upgrade screens | "paywall," "upgrade screen," "feature gate" |
-| [email-sequence](skills/email-sequence.md) | Build email sequences and drip campaigns | "email sequence," "drip campaign," "nurture" |
-| [seo-audit](skills/seo-audit.md) | Audit technical and on-page SEO | "SEO audit," "technical SEO," "not ranking" |
-| [programmatic-seo](skills/programmatic-seo.md) | Build SEO pages at scale | "programmatic SEO," "template pages," "pages at scale" |
-| [competitor-alternatives](skills/competitor-alternatives.md) | Competitor comparison and alternative pages | "vs page," "alternative page," "[X] vs [Y]," "competitor comparison" |
-| [schema-markup](skills/schema-markup.md) | Add structured data and rich snippets | "schema," "JSON-LD," "structured data" |
-| [analytics-tracking](skills/analytics-tracking.md) | Set up tracking and measurement | "tracking," "GA4," "GTM," "events" |
 | [ab-test-setup](skills/ab-test-setup.md) | Plan and implement A/B tests | "A/B test," "split test," "experiment" |
+| [analytics-tracking](skills/analytics-tracking.md) | Set up tracking and measurement | "tracking," "GA4," "GTM," "events" |
+| [competitor-alternatives](skills/competitor-alternatives.md) | Competitor comparison and alternative pages | "vs page," "alternative page," "[X] vs [Y]" |
+| [copy-editing](skills/copy-editing.md) | Edit and polish existing copy | "edit this copy," "review my copy," "copy sweep" |
+| [email-sequence](skills/email-sequence.md) | Build email sequences and drip campaigns | "email sequence," "drip campaign," "nurture" |
+| [form-cro](skills/form-cro.md) | Optimize lead capture and contact forms | "form optimization," "lead form," "contact form" |
 | [free-tool-strategy](skills/free-tool-strategy.md) | Plan engineering-as-marketing tools | "free tool," "calculator," "lead gen tool" |
+| [launch-strategy](skills/launch-strategy.md) | Product launches and feature announcements | "launch," "Product Hunt," "feature release" |
 | [marketing-ideas](skills/marketing-ideas.md) | 140 SaaS marketing ideas and strategies | "marketing ideas," "growth ideas," "how to market" |
-| [marketing-psychology](skills/marketing-psychology.md) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias," "persuasion" |
-| [launch-strategy](skills/launch-strategy.md) | Product launches and feature announcements | "launch," "Product Hunt," "feature release," "go-to-market" |
+| [marketing-psychology](skills/marketing-psychology.md) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias" |
+| [onboarding-cro](skills/onboarding-cro.md) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
+| [page-copywriting](skills/page-copywriting.md) | Write or improve marketing copy | "write copy," "rewrite," "headlines," "CTA copy" |
+| [page-cro](skills/page-cro.md) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
+| [paywall-upgrade-cro](skills/paywall-upgrade-cro.md) | In-app paywalls and upgrade screens | "paywall," "upgrade screen," "feature gate" |
+| [popup-cro](skills/popup-cro.md) | Create/optimize popups and modals | "popup," "modal," "exit intent" |
+| [programmatic-seo](skills/programmatic-seo.md) | Build SEO pages at scale | "programmatic SEO," "template pages," "pages at scale" |
+| [schema-markup](skills/schema-markup.md) | Add structured data and rich snippets | "schema," "JSON-LD," "structured data" |
+| [seo-audit](skills/seo-audit.md) | Audit technical and on-page SEO | "SEO audit," "technical SEO," "not ranking" |
+| [signup-flow-cro](skills/signup-flow-cro.md) | Optimize signup and registration flows | "signup optimization," "registration form" |
 
 ## Installation
 
