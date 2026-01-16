@@ -170,6 +170,128 @@ Before creating competitor pages, understand:
 
 ---
 
+## Index Pages
+
+Each format needs an index page that lists all pages of that type. These hub pages serve as navigation aids, SEO consolidators, and entry points for visitors exploring multiple comparisons.
+
+### Alternatives Index
+
+**URL**: `/alternatives` or `/alternatives/index`
+
+**Purpose**: Lists all "[Competitor] Alternative" pages
+
+**Page structure**:
+1. Headline: "[Your Product] as an Alternative"
+2. Brief intro on why people switch to you
+3. List of all alternative pages with:
+   - Competitor name/logo
+   - One-line summary of key differentiator vs. that competitor
+   - Link to full comparison
+4. Common reasons people switch (aggregated)
+5. CTA
+
+**Example**:
+```markdown
+## Explore [Your Product] as an Alternative
+
+Looking to switch? See how [Your Product] compares to the tools you're evaluating:
+
+- **[Notion Alternative](/alternatives/notion)** — Better for teams who need [X]
+- **[Airtable Alternative](/alternatives/airtable)** — Better for teams who need [Y]
+- **[Monday Alternative](/alternatives/monday)** — Better for teams who need [Z]
+```
+
+---
+
+### Alternatives (Plural) Index
+
+**URL**: `/alternatives/compare` or `/best-alternatives`
+
+**Purpose**: Lists all "[Competitor] Alternatives" roundup pages
+
+**Page structure**:
+1. Headline: "Software Alternatives & Comparisons"
+2. Brief intro on your comparison methodology
+3. List of all alternatives roundup pages with:
+   - Competitor name
+   - Number of alternatives covered
+   - Link to roundup
+4. CTA
+
+**Example**:
+```markdown
+## Find the Right Tool
+
+Comparing your options? Our guides cover the top alternatives:
+
+- **[Best Notion Alternatives](/alternatives/notion-alternatives)** — 7 tools compared
+- **[Best Airtable Alternatives](/alternatives/airtable-alternatives)** — 6 tools compared
+- **[Best Monday Alternatives](/alternatives/monday-alternatives)** — 5 tools compared
+```
+
+---
+
+### Vs Comparisons Index
+
+**URL**: `/vs` or `/compare`
+
+**Purpose**: Lists all "You vs [Competitor]" and "[A] vs [B]" pages
+
+**Page structure**:
+1. Headline: "Compare [Your Product]"
+2. Section: "[Your Product] vs Competitors" — list of direct comparisons
+3. Section: "Head-to-Head Comparisons" — list of [A] vs [B] pages
+4. Brief methodology note
+5. CTA
+
+**Example**:
+```markdown
+## Compare [Your Product]
+
+### [Your Product] vs. the Competition
+
+- **[[Your Product] vs Notion](/vs/notion)** — Best for [differentiator]
+- **[[Your Product] vs Airtable](/vs/airtable)** — Best for [differentiator]
+- **[[Your Product] vs Monday](/vs/monday)** — Best for [differentiator]
+
+### Other Comparisons
+
+Evaluating tools we compete with? We've done the research:
+
+- **[Notion vs Airtable](/compare/notion-vs-airtable)**
+- **[Notion vs Monday](/compare/notion-vs-monday)**
+- **[Airtable vs Monday](/compare/airtable-vs-monday)**
+```
+
+---
+
+### Index Page Best Practices
+
+**Keep them updated**: When you add a new comparison page, add it to the relevant index.
+
+**Internal linking**:
+- Link from index → individual pages
+- Link from individual pages → back to index
+- Cross-link between related comparisons
+
+**SEO value**:
+- Index pages can rank for broad terms like "project management tool comparisons"
+- Pass link equity to individual comparison pages
+- Help search engines discover all comparison content
+
+**Sorting options**:
+- By popularity (search volume)
+- Alphabetically
+- By category/use case
+- By date added (show freshness)
+
+**Include on index pages**:
+- Last updated date for credibility
+- Number of pages/comparisons available
+- Quick filters if you have many comparisons
+
+---
+
 ## Content Architecture
 
 ### Centralized Competitor Data
