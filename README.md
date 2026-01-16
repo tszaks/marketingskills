@@ -30,6 +30,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 | [ab-test-setup](skills/ab-test-setup.md) | Plan and implement A/B tests | "A/B test," "split test," "experiment" |
 | [free-tool-strategy](skills/free-tool-strategy.md) | Plan engineering-as-marketing tools | "free tool," "calculator," "lead gen tool" |
 | [marketing-ideas](skills/marketing-ideas.md) | 140 SaaS marketing ideas and strategies | "marketing ideas," "growth ideas," "how to market" |
+| [marketing-psychology](skills/marketing-psychology.md) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias," "persuasion" |
 
 ## Installation
 
@@ -126,6 +127,7 @@ You can also invoke skills directly:
 
 ### Strategy & Ideas
 - `marketing-ideas` - 140 SaaS marketing ideas
+- `marketing-psychology` - Mental models and psychology
 
 ## Contributing
 
