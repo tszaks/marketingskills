@@ -27,12 +27,16 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 | [marketing-psychology](skills/marketing-psychology.md) | 70+ mental models for marketing | "psychology," "mental models," "cognitive bias" |
 | [onboarding-cro](skills/onboarding-cro.md) | Improve user activation and onboarding | "onboarding," "activation," "first-run experience" |
 | [page-cro](skills/page-cro.md) | Conversion optimization for any marketing page | "optimize [page]," "CRO," "page isn't converting" |
+| [paid-ads](skills/paid-ads.md) | Create and optimize paid ad campaigns | "PPC," "Google Ads," "Meta ads," "paid media" |
 | [paywall-upgrade-cro](skills/paywall-upgrade-cro.md) | In-app paywalls and upgrade screens | "paywall," "upgrade screen," "feature gate" |
 | [popup-cro](skills/popup-cro.md) | Create/optimize popups and modals | "popup," "modal," "exit intent" |
+| [pricing-strategy](skills/pricing-strategy.md) | Design pricing, packaging, and monetization | "pricing," "tiers," "freemium," "willingness to pay" |
 | [programmatic-seo](skills/programmatic-seo.md) | Build SEO pages at scale | "programmatic SEO," "template pages," "pages at scale" |
+| [referral-program](skills/referral-program.md) | Design referral and affiliate programs | "referral," "affiliate," "word of mouth," "viral" |
 | [schema-markup](skills/schema-markup.md) | Add structured data and rich snippets | "schema," "JSON-LD," "structured data" |
 | [seo-audit](skills/seo-audit.md) | Audit technical and on-page SEO | "SEO audit," "technical SEO," "not ranking" |
 | [signup-flow-cro](skills/signup-flow-cro.md) | Optimize signup and registration flows | "signup optimization," "registration form" |
+| [social-content](skills/social-content.md) | Create and schedule social media content | "LinkedIn post," "Twitter thread," "social media" |
 
 ## Installation
 
@@ -114,6 +118,7 @@ You can also invoke skills directly:
 - `copywriting` - Marketing page copy
 - `copy-editing` - Edit and polish existing copy
 - `email-sequence` - Automated email flows
+- `social-content` - Social media content
 
 ### SEO & Discovery
 - `seo-audit` - Technical and on-page SEO
@@ -121,17 +126,23 @@ You can also invoke skills directly:
 - `competitor-alternatives` - Comparison and alternative pages
 - `schema-markup` - Structured data
 
+### Paid & Distribution
+- `paid-ads` - Google, Meta, LinkedIn ad campaigns
+- `social-content` - Social media scheduling and strategy
+
 ### Measurement & Testing
 - `analytics-tracking` - Event tracking setup
 - `ab-test-setup` - Experiment design
 
 ### Growth Engineering
 - `free-tool-strategy` - Marketing tools and calculators
+- `referral-program` - Referral and affiliate programs
 
-### Strategy & Ideas
+### Strategy & Monetization
 - `marketing-ideas` - 140 SaaS marketing ideas
 - `marketing-psychology` - Mental models and psychology
 - `launch-strategy` - Product launches and announcements
+- `pricing-strategy` - Pricing, packaging, and monetization
 
 ## Contributing
 
