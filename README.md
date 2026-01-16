@@ -40,7 +40,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 ## Installation
 
-### Option 1: Quick Install (Recommended)
+### Option 1: CLI Install (Recommended)
 
 Use [add-skill](https://github.com/vercel-labs/add-skill) to install skills directly:
 
@@ -57,7 +57,19 @@ npx add-skill coreyhaines31/marketingskills --list
 
 This automatically installs to your `.claude/skills/` directory.
 
-### Option 2: Clone and Copy
+### Option 2: Claude Code Plugin
+
+Install via Claude Code's built-in plugin system:
+
+```bash
+# Add the marketplace
+/plugin marketplace add coreyhaines31/marketingskills
+
+# Install all marketing skills
+/plugin install marketing-skills
+```
+
+### Option 3: Clone and Copy
 
 Clone the entire repo and copy the skills folder:
 
@@ -66,7 +78,7 @@ git clone https://github.com/coreyhaines31/marketingskills.git
 cp -r marketingskills/skills/* .claude/skills/
 ```
 
-### Option 3: Git Submodule
+### Option 4: Git Submodule
 
 Add as a submodule for easy updates:
 
@@ -76,7 +88,7 @@ git submodule add https://github.com/coreyhaines31/marketingskills.git .claude/m
 
 Then reference skills from `.claude/marketingskills/skills/`.
 
-### Option 4: Fork and Customize
+### Option 5: Fork and Customize
 
 1. Fork this repository
 2. Customize skills for your specific needs
