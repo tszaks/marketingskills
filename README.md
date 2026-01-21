@@ -2,7 +2,7 @@
 
 A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want Claude Code (or similar AI coding assistants) to help with conversion optimization, copywriting, SEO, analytics, and growth engineering.
 
-Built by [Corey Haines](https://corey.co). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co) — Corey's agency for conversion optimization, landing pages, and growth strategy.
+Built by [Corey Haines](https://corey.co). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com).
 
 **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
 
