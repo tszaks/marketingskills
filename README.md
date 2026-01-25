@@ -166,41 +166,8 @@ You can also invoke skills directly:
 
 Found a way to improve a skill? Have a new skill to suggest? PRs and issues welcome!
 
-**Ideas for contributions:**
-- Improve existing skill instructions or frameworks
-- Add new experiment ideas or best practices
-- Fix typos or clarify confusing sections
-- Suggest new skills (open an issue first to discuss)
-- Add examples or case studies
-
-**How to contribute:**
-1. Fork the repo
-2. Edit the skill file(s)
-3. Submit a PR with a clear description of what you improved
-
-### Skill File Structure
-
-Each skill is a directory containing a `SKILL.md` file:
-
-```
-skills/
-  skill-name/
-    SKILL.md
-```
-
-The `SKILL.md` file follows this format:
-
-```markdown
----
-name: skill-name
-description: One-line description for skill selection
----
-
-# Skill Name
-
-[Full instructions for the AI agent]
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving skills.
 
 ## License
 
-MIT - Use these however you want.
+[MIT](LICENSE) - Use these however you want.
