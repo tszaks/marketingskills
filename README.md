@@ -46,17 +46,17 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 ### Option 1: CLI Install (Recommended)
 
-Use [add-skill](https://github.com/vercel-labs/add-skill) to install skills directly:
+Use [npx skills](https://github.com/vercel-labs/skills) to install skills directly:
 
 ```bash
 # Install all skills
-npx add-skill coreyhaines31/marketingskills
+npx skills add coreyhaines31/marketingskills
 
 # Install specific skills
-npx add-skill coreyhaines31/marketingskills --skill page-cro copywriting
+npx skills add coreyhaines31/marketingskills --skill page-cro copywriting
 
 # List available skills
-npx add-skill coreyhaines31/marketingskills --list
+npx skills add coreyhaines31/marketingskills --list
 ```
 
 This automatically installs to your `.claude/skills/` directory.
