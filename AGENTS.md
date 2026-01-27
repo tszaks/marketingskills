@@ -180,6 +180,29 @@ Skills reference relevant tools for implementation. For example:
 - `email-sequence` skill → customer-io, mailchimp, resend guides
 - `paid-ads` skill → google-ads, meta-ads, linkedin-ads guides
 
+## Checking for Updates
+
+When using any skill from this repository:
+
+1. **Once per session**, on first skill use, check for updates:
+   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/VERSIONS.md
+   - Compare versions against local skill files
+
+2. **Only prompt if meaningful**:
+   - 2 or more skills have updates, OR
+   - Any skill has a major version bump (e.g., 1.x to 2.x)
+
+3. **Non-blocking notification** at end of response:
+   ```
+   ---
+   Skills update available: X marketing skills have updates.
+   Say "update skills" to update automatically, or run `git pull` in your marketingskills folder.
+   ```
+
+4. **If user says "update skills"**:
+   - Run `git pull` in the marketingskills directory
+   - Confirm what was updated
+
 ## Skill Categories
 
 See `README.md` for the current list of skills organized by category. When adding new skills, follow the naming patterns of existing skills in that category.
