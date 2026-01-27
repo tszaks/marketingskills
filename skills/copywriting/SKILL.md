@@ -118,6 +118,8 @@ Puns and wit make copy memorable—but only if it fits the brand and doesn't und
 
 **For comprehensive headline formulas**: See [references/copy-frameworks.md](references/copy-frameworks.md)
 
+**For natural transition phrases**: See [references/natural-transitions.md](references/natural-transitions.md)
+
 **Subheadline**
 - Expands on headline
 - Adds specificity
