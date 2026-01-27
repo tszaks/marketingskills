@@ -132,7 +132,7 @@ See [Claude Code plugins documentation](https://code.claude.com/docs/en/plugins.
 
 ### Branch Naming
 
-- New skills: `feat/skill-name`
+- New skills: `feature/skill-name`
 - Improvements: `fix/skill-name-description`
 - Documentation: `docs/description`
 

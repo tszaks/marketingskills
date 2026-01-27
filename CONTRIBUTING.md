@@ -22,16 +22,14 @@ Every skill needs a `SKILL.md` file with YAML frontmatter:
 ---
 name: your-skill-name
 description: When to use this skill. Include trigger phrases and keywords that help agents identify relevant tasks.
-license: MIT
-metadata:
-  author: "[Your Name](https://your-website.com)"
-  version: "1.0.0"
 ---
 
 # Your Skill Name
 
 Instructions for the agent go here...
 ```
+
+Optional frontmatter fields: `license` (default: MIT), `metadata` (author, version, etc.)
 
 ### 3. Follow the naming conventions
 
@@ -70,7 +68,7 @@ skills/your-skill-name/
 ## Submitting Your Contribution
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/new-skill-name`)
+2. Create a feature branch (`git checkout -b feature/new-skill-name`)
 3. Make your changes
 4. Test locally with an AI agent
 5. Submit a pull request using the appropriate template:
