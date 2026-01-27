@@ -93,6 +93,7 @@ Provide affiliates with:
 - Ambassador — Enterprise referral programs
 - Friendbuy — E-commerce and subscription
 - GrowSurf — SaaS and tech companies
+- Mention Me — AI-powered referral marketing
 - Viral Loops — Template-based campaigns
 
 **Built-in options:**
