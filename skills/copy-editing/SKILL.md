@@ -411,6 +411,12 @@ This iterative process ensures each edit doesn't create new problems while respe
 
 ---
 
+## References
+
+- [Plain English Alternatives](references/plain-english-alternatives.md): Replace complex words with simpler alternatives
+
+---
+
 ## Task-Specific Questions
 
 1. What's the goal of this copy? (Awareness, conversion, retention)
