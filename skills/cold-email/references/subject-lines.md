@@ -48,6 +48,6 @@ Data conflicts: Belkins says questions perform well (46% open rate). Lavender sa
 
 Executives receive 300–400 emails daily, decide in seconds. They respond **23% more often** than non-C-suite when emails pass their filter (6.4% reply rate).
 
-What works: ultra-concise, human, understated. "{{Name}}, can you help me?" (up to 67% open rate on good lists) · "thank you" · "an update" · "a question" · reference to a specific project.
+What works: ultra-concise, human, understated. "{{companyInitiative}}" · "thank you" · "an update" · "a question" · reference to a specific project or trigger event.
 
 Anything "salesy" is immediately rejected.

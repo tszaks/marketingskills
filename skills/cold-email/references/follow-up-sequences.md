@@ -7,7 +7,7 @@
 - Highest single-email reply rate: **8.4%** (Belkins).
 - 4–7 email campaigns achieve **27% reply rates** vs 9% for 1–3 emails (Woodpecker, 20M emails).
 - By 4th follow-up, response rates drop **55%** and spam complaints **triple**.
-- Resolution: longer sequences catch different timing windows. Cap at 5 follow-ups max. Each must add genuinely new value.
+- Resolution: longer sequences catch different timing windows. Cap at 4 follow-ups (5 total emails). Each must add genuinely new value.
 
 ## Optimal Cadence
 
