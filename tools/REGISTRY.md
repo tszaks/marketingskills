@@ -14,32 +14,32 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 
 | Tool | Category | API | MCP | CLI | SDK | Guide |
 |------|----------|:---:|:---:|:---:|:---:|-------|
-| ga4 | Analytics | ✓ | ✓ | - | ✓ | [ga4.md](integrations/ga4.md) |
-| mixpanel | Analytics | ✓ | - | - | ✓ | [mixpanel.md](integrations/mixpanel.md) |
-| amplitude | Analytics | ✓ | - | - | ✓ | [amplitude.md](integrations/amplitude.md) |
+| ga4 | Analytics | ✓ | ✓ | [✓](clis/ga4.js) | ✓ | [ga4.md](integrations/ga4.md) |
+| mixpanel | Analytics | ✓ | - | [✓](clis/mixpanel.js) | ✓ | [mixpanel.md](integrations/mixpanel.md) |
+| amplitude | Analytics | ✓ | - | [✓](clis/amplitude.js) | ✓ | [amplitude.md](integrations/amplitude.md) |
 | posthog | Analytics | ✓ | - | ✓ | ✓ | [posthog.md](integrations/posthog.md) |
-| segment | Analytics | ✓ | - | - | ✓ | [segment.md](integrations/segment.md) |
-| adobe-analytics | Analytics | ✓ | - | - | ✓ | [adobe-analytics.md](integrations/adobe-analytics.md) |
-| google-search-console | SEO | ✓ | - | - | ✓ | [google-search-console.md](integrations/google-search-console.md) |
-| semrush | SEO | ✓ | - | - | - | [semrush.md](integrations/semrush.md) |
-| ahrefs | SEO | ✓ | - | - | - | [ahrefs.md](integrations/ahrefs.md) |
+| segment | Analytics | ✓ | - | [✓](clis/segment.js) | ✓ | [segment.md](integrations/segment.md) |
+| adobe-analytics | Analytics | ✓ | - | [✓](clis/adobe-analytics.js) | ✓ | [adobe-analytics.md](integrations/adobe-analytics.md) |
+| google-search-console | SEO | ✓ | - | [✓](clis/google-search-console.js) | ✓ | [google-search-console.md](integrations/google-search-console.md) |
+| semrush | SEO | ✓ | - | [✓](clis/semrush.js) | - | [semrush.md](integrations/semrush.md) |
+| ahrefs | SEO | ✓ | - | [✓](clis/ahrefs.js) | - | [ahrefs.md](integrations/ahrefs.md) |
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
-| rewardful | Referral | ✓ | - | - | - | [rewardful.md](integrations/rewardful.md) |
-| tolt | Referral | ✓ | - | - | - | [tolt.md](integrations/tolt.md) |
-| dub-co | Links | ✓ | - | - | ✓ | [dub-co.md](integrations/dub-co.md) |
-| mention-me | Referral | ✓ | - | - | - | [mention-me.md](integrations/mention-me.md) |
-| mailchimp | Email | ✓ | ✓ | - | ✓ | [mailchimp.md](integrations/mailchimp.md) |
-| customer-io | Email | ✓ | - | - | ✓ | [customer-io.md](integrations/customer-io.md) |
-| sendgrid | Email | ✓ | - | - | ✓ | [sendgrid.md](integrations/sendgrid.md) |
-| resend | Email | ✓ | ✓ | - | ✓ | [resend.md](integrations/resend.md) |
-| kit | Email | ✓ | - | - | ✓ | [kit.md](integrations/kit.md) |
-| google-ads | Ads | ✓ | ✓ | - | ✓ | [google-ads.md](integrations/google-ads.md) |
-| meta-ads | Ads | ✓ | - | - | ✓ | [meta-ads.md](integrations/meta-ads.md) |
-| linkedin-ads | Ads | ✓ | - | - | - | [linkedin-ads.md](integrations/linkedin-ads.md) |
-| tiktok-ads | Ads | ✓ | - | - | ✓ | [tiktok-ads.md](integrations/tiktok-ads.md) |
-| zapier | Automation | ✓ | ✓ | - | - | [zapier.md](integrations/zapier.md) |
+| rewardful | Referral | ✓ | - | [✓](clis/rewardful.js) | - | [rewardful.md](integrations/rewardful.md) |
+| tolt | Referral | ✓ | - | [✓](clis/tolt.js) | - | [tolt.md](integrations/tolt.md) |
+| dub-co | Links | ✓ | - | [✓](clis/dub.js) | ✓ | [dub-co.md](integrations/dub-co.md) |
+| mention-me | Referral | ✓ | - | [✓](clis/mention-me.js) | - | [mention-me.md](integrations/mention-me.md) |
+| mailchimp | Email | ✓ | ✓ | [✓](clis/mailchimp.js) | ✓ | [mailchimp.md](integrations/mailchimp.md) |
+| customer-io | Email | ✓ | - | [✓](clis/customer-io.js) | ✓ | [customer-io.md](integrations/customer-io.md) |
+| sendgrid | Email | ✓ | - | [✓](clis/sendgrid.js) | ✓ | [sendgrid.md](integrations/sendgrid.md) |
+| resend | Email | ✓ | ✓ | [✓](clis/resend.js) | ✓ | [resend.md](integrations/resend.md) |
+| kit | Email | ✓ | - | [✓](clis/kit.js) | ✓ | [kit.md](integrations/kit.md) |
+| google-ads | Ads | ✓ | ✓ | [✓](clis/google-ads.js) | ✓ | [google-ads.md](integrations/google-ads.md) |
+| meta-ads | Ads | ✓ | - | [✓](clis/meta-ads.js) | ✓ | [meta-ads.md](integrations/meta-ads.md) |
+| linkedin-ads | Ads | ✓ | - | [✓](clis/linkedin-ads.js) | - | [linkedin-ads.md](integrations/linkedin-ads.md) |
+| tiktok-ads | Ads | ✓ | - | [✓](clis/tiktok-ads.js) | ✓ | [tiktok-ads.md](integrations/tiktok-ads.md) |
+| zapier | Automation | ✓ | ✓ | [✓](clis/zapier.js) | - | [zapier.md](integrations/zapier.md) |
 | shopify | Commerce | ✓ | - | ✓ | ✓ | [shopify.md](integrations/shopify.md) |
 | wordpress | CMS | ✓ | - | ✓ | ✓ | [wordpress.md](integrations/wordpress.md) |
 | webflow | CMS | ✓ | - | ✓ | ✓ | [webflow.md](integrations/webflow.md) |
@@ -157,6 +157,18 @@ E-commerce platforms and content management systems.
 | **webflow** | Design-focused marketing sites | ✓ |
 
 **Agent recommendation**: Shopify for e-commerce. Webflow for marketing sites. WordPress for blogs.
+
+---
+
+## CLI Tools
+
+Zero-dependency, single-file Node.js CLIs for tools that don't ship their own. See [`clis/README.md`](clis/README.md) for install instructions and usage.
+
+All CLIs follow a consistent pattern:
+- **No dependencies** — Node 18+ only, uses native `fetch`
+- **JSON output** — pipe to `jq`, save to file, or use in scripts
+- **Env var auth** — set `{TOOL}_API_KEY` and go
+- **Consistent commands** — `{tool} <resource> <action> [options]`
 
 ---
 
