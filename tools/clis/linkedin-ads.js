@@ -11,6 +11,7 @@ if (!TOKEN) {
 async function api(method, path, body) {
   const headers = {
     'Authorization': `Bearer ${TOKEN}`,
+    'X-RestLi-Protocol-Version': '2.0.0',
     'Content-Type': 'application/json',
   }
   if (args['dry-run']) {

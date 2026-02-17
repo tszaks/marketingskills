@@ -203,7 +203,7 @@ async function main() {
           break
         case 'create': {
           const events = args.events?.split(',') || ['email.sent', 'email.delivered', 'email.bounced']
-          result = await api('POST', '/webhooks', { endpoint_url: args.endpoint, events })
+          result = await api('POST', '/webhooks', { endpoint: args.endpoint, events })
           break
         }
         case 'delete':

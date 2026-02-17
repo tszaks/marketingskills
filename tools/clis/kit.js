@@ -14,6 +14,8 @@ async function api(method, path, body, useSecret = true) {
   if (method === 'GET' || method === 'DELETE') {
     if (useSecret && API_SECRET) {
       url.searchParams.set('api_secret', API_SECRET)
+    } else if (useSecret && !API_SECRET) {
+      return { error: 'KIT_API_SECRET required for this endpoint' }
     } else if (API_KEY) {
       url.searchParams.set('api_key', API_KEY)
     }
@@ -26,6 +28,8 @@ async function api(method, path, body, useSecret = true) {
     const authBody = { ...body }
     if (useSecret && API_SECRET) {
       authBody.api_secret = API_SECRET
+    } else if (useSecret && !API_SECRET) {
+      return { error: 'KIT_API_SECRET required for this endpoint' }
     } else if (API_KEY) {
       authBody.api_key = API_KEY
     }

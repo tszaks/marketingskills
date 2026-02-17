@@ -273,11 +273,11 @@ async function main() {
         }
         case 'add-contact': {
           const automationId = args.id
-          const contactEmail = args.email
+          const contactId = args['contact-id']
           if (!automationId) { result = { error: '--id required (automation ID)' }; break }
-          if (!contactEmail) { result = { error: '--email required' }; break }
+          if (!contactId) { result = { error: '--contact-id required (contact ID, not email)' }; break }
           result = await api('POST', '/contactAutomations', {
-            contactAutomation: { contact: contactEmail, automation: automationId }
+            contactAutomation: { contact: contactId, automation: automationId }
           })
           break
         }

@@ -155,8 +155,8 @@ async function main() {
             params: {
               events: [{ event: args.event || 'all' }],
               time_range: {
-                from_date: args['from-date'] || '30daysAgo',
-                to_date: args['to-date'] || 'today',
+                from_date: args['from-date'] || new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10),
+                to_date: args['to-date'] || new Date().toISOString().slice(0, 10),
               },
             },
           }

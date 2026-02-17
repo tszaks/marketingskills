@@ -11,8 +11,9 @@ const dc = API_KEY.split('-').pop()
 const BASE_URL = `https://${dc}.api.mailchimp.com/3.0`
 
 async function api(method, path, body) {
+  const auth = 'Basic ' + Buffer.from(`anystring:${API_KEY}`).toString('base64')
   const headers = {
-    'Authorization': `Bearer ${API_KEY}`,
+    'Authorization': auth,
     'Content-Type': 'application/json',
   }
   if (args['dry-run']) {

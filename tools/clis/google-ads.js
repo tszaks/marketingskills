@@ -157,7 +157,7 @@ async function main() {
                 resourceName: `customers/${CUSTOMER_ID}/campaignBudgets/${args.id}`,
                 amountMicros,
               },
-              updateMask: 'amountMicros',
+              updateMask: 'amount_micros',
             }],
           })
           break
