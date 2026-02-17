@@ -13,13 +13,14 @@ const BASE_URL = `https://analytics.adobe.io/api/${COMPANY_ID}`
 
 async function api(method, path, body) {
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'Authorization': '***', 'x-api-key': '***', 'Content-Type': 'application/json' }, body: body || undefined }
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'Authorization': '***', 'x-api-key': '***', 'x-proxy-global-company-id': COMPANY_ID, 'Content-Type': 'application/json' }, body: body || undefined }
   }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {
       'Authorization': `Bearer ${ACCESS_TOKEN}`,
       'x-api-key': CLIENT_ID,
+      'x-proxy-global-company-id': COMPANY_ID,
       'Content-Type': 'application/json',
     },
     body: body ? JSON.stringify(body) : undefined,
