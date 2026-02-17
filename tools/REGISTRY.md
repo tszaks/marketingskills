@@ -47,6 +47,10 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | postmark | Email | ✓ | - | [✓](clis/postmark.js) | ✓ | [postmark.md](integrations/postmark.md) |
 | brevo | Email/SMS | ✓ | - | [✓](clis/brevo.js) | ✓ | [brevo.md](integrations/brevo.md) |
 | activecampaign | Email/CRM | ✓ | - | [✓](clis/activecampaign.js) | ✓ | [activecampaign.md](integrations/activecampaign.md) |
+| hunter | Email Outreach | ✓ | - | [✓](clis/hunter.js) | - | [hunter.md](integrations/hunter.md) |
+| snov | Email Outreach | ✓ | - | [✓](clis/snov.js) | - | [snov.md](integrations/snov.md) |
+| lemlist | Email Outreach | ✓ | - | [✓](clis/lemlist.js) | - | [lemlist.md](integrations/lemlist.md) |
+| instantly | Email Outreach | ✓ | - | [✓](clis/instantly.js) | - | [instantly.md](integrations/instantly.md) |
 | google-ads | Ads | ✓ | ✓ | [✓](clis/google-ads.js) | ✓ | [google-ads.md](integrations/google-ads.md) |
 | meta-ads | Ads | ✓ | - | [✓](clis/meta-ads.js) | ✓ | [meta-ads.md](integrations/meta-ads.md) |
 | linkedin-ads | Ads | ✓ | - | [✓](clis/linkedin-ads.js) | - | [linkedin-ads.md](integrations/linkedin-ads.md) |
@@ -287,6 +291,19 @@ Webinar and virtual event platforms.
 
 **Agent recommendation**: Demio for marketing-focused webinars. Livestorm for full event engagement.
 
+### Email Outreach
+
+Cold email outreach and email finding tools for link building and sales prospecting.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **hunter** | Email finding, domain search | Largest email database |
+| **snov** | Email finding, drip campaigns | Built-in sequences |
+| **lemlist** | Cold email campaigns | Personalization features |
+| **instantly** | Cold email at scale | Email warmup built-in |
+
+**Agent recommendation**: Hunter for finding emails. Lemlist or Instantly for sending cold email campaigns. Snov for combined finding + outreach.
+
 ### Commerce & CMS
 
 E-commerce platforms and content management systems.
@@ -341,6 +358,10 @@ To use MCP tools, ensure the appropriate MCP server is configured in your enviro
 ### Setting up email automation
 1. Read [customer-io.md](integrations/customer-io.md) for behavior-based automation
 2. Read [resend.md](integrations/resend.md) for transactional email
+
+### Running email outreach for backlinks
+1. Read [hunter.md](integrations/hunter.md) for finding emails
+2. Read [lemlist.md](integrations/lemlist.md) or [instantly.md](integrations/instantly.md) for sending campaigns
 
 ### Running paid ads
 1. Read [google-ads.md](integrations/google-ads.md) for search campaigns

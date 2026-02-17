@@ -81,6 +81,10 @@ Every CLI reads credentials from environment variables:
 | `tolt` | `TOLT_API_KEY` |
 | `trustpilot` | `TRUSTPILOT_API_KEY`, `TRUSTPILOT_API_SECRET`, `TRUSTPILOT_BUSINESS_UNIT_ID` |
 | `typeform` | `TYPEFORM_API_KEY` |
+| `hunter` | `HUNTER_API_KEY` |
+| `instantly` | `INSTANTLY_API_KEY` |
+| `lemlist` | `LEMLIST_API_KEY` |
+| `snov` | `SNOV_CLIENT_ID`, `SNOV_CLIENT_SECRET` |
 | `wistia` | `WISTIA_API_KEY` |
 | `zapier` | `ZAPIER_API_KEY` |
 
@@ -140,10 +144,13 @@ DOMAINS=$(rewardful affiliates list | jq -r '.data[].email')
 | `google-ads.js` | Ads | [Google Ads](https://ads.google.com) |
 | `google-search-console.js` | SEO | [Google Search Console](https://search.google.com/search-console) |
 | `hotjar.js` | CRO | [Hotjar](https://hotjar.com) |
+| `hunter.js` | Email Outreach | [Hunter.io](https://hunter.io) |
+| `instantly.js` | Email Outreach | [Instantly.ai](https://instantly.ai) |
 | `intercom.js` | Messaging | [Intercom](https://intercom.com) |
 | `keywords-everywhere.js` | SEO | [Keywords Everywhere](https://keywordseverywhere.com) |
 | `kit.js` | Email | [Kit](https://kit.com) |
 | `klaviyo.js` | Email/SMS | [Klaviyo](https://klaviyo.com) |
+| `lemlist.js` | Email Outreach | [Lemlist](https://lemlist.com) |
 | `linkedin-ads.js` | Ads | [LinkedIn Ads](https://business.linkedin.com/marketing-solutions/ads) |
 | `livestorm.js` | Webinar | [Livestorm](https://livestorm.co) |
 | `mailchimp.js` | Email | [Mailchimp](https://mailchimp.com) |
@@ -162,6 +169,7 @@ DOMAINS=$(rewardful affiliates list | jq -r '.data[].email')
 | `segment.js` | Analytics | [Segment](https://segment.com) |
 | `semrush.js` | SEO | [SEMrush](https://semrush.com) |
 | `sendgrid.js` | Email | [SendGrid](https://sendgrid.com) |
+| `snov.js` | Email Outreach | [Snov.io](https://snov.io) |
 | `tiktok-ads.js` | Ads | [TikTok Ads](https://ads.tiktok.com) |
 | `tolt.js` | Referral | [Tolt](https://tolt.io) |
 | `trustpilot.js` | Reviews | [Trustpilot](https://trustpilot.com) |
