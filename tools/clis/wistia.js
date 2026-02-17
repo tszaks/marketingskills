@@ -221,7 +221,10 @@ async function main() {
           if (!id) { result = { error: '--id required (media hashed ID)' }; break }
           if (!language) { result = { error: '--language required (e.g. eng)' }; break }
           const body = { language }
-          if (args['srt-file']) body.caption_file = args['srt-file']
+          if (args['srt-file']) {
+            const fs = require('fs')
+            body.caption_file = fs.readFileSync(args['srt-file'], 'utf8')
+          }
           result = await api('POST', `/medias/${id}/captions.json`, body)
           break
         }

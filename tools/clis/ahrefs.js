@@ -58,6 +58,7 @@ async function main() {
     case 'domain-rating':
       switch (sub) {
         case 'get': {
+          if (!args.target) { result = { error: '--target required (domain)' }; break }
           const params = new URLSearchParams({ target: args.target })
           result = await api('GET', `/site-explorer/domain-rating?${params}`)
           break
@@ -70,6 +71,7 @@ async function main() {
     case 'backlinks':
       switch (sub) {
         case 'list': {
+          if (!args.target) { result = { error: '--target required (domain or URL)' }; break }
           const params = new URLSearchParams({ target: args.target, mode })
           if (args.limit) params.set('limit', args.limit)
           result = await api('GET', `/site-explorer/backlinks?${params}`)
@@ -83,6 +85,7 @@ async function main() {
     case 'refdomains':
       switch (sub) {
         case 'list': {
+          if (!args.target) { result = { error: '--target required (domain or URL)' }; break }
           const params = new URLSearchParams({ target: args.target, mode })
           if (args.limit) params.set('limit', args.limit)
           result = await api('GET', `/site-explorer/refdomains?${params}`)
@@ -96,6 +99,7 @@ async function main() {
     case 'keywords':
       switch (sub) {
         case 'organic': {
+          if (!args.target) { result = { error: '--target required (domain or URL)' }; break }
           const params = new URLSearchParams({ target: args.target, mode })
           if (args.country) params.set('country', args.country)
           if (args.limit) params.set('limit', args.limit)
@@ -110,6 +114,7 @@ async function main() {
     case 'top-pages':
       switch (sub) {
         case 'list': {
+          if (!args.target) { result = { error: '--target required (domain or URL)' }; break }
           const params = new URLSearchParams({ target: args.target, mode })
           if (args.country) params.set('country', args.country)
           if (args.limit) params.set('limit', args.limit)

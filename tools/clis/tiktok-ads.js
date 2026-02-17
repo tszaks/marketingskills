@@ -68,7 +68,8 @@ async function main() {
         case 'info': {
           const advId = getAdvertiserId()
           if (!advId) { result = { error: 'TIKTOK_ADVERTISER_ID env or --advertiser-id required' }; break }
-          result = await api('GET', `/advertiser/info/?advertiser_ids=["${advId}"]`)
+          const advParams = new URLSearchParams({ advertiser_ids: JSON.stringify([advId]) })
+          result = await api('GET', `/advertiser/info/?${advParams}`)
           break
         }
         default:
@@ -81,7 +82,8 @@ async function main() {
         case 'list': {
           const advId = getAdvertiserId()
           if (!advId) { result = { error: 'TIKTOK_ADVERTISER_ID env or --advertiser-id required' }; break }
-          result = await api('GET', `/campaign/get/?advertiser_id=${advId}&page=1&page_size=20`)
+          const campParams = new URLSearchParams({ advertiser_id: advId, page: '1', page_size: '20' })
+          result = await api('GET', `/campaign/get/?${campParams}`)
           break
         }
         case 'create': {
@@ -119,9 +121,9 @@ async function main() {
         case 'list': {
           const advId = getAdvertiserId()
           if (!advId) { result = { error: 'TIKTOK_ADVERTISER_ID env or --advertiser-id required' }; break }
-          let path = `/adgroup/get/?advertiser_id=${advId}`
-          if (args['campaign-id']) path += `&campaign_ids=["${args['campaign-id']}"]`
-          result = await api('GET', path)
+          const agParams = new URLSearchParams({ advertiser_id: advId })
+          if (args['campaign-id']) agParams.set('campaign_ids', JSON.stringify([args['campaign-id']]))
+          result = await api('GET', `/adgroup/get/?${agParams}`)
           break
         }
         default:
@@ -157,7 +159,8 @@ async function main() {
         case 'list': {
           const advId = getAdvertiserId()
           if (!advId) { result = { error: 'TIKTOK_ADVERTISER_ID env or --advertiser-id required' }; break }
-          result = await api('GET', `/dmp/custom_audience/list/?advertiser_id=${advId}`)
+          const audParams = new URLSearchParams({ advertiser_id: advId })
+          result = await api('GET', `/dmp/custom_audience/list/?${audParams}`)
           break
         }
         default:

@@ -93,7 +93,7 @@ async function main() {
             name: args.name,
             objective: args.objective,
             status: args.status || 'PAUSED',
-            special_ad_categories: ['NONE'],
+            special_ad_categories: [],
           }
           result = await api('POST', `/act_${accountId}/campaigns`, body)
           break

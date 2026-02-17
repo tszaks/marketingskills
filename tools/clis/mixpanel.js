@@ -187,9 +187,10 @@ async function main() {
     case 'retention':
       switch (sub) {
         case 'get': {
+          if (!args['from-date'] || !args['to-date']) { result = { error: '--from-date and --to-date required (YYYY-MM-DD)' }; break }
           const params = new URLSearchParams()
-          if (args['from-date']) params.set('from_date', args['from-date'])
-          if (args['to-date']) params.set('to_date', args['to-date'])
+          params.set('from_date', args['from-date'])
+          params.set('to_date', args['to-date'])
           params.set('retention_type', 'birth')
           if (args['born-event']) params.set('born_event', args['born-event'])
           result = await queryApi('GET', QUERY_URL, '/retention', params)
@@ -208,6 +209,7 @@ async function main() {
           const params = new URLSearchParams()
           params.set('from_date', args['from-date'])
           params.set('to_date', args['to-date'])
+          if (args.event) params.set('event', JSON.stringify([args.event]))
           result = await queryApi('GET', EXPORT_URL, '/export', params)
           break
         }
