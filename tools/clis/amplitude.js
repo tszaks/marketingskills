@@ -149,7 +149,7 @@ async function main() {
           params.set('start', args.start)
           params.set('end', args.end)
           if (args.event) {
-            params.set('e', JSON.stringify({ event_type: args.event }))
+            params.set('e', JSON.stringify([{ event_type: args.event }]))
           }
           result = await queryApi('GET', '/retention', params)
           break

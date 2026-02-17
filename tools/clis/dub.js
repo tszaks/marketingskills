@@ -77,10 +77,13 @@ async function main() {
           const params = new URLSearchParams()
           if (args.domain) params.set('domain', args.domain)
           if (args.key) params.set('key', args.key)
-          result = await api('GET', `/links?${params}`)
+          if (args['link-id']) params.set('linkId', args['link-id'])
+          if (args['external-id']) params.set('externalId', args['external-id'])
+          result = await api('GET', `/links/info?${params}`)
           break
         }
         case 'update': {
+          if (!args.id) { result = { error: '--id required (link ID)' }; break }
           const body = {}
           if (args.url) body.url = args.url
           if (args.tags) body.tags = args.tags.split(',')
@@ -88,6 +91,7 @@ async function main() {
           break
         }
         case 'delete':
+          if (!args.id) { result = { error: '--id required (link ID)' }; break }
           result = await api('DELETE', `/links/${args.id}`)
           break
         case 'bulk-create': {

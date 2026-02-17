@@ -60,9 +60,12 @@ async function main() {
         case 'list':
           result = await api('GET', '/affiliates')
           break
-        case 'get':
-          result = await api('GET', `/affiliates/${rest[0]}`)
+        case 'get': {
+          const id = rest[0] || args.id
+          if (!id) { result = { error: 'Affiliate ID required (positional arg or --id)' }; break }
+          result = await api('GET', `/affiliates/${id}`)
           break
+        }
         case 'create': {
           const body = {}
           if (args.email) body.email = args.email
@@ -71,6 +74,7 @@ async function main() {
           break
         }
         case 'update': {
+          if (!args.id) { result = { error: '--id required (affiliate ID)' }; break }
           const body = {}
           if (args['commission-rate']) body.commission_rate = Number(args['commission-rate'])
           if (args['payout-method']) body.payout_method = args['payout-method']

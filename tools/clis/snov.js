@@ -148,10 +148,10 @@ async function main() {
         case 'prospects': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          const params = new URLSearchParams({ listId: id })
-          if (args.page) params.set('page', args.page)
-          if (args['per-page']) params.set('perPage', args['per-page'])
-          result = await api('GET', `/prospect-list?${params.toString()}`)
+          const body = { listId: id }
+          if (args.page) body.page = Number(args.page)
+          if (args['per-page']) body.perPage = Number(args['per-page'])
+          result = await api('POST', '/prospect-list', body)
           break
         }
         default:

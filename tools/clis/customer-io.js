@@ -94,6 +94,7 @@ async function main() {
       switch (sub) {
         case 'identify': {
           const customerId = rest[0] || args.id
+          if (!customerId) { result = { error: 'Customer ID required (positional arg or --id)' }; break }
           const body = {}
           if (args.email) body.email = args.email
           if (args['first-name']) body.first_name = args['first-name']
@@ -106,16 +107,20 @@ async function main() {
         }
         case 'get': {
           const customerId = rest[0] || args.id
+          if (!customerId) { result = { error: 'Customer ID required (positional arg or --id)' }; break }
           result = await appApi('GET', `/customers/${customerId}/attributes`)
           break
         }
         case 'delete': {
           const customerId = rest[0] || args.id
+          if (!customerId) { result = { error: 'Customer ID required (positional arg or --id)' }; break }
           result = await trackApi('DELETE', `/customers/${customerId}`)
           break
         }
         case 'track-event': {
           const customerId = rest[0] || args.id
+          if (!customerId) { result = { error: 'Customer ID required (positional arg or --id)' }; break }
+          if (!args.name) { result = { error: '--name required (event name)' }; break }
           const body = { name: args.name }
           if (args.data) body.data = JSON.parse(args.data)
           result = await trackApi('POST', `/customers/${customerId}/events`, body)
@@ -131,18 +136,26 @@ async function main() {
         case 'list':
           result = await appApi('GET', '/campaigns')
           break
-        case 'get':
-          result = await appApi('GET', `/campaigns/${rest[0]}`)
+        case 'get': {
+          const campaignId = rest[0] || args.id
+          if (!campaignId) { result = { error: 'Campaign ID required (positional arg or --id)' }; break }
+          result = await appApi('GET', `/campaigns/${campaignId}`)
           break
-        case 'metrics':
-          result = await appApi('GET', `/campaigns/${rest[0]}/metrics`)
+        }
+        case 'metrics': {
+          const campaignId = rest[0] || args.id
+          if (!campaignId) { result = { error: 'Campaign ID required (positional arg or --id)' }; break }
+          result = await appApi('GET', `/campaigns/${campaignId}/metrics`)
           break
+        }
         case 'trigger': {
+          const campaignId = rest[0] || args.id
+          if (!campaignId) { result = { error: 'Campaign ID required (positional arg or --id)' }; break }
           const body = {}
           if (args.emails) body.emails = args.emails.split(',')
           if (args.ids) body.ids = args.ids.split(',')
           if (args.data) body.data = JSON.parse(args.data)
-          result = await appApi('POST', `/campaigns/${rest[0]}/triggers`, body)
+          result = await appApi('POST', `/campaigns/${campaignId}/triggers`, body)
           break
         }
         default:

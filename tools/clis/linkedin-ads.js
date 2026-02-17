@@ -76,17 +76,19 @@ async function main() {
         }
         case 'create': {
           if (!args['account-id'] || !args.name) { result = { error: '--account-id and --name required' }; break }
+          if (!args['campaign-group-id']) { result = { error: '--campaign-group-id required' }; break }
           const body = {
             account: `urn:li:sponsoredAccount:${args['account-id']}`,
+            campaignGroup: `urn:li:sponsoredCampaignGroup:${args['campaign-group-id']}`,
             name: args.name,
             type: args.type || 'SPONSORED_UPDATES',
             costType: args['cost-type'] || 'CPC',
             unitCost: {
-              amount: args['unit-cost'] || '5.00',
+              amount: parseFloat(args['unit-cost'] || '5.00'),
               currencyCode: 'USD',
             },
             dailyBudget: {
-              amount: args['daily-budget'] || '100.00',
+              amount: parseFloat(args['daily-budget'] || '100.00'),
               currencyCode: 'USD',
             },
             status: 'PAUSED',

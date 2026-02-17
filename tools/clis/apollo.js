@@ -9,17 +9,16 @@ if (!API_KEY) {
 }
 
 async function api(method, path, body) {
+  const authBody = body ? { ...body, api_key: API_KEY } : { api_key: API_KEY }
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'x-api-key': '***', 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: body || undefined }
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'Content-Type': 'application/json' }, body: { ...authBody, api_key: '***' } }
   }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {
-      'x-api-key': API_KEY,
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
     },
-    body: body ? JSON.stringify(body) : undefined,
+    body: JSON.stringify(authBody),
   })
   const text = await res.text()
   try {
@@ -67,7 +66,7 @@ async function main() {
           if (args.seniorities) body.person_seniorities = args.seniorities.split(',')
           if (args['employee-ranges']) body.organization_num_employees_ranges = args['employee-ranges'].split(',').map(r => r.trim())
           if (args.keywords) body.q_keywords = args.keywords
-          result = await api('POST', '/mixed_people/api_search', body)
+          result = await api('POST', '/mixed_people/search', body)
           break
         }
         case 'enrich': {

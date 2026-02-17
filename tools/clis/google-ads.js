@@ -155,7 +155,7 @@ async function main() {
             operations: [{
               update: {
                 resourceName: `customers/${CUSTOMER_ID}/campaignBudgets/${args.id}`,
-                amountMicros,
+                amount_micros: amountMicros,
               },
               updateMask: 'amount_micros',
             }],

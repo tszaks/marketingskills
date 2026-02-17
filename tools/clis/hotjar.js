@@ -2,7 +2,8 @@
 
 const CLIENT_ID = process.env.HOTJAR_CLIENT_ID
 const CLIENT_SECRET = process.env.HOTJAR_CLIENT_SECRET
-const BASE_URL = 'https://api.hotjar.io/v1'
+const OAUTH_URL = 'https://api.hotjar.io'
+const BASE_URL = 'https://api.hotjar.io/v2'
 
 if (!CLIENT_ID || !CLIENT_SECRET) {
   console.error(JSON.stringify({ error: 'HOTJAR_CLIENT_ID and HOTJAR_CLIENT_SECRET environment variables required' }))
@@ -13,7 +14,7 @@ let cachedToken = null
 
 async function getToken() {
   if (cachedToken) return cachedToken
-  const res = await fetch(`${BASE_URL}/oauth/token`, {
+  const res = await fetch(`${OAUTH_URL}/oauth/token`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: `grant_type=client_credentials&client_id=${encodeURIComponent(CLIENT_ID)}&client_secret=${encodeURIComponent(CLIENT_SECRET)}`,

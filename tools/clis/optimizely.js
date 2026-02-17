@@ -135,7 +135,7 @@ async function main() {
         case 'archive': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('DELETE', `/experiments/${id}`)
+          result = await api('PATCH', `/experiments/${id}`, { status: 'archived' })
           break
         }
         default:

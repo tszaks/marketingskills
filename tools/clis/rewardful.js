@@ -9,13 +9,14 @@ if (!API_KEY) {
 }
 
 async function api(method, path, body) {
+  const auth = 'Basic ' + Buffer.from(`${API_KEY}:`).toString('base64')
   if (args['dry-run']) {
     return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
   }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {
-      'Authorization': `Bearer ${API_KEY}`,
+      'Authorization': auth,
       'Content-Type': 'application/json',
     },
     body: body ? JSON.stringify(body) : undefined,

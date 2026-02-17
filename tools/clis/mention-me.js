@@ -76,10 +76,14 @@ async function main() {
 
     case 'referrals':
       switch (sub) {
-        case 'get':
-          result = await api('GET', `/referral/${rest[0]}`)
+        case 'get': {
+          const refId = rest[0] || args.id
+          if (!refId) { result = { error: 'Referral ID required (positional arg or --id)' }; break }
+          result = await api('GET', `/referral/${refId}`)
           break
+        }
         case 'list': {
+          if (!args['customer-id']) { result = { error: '--customer-id required' }; break }
           result = await api('GET', `/referrer/${args['customer-id']}/referrals`)
           break
         }
@@ -91,6 +95,7 @@ async function main() {
     case 'share-links':
       switch (sub) {
         case 'get':
+          if (!args['customer-id']) { result = { error: '--customer-id required' }; break }
           result = await api('GET', `/referrer/${args['customer-id']}/share-links`)
           break
         default:
@@ -101,9 +106,11 @@ async function main() {
     case 'rewards':
       switch (sub) {
         case 'get':
+          if (!args['customer-id']) { result = { error: '--customer-id required' }; break }
           result = await api('GET', `/referrer/${args['customer-id']}/rewards`)
           break
         case 'redeem': {
+          if (!args['customer-id']) { result = { error: '--customer-id required' }; break }
           const body = {}
           if (args['reward-id']) body.reward_id = args['reward-id']
           if (args['order-number']) body.order_number = args['order-number']

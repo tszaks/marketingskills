@@ -90,7 +90,7 @@ async function main() {
           result = await api('POST', `/webmasters/v3/sites/${encodedSiteUrl}/searchAnalytics/query`, body)
           break
         case 'countries':
-          body.dimensions = ['country', 'query']
+          body.dimensions = ['country']
           result = await api('POST', `/webmasters/v3/sites/${encodedSiteUrl}/searchAnalytics/query`, body)
           break
         default:
@@ -106,6 +106,7 @@ async function main() {
       }
       switch (sub) {
         case 'url':
+          if (!args.url) { result = { error: '--url required (URL to inspect)' }; break }
           result = await api('POST', '/v1/urlInspection/index:inspect', {
             inspectionUrl: args.url,
             siteUrl: siteUrl,
