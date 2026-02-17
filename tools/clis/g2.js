@@ -9,6 +9,9 @@ if (!API_TOKEN) {
 }
 
 async function api(method, path, body) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/vnd.api+json', Accept: 'application/vnd.api+json' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {

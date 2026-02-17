@@ -13,9 +13,13 @@ if (!TOKEN && !API_KEY) {
 }
 
 async function ingestApi(method, path, body) {
+  const headers = { 'Content-Type': 'application/json' }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers, body: body || undefined }
+  }
   const res = await fetch(`${INGESTION_URL}${path}`, {
     method,
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: body ? JSON.stringify(body) : undefined,
   })
   const text = await res.text()
@@ -32,12 +36,16 @@ async function queryApi(method, baseUrl, path, params) {
   }
   const auth = Buffer.from(`${API_KEY}:${SECRET}`).toString('base64')
   const url = params ? `${baseUrl}${path}?${params}` : `${baseUrl}${path}`
+  const headers = {
+    'Authorization': `Basic ${auth}`,
+    'Content-Type': 'application/json',
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url, headers: { ...headers, Authorization: '***' } }
+  }
   const res = await fetch(url, {
     method,
-    headers: {
-      'Authorization': `Basic ${auth}`,
-      'Content-Type': 'application/json',
-    },
+    headers,
   })
   const text = await res.text()
   try {
@@ -52,12 +60,16 @@ async function queryApiPost(path, body) {
     return { error: 'MIXPANEL_API_KEY and MIXPANEL_SECRET required for query/export operations' }
   }
   const auth = Buffer.from(`${API_KEY}:${SECRET}`).toString('base64')
+  const headers = {
+    'Authorization': `Basic ${auth}`,
+    'Content-Type': 'application/json',
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method: 'POST', url: `${QUERY_URL}${path}`, headers: { ...headers, Authorization: '***' }, body: body || undefined }
+  }
   const res = await fetch(`${QUERY_URL}${path}`, {
     method: 'POST',
-    headers: {
-      'Authorization': `Basic ${auth}`,
-      'Content-Type': 'application/json',
-    },
+    headers,
     body: JSON.stringify(body),
   })
   const text = await res.text()

@@ -9,6 +9,9 @@ if (!API_KEY) {
 }
 
 async function api(method, path) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'Authorization': '***', 'Content-Type': 'application/json' } }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {

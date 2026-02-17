@@ -28,6 +28,11 @@ function parseCSV(text) {
 async function api(params) {
   params.set('key', API_KEY)
   params.set('export_escape', '1')
+  if (args['dry-run']) {
+    const maskedParams = new URLSearchParams(params)
+    maskedParams.set('key', '***')
+    return { _dry_run: true, method: 'GET', url: `${BASE_URL}?${maskedParams}`, headers: {}, body: undefined }
+  }
   const res = await fetch(`${BASE_URL}?${params}`)
   const text = await res.text()
   if (!res.ok) {

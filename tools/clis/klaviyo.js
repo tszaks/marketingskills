@@ -10,14 +10,18 @@ if (!API_KEY) {
 }
 
 async function api(method, path, body) {
+  const headers = {
+    'Authorization': `Klaviyo-API-Key ${API_KEY}`,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'revision': REVISION,
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { ...headers, Authorization: '***' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
-    headers: {
-      'Authorization': `Klaviyo-API-Key ${API_KEY}`,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'revision': REVISION,
-    },
+    headers,
     body: body ? JSON.stringify(body) : undefined,
   })
   const text = await res.text()

@@ -11,6 +11,9 @@ if (!ACCESS_TOKEN) {
 }
 
 async function api(method, baseUrl, path, body) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${baseUrl}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${baseUrl}${path}`, {
     method,
     headers: {
@@ -29,6 +32,9 @@ async function api(method, baseUrl, path, body) {
 
 async function mpApi(measurementId, apiSecret, body) {
   const params = new URLSearchParams({ measurement_id: measurementId, api_secret: apiSecret })
+  if (args['dry-run']) {
+    return { _dry_run: true, method: 'POST', url: `${MP_URL}?${new URLSearchParams({ measurement_id: measurementId, api_secret: '***' })}`, headers: { 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${MP_URL}?${params}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

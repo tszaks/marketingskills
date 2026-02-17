@@ -15,13 +15,17 @@ if (!APP_ID) {
 }
 
 async function api(method, path, body) {
+  const headers = {
+    'Authorization': `Basic ${REST_API_KEY}`,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { ...headers, Authorization: '***' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
-    headers: {
-      'Authorization': `Basic ${REST_API_KEY}`,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    },
+    headers,
     body: body ? JSON.stringify(body) : undefined,
   })
   const text = await res.text()

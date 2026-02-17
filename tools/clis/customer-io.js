@@ -21,6 +21,9 @@ async function trackApi(method, path, body) {
   if (!hasTrackAuth) {
     return { error: 'Track API requires CUSTOMERIO_SITE_ID and CUSTOMERIO_API_KEY environment variables' }
   }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${TRACK_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${TRACK_URL}${path}`, {
     method,
     headers: {
@@ -40,6 +43,9 @@ async function trackApi(method, path, body) {
 async function appApi(method, path, body) {
   if (!hasAppAuth) {
     return { error: 'App API requires CUSTOMERIO_APP_KEY environment variable' }
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${APP_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
   }
   const res = await fetch(`${APP_URL}${path}`, {
     method,

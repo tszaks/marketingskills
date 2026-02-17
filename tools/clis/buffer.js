@@ -16,6 +16,9 @@ async function api(method, path, body) {
   if (body && method !== 'GET') {
     headers['Content-Type'] = 'application/x-www-form-urlencoded'
   }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { ...headers, 'Authorization': '***' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers,
@@ -30,6 +33,9 @@ async function api(method, path, body) {
 }
 
 async function apiJson(method, path, body) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { 'Authorization': '***', 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {
@@ -155,6 +161,10 @@ async function main() {
           if (args.now) formBody.append('now', 'true')
           if (args.top) formBody.append('top', 'true')
           if (args.shorten) formBody.append('shorten', 'true')
+          if (args['dry-run']) {
+            result = { _dry_run: true, method: 'POST', url: `${BASE_URL}/updates/create.json`, headers: { 'Authorization': '***', 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }, body: formBody.toString() }
+            break
+          }
           const res = await fetch(`${BASE_URL}/updates/create.json`, {
             method: 'POST',
             headers: {
@@ -197,6 +207,10 @@ async function main() {
           if (!order) { result = { error: '--order required (comma-separated update IDs)' }; break }
           const formBody = new URLSearchParams()
           order.split(',').forEach(uid => formBody.append('order[]', uid.trim()))
+          if (args['dry-run']) {
+            result = { _dry_run: true, method: 'POST', url: `${BASE_URL}/profiles/${id}/updates/reorder.json`, headers: { 'Authorization': '***', 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }, body: formBody.toString() }
+            break
+          }
           const res = await fetch(`${BASE_URL}/profiles/${id}/updates/reorder.json`, {
             method: 'POST',
             headers: {

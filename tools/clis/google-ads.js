@@ -11,6 +11,9 @@ if (!TOKEN || !DEV_TOKEN || !CUSTOMER_ID) {
 }
 
 async function api(method, path, body) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'developer-token': '***', 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {

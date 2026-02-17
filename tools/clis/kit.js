@@ -31,6 +31,18 @@ async function api(method, path, body, useSecret = true) {
     }
     opts.body = JSON.stringify(authBody)
   }
+  if (args['dry-run']) {
+    const dryRunHeaders = { ...opts.headers }
+    const dryRunUrl = url.toString().replace(API_SECRET, '***').replace(API_KEY, '***')
+    let dryRunBody = undefined
+    if (opts.body) {
+      const parsed = JSON.parse(opts.body)
+      if (parsed.api_secret) parsed.api_secret = '***'
+      if (parsed.api_key) parsed.api_key = '***'
+      dryRunBody = parsed
+    }
+    return { _dry_run: true, method, url: dryRunUrl, headers: dryRunHeaders, body: dryRunBody }
+  }
   const res = await fetch(url.toString(), opts)
   const text = await res.text()
   try {

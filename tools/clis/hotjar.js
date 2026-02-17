@@ -27,6 +27,9 @@ async function getToken() {
 }
 
 async function api(method, path) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json', Accept: 'application/json' } }
+  }
   const token = await getToken()
   const res = await fetch(`${BASE_URL}${path}`, {
     method,

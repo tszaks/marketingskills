@@ -14,6 +14,9 @@ async function trackApi(method, path, body) {
   if (!WRITE_KEY) {
     return { error: 'SEGMENT_WRITE_KEY required for tracking operations' }
   }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${TRACKING_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const auth = Buffer.from(`${WRITE_KEY}:`).toString('base64')
   const res = await fetch(`${TRACKING_URL}${path}`, {
     method,
@@ -34,6 +37,9 @@ async function trackApi(method, path, body) {
 async function profileApi(method, path) {
   if (!ACCESS_TOKEN) {
     return { error: 'SEGMENT_ACCESS_TOKEN required for profile operations' }
+  }
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${PROFILE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' } }
   }
   const auth = Buffer.from(`${ACCESS_TOKEN}:`).toString('base64')
   const res = await fetch(`${PROFILE_URL}${path}`, {

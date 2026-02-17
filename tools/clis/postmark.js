@@ -9,6 +9,15 @@ if (!API_KEY) {
 }
 
 async function api(method, path, body, useAccountToken) {
+  if (args['dry-run']) {
+    const maskedHeaders = { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+    if (useAccountToken) {
+      maskedHeaders['X-Postmark-Account-Token'] = '***'
+    } else {
+      maskedHeaders['X-Postmark-Server-Token'] = '***'
+    }
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: maskedHeaders, body: body || undefined }
+  }
   const headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',

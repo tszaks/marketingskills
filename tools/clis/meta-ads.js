@@ -17,6 +17,10 @@ async function api(method, path, body) {
     opts.headers['Content-Type'] = 'application/json'
     opts.body = JSON.stringify(body)
   }
+  if (args['dry-run']) {
+    const dryRunUrl = url.replace(TOKEN, '***')
+    return { _dry_run: true, method, url: dryRunUrl, headers: opts.headers, body: body || undefined }
+  }
   const res = await fetch(url, opts)
   const text = await res.text()
   try {

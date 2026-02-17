@@ -11,6 +11,9 @@ if (!API_KEY) {
 }
 
 async function ingestApi(method, path, body) {
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers: { 'Content-Type': 'application/json' }, body: body || undefined }
+  }
   const res = await fetch(`${INGESTION_URL}${path}`, {
     method,
     headers: { 'Content-Type': 'application/json' },
@@ -28,8 +31,11 @@ async function queryApi(method, path, params) {
   if (!SECRET_KEY) {
     return { error: 'AMPLITUDE_SECRET_KEY required for query/export operations' }
   }
-  const auth = Buffer.from(`${API_KEY}:${SECRET_KEY}`).toString('base64')
   const url = params ? `${QUERY_URL}${path}?${params}` : `${QUERY_URL}${path}`
+  if (args['dry-run']) {
+    return { _dry_run: true, method, url, headers: { 'Authorization': '***', 'Content-Type': 'application/json' } }
+  }
+  const auth = Buffer.from(`${API_KEY}:${SECRET_KEY}`).toString('base64')
   const res = await fetch(url, {
     method,
     headers: {
