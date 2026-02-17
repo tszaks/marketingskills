@@ -20,28 +20,51 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | posthog | Analytics | ✓ | - | ✓ | ✓ | [posthog.md](integrations/posthog.md) |
 | segment | Analytics | ✓ | - | [✓](clis/segment.js) | ✓ | [segment.md](integrations/segment.md) |
 | adobe-analytics | Analytics | ✓ | - | [✓](clis/adobe-analytics.js) | ✓ | [adobe-analytics.md](integrations/adobe-analytics.md) |
+| plausible | Analytics | ✓ | - | [✓](clis/plausible.js) | - | [plausible.md](integrations/plausible.md) |
 | google-search-console | SEO | ✓ | - | [✓](clis/google-search-console.js) | ✓ | [google-search-console.md](integrations/google-search-console.md) |
 | semrush | SEO | ✓ | - | [✓](clis/semrush.js) | - | [semrush.md](integrations/semrush.md) |
 | ahrefs | SEO | ✓ | - | [✓](clis/ahrefs.js) | - | [ahrefs.md](integrations/ahrefs.md) |
 | dataforseo | SEO | ✓ | - | [✓](clis/dataforseo.js) | ✓ | [dataforseo.md](integrations/dataforseo.md) |
 | keywords-everywhere | SEO | ✓ | - | [✓](clis/keywords-everywhere.js) | - | [keywords-everywhere.md](integrations/keywords-everywhere.md) |
+| clearbit | Data Enrichment | ✓ | - | [✓](clis/clearbit.js) | ✓ | [clearbit.md](integrations/clearbit.md) |
+| apollo | Data Enrichment | ✓ | - | [✓](clis/apollo.js) | - | [apollo.md](integrations/apollo.md) |
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
+| paddle | Payments | ✓ | - | [✓](clis/paddle.js) | ✓ | [paddle.md](integrations/paddle.md) |
 | rewardful | Referral | ✓ | - | [✓](clis/rewardful.js) | - | [rewardful.md](integrations/rewardful.md) |
 | tolt | Referral | ✓ | - | [✓](clis/tolt.js) | - | [tolt.md](integrations/tolt.md) |
 | dub-co | Links | ✓ | - | [✓](clis/dub.js) | ✓ | [dub-co.md](integrations/dub-co.md) |
 | mention-me | Referral | ✓ | - | [✓](clis/mention-me.js) | - | [mention-me.md](integrations/mention-me.md) |
+| partnerstack | Affiliate | ✓ | - | [✓](clis/partnerstack.js) | - | [partnerstack.md](integrations/partnerstack.md) |
 | mailchimp | Email | ✓ | ✓ | [✓](clis/mailchimp.js) | ✓ | [mailchimp.md](integrations/mailchimp.md) |
 | customer-io | Email | ✓ | - | [✓](clis/customer-io.js) | ✓ | [customer-io.md](integrations/customer-io.md) |
 | sendgrid | Email | ✓ | - | [✓](clis/sendgrid.js) | ✓ | [sendgrid.md](integrations/sendgrid.md) |
 | resend | Email | ✓ | ✓ | [✓](clis/resend.js) | ✓ | [resend.md](integrations/resend.md) |
 | kit | Email | ✓ | - | [✓](clis/kit.js) | ✓ | [kit.md](integrations/kit.md) |
+| beehiiv | Newsletter | ✓ | - | [✓](clis/beehiiv.js) | - | [beehiiv.md](integrations/beehiiv.md) |
+| klaviyo | Email/SMS | ✓ | - | [✓](clis/klaviyo.js) | ✓ | [klaviyo.md](integrations/klaviyo.md) |
+| postmark | Email | ✓ | - | [✓](clis/postmark.js) | ✓ | [postmark.md](integrations/postmark.md) |
+| brevo | Email/SMS | ✓ | - | [✓](clis/brevo.js) | ✓ | [brevo.md](integrations/brevo.md) |
+| activecampaign | Email/CRM | ✓ | - | [✓](clis/activecampaign.js) | ✓ | [activecampaign.md](integrations/activecampaign.md) |
 | google-ads | Ads | ✓ | ✓ | [✓](clis/google-ads.js) | ✓ | [google-ads.md](integrations/google-ads.md) |
 | meta-ads | Ads | ✓ | - | [✓](clis/meta-ads.js) | ✓ | [meta-ads.md](integrations/meta-ads.md) |
 | linkedin-ads | Ads | ✓ | - | [✓](clis/linkedin-ads.js) | - | [linkedin-ads.md](integrations/linkedin-ads.md) |
 | tiktok-ads | Ads | ✓ | - | [✓](clis/tiktok-ads.js) | ✓ | [tiktok-ads.md](integrations/tiktok-ads.md) |
 | zapier | Automation | ✓ | ✓ | [✓](clis/zapier.js) | - | [zapier.md](integrations/zapier.md) |
+| hotjar | CRO | ✓ | - | [✓](clis/hotjar.js) | - | [hotjar.md](integrations/hotjar.md) |
+| optimizely | A/B Testing | ✓ | - | [✓](clis/optimizely.js) | ✓ | [optimizely.md](integrations/optimizely.md) |
+| calendly | Scheduling | ✓ | - | [✓](clis/calendly.js) | - | [calendly.md](integrations/calendly.md) |
+| savvycal | Scheduling | ✓ | - | [✓](clis/savvycal.js) | - | [savvycal.md](integrations/savvycal.md) |
+| typeform | Forms | ✓ | - | [✓](clis/typeform.js) | ✓ | [typeform.md](integrations/typeform.md) |
+| intercom | Messaging | ✓ | - | [✓](clis/intercom.js) | ✓ | [intercom.md](integrations/intercom.md) |
+| buffer | Social | ✓ | - | [✓](clis/buffer.js) | - | [buffer.md](integrations/buffer.md) |
+| wistia | Video | ✓ | - | [✓](clis/wistia.js) | - | [wistia.md](integrations/wistia.md) |
+| trustpilot | Reviews | ✓ | - | [✓](clis/trustpilot.js) | - | [trustpilot.md](integrations/trustpilot.md) |
+| g2 | Reviews | ✓ | - | [✓](clis/g2.js) | - | [g2.md](integrations/g2.md) |
+| onesignal | Push | ✓ | - | [✓](clis/onesignal.js) | ✓ | [onesignal.md](integrations/onesignal.md) |
+| demio | Webinar | ✓ | - | [✓](clis/demio.js) | - | [demio.md](integrations/demio.md) |
+| livestorm | Webinar | ✓ | - | [✓](clis/livestorm.js) | - | [livestorm.md](integrations/livestorm.md) |
 | shopify | Commerce | ✓ | - | ✓ | ✓ | [shopify.md](integrations/shopify.md) |
 | wordpress | CMS | ✓ | - | ✓ | ✓ | [wordpress.md](integrations/wordpress.md) |
 | webflow | CMS | ✓ | - | ✓ | ✓ | [webflow.md](integrations/webflow.md) |
@@ -62,8 +85,9 @@ Track user behavior, measure conversions, and analyze marketing performance.
 | **posthog** | Open-source analytics, session replay | - |
 | **segment** | Customer data platform, routing | - |
 | **adobe-analytics** | Enterprise analytics | - |
+| **plausible** | Privacy-focused analytics | - |
 
-**Agent recommendation**: Start with GA4 if using Google ecosystem. Use Mixpanel or Amplitude for deeper product analytics.
+**Agent recommendation**: Start with GA4 if using Google ecosystem. Use Mixpanel or Amplitude for deeper product analytics. Plausible for privacy-focused sites.
 
 ### SEO
 
@@ -98,7 +122,9 @@ Payment processing and subscription management.
 |------|----------|:-------------:|
 | **stripe** | SaaS subscriptions, developer-friendly | ✓ |
 
-**Agent recommendation**: Stripe is the default for SaaS and developer-focused products.
+| **paddle** | SaaS billing with tax handling | - |
+
+**Agent recommendation**: Stripe is the default for SaaS. Paddle for built-in tax compliance.
 
 ### Referral & Affiliate
 
@@ -110,8 +136,9 @@ Tools for referral programs, affiliate tracking, and partner management.
 | **tolt** | SaaS affiliate programs | ✓ |
 | **mention-me** | Enterprise referral programs | ✓ |
 | **dub-co** | Link tracking, attribution | - |
+| **partnerstack** | Enterprise partner programs | ✓ |
 
-**Agent recommendation**: Rewardful or Tolt for Stripe-based SaaS. Dub.co for link attribution.
+**Agent recommendation**: Rewardful or Tolt for Stripe-based SaaS. PartnerStack for enterprise partner programs. Dub.co for link attribution.
 
 ### Email
 
@@ -124,8 +151,13 @@ Email marketing, transactional email, and automation platforms.
 | **sendgrid** | Transactional email at scale | - |
 | **resend** | Developer-friendly transactional | ✓ |
 | **kit** | Creator/newsletter focused | - |
+| **beehiiv** | Newsletter platform | - |
+| **klaviyo** | E-commerce email + SMS | - |
+| **postmark** | Deliverability-focused transactional | - |
+| **brevo** | Email + SMS, popular in EU | - |
+| **activecampaign** | Email automation + CRM | - |
 
-**Agent recommendation**: Resend for transactional (dev-friendly). Customer.io for advanced automation. Kit for creators.
+**Agent recommendation**: Resend for transactional (dev-friendly). Postmark for deliverability. Customer.io for advanced automation. Kit for creators. Beehiiv for newsletters. Klaviyo for e-commerce email/SMS. ActiveCampaign for email + CRM combo.
 
 ### Advertising
 
@@ -149,6 +181,111 @@ Workflow automation and integration platforms.
 | **zapier** | No-code integrations | ✓ |
 
 **Agent recommendation**: Zapier for connecting tools without code.
+
+### CRO & A/B Testing
+
+Conversion rate optimization, heatmaps, and experimentation.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **hotjar** | Heatmaps, recordings, surveys | Visual behavior data |
+| **optimizely** | A/B testing, feature flags | Enterprise experimentation |
+
+**Agent recommendation**: Hotjar for understanding user behavior. Optimizely for running experiments.
+
+### Scheduling
+
+Booking and appointment scheduling tools.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **calendly** | Meeting scheduling, lead gen | Most popular |
+| **savvycal** | Personalized scheduling | Developer-friendly |
+
+**Agent recommendation**: Calendly for general use. SavvyCal for personalized booking experiences.
+
+### Forms & Surveys
+
+Form builders and survey platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **typeform** | Interactive forms, surveys | Conversational UX |
+
+**Agent recommendation**: Typeform for engaging forms and surveys.
+
+### Messaging
+
+In-app messaging, chat, and customer communication.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **intercom** | In-app messaging, support, product tours | Full customer platform |
+
+**Agent recommendation**: Intercom for in-app messaging and customer support.
+
+### Social Media
+
+Social media scheduling, management, and analytics.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **buffer** | Social scheduling, analytics | Multi-platform |
+
+**Agent recommendation**: Buffer for scheduling and analytics across social platforms.
+
+### Video
+
+Video hosting, analytics, and engagement.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **wistia** | Video hosting, marketing analytics | Best for marketing video |
+
+**Agent recommendation**: Wistia for marketing video hosting with analytics.
+
+### Data Enrichment
+
+Company and person data enrichment for sales and marketing.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **clearbit** | Company/person enrichment | Now HubSpot Breeze |
+| **apollo** | B2B prospecting, email finding | Large database |
+
+**Agent recommendation**: Clearbit for enrichment. Apollo for prospecting and outbound.
+
+### Reviews
+
+Review management and social proof platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **trustpilot** | Consumer business reviews | Most recognized |
+| **g2** | Software/B2B reviews | Best for SaaS |
+
+**Agent recommendation**: Trustpilot for consumer products. G2 for B2B software.
+
+### Push Notifications
+
+Push notification delivery platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **onesignal** | Multi-channel push notifications | Web + mobile |
+
+**Agent recommendation**: OneSignal for web and mobile push notifications.
+
+### Webinar
+
+Webinar and virtual event platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **demio** | Marketing webinars | Simple, focused |
+| **livestorm** | Video engagement, webinars | Full event platform |
+
+**Agent recommendation**: Demio for marketing-focused webinars. Livestorm for full event engagement.
 
 ### Commerce & CMS
 
