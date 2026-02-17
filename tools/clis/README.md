@@ -88,6 +88,15 @@ Every CLI reads credentials from environment variables:
 | `wistia` | `WISTIA_API_KEY` |
 | `zapier` | `ZAPIER_API_KEY` |
 
+## Security
+
+**Never hardcode API keys or tokens in scripts.** All CLIs read credentials exclusively from environment variables.
+
+- Store keys in your shell profile (`~/.zshrc`, `~/.bashrc`) or a `.env` file
+- The `.env` file is gitignored — but double-check before committing
+- Use `--dry-run` on any command to preview the request without sending it (credentials are masked as `***`)
+- If you fork this repo, audit your commits to ensure no secrets are included
+
 ## Command Pattern
 
 All CLIs follow the same structure:
