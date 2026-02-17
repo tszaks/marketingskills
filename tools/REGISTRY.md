@@ -23,6 +23,8 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | google-search-console | SEO | ✓ | - | [✓](clis/google-search-console.js) | ✓ | [google-search-console.md](integrations/google-search-console.md) |
 | semrush | SEO | ✓ | - | [✓](clis/semrush.js) | - | [semrush.md](integrations/semrush.md) |
 | ahrefs | SEO | ✓ | - | [✓](clis/ahrefs.js) | - | [ahrefs.md](integrations/ahrefs.md) |
+| dataforseo | SEO | ✓ | - | [✓](clis/dataforseo.js) | ✓ | [dataforseo.md](integrations/dataforseo.md) |
+| keywords-everywhere | SEO | ✓ | - | [✓](clis/keywords-everywhere.js) | - | [keywords-everywhere.md](integrations/keywords-everywhere.md) |
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
@@ -72,8 +74,10 @@ Search engine optimization tools for keyword research, rank tracking, and site a
 | **google-search-console** | Free, authoritative search data | Direct from Google |
 | **semrush** | Competitive analysis, keyword research | Comprehensive |
 | **ahrefs** | Backlink analysis, content research | Best for links |
+| **dataforseo** | SERP tracking, backlinks, on-page audits | Comprehensive API |
+| **keywords-everywhere** | Quick keyword research, traffic estimates | Credit-based |
 
-**Agent recommendation**: Google Search Console is essential (free). Add Semrush or Ahrefs for competitive research.
+**Agent recommendation**: Google Search Console is essential (free). Add Semrush or Ahrefs for competitive research. DataForSEO for programmatic SERP data. Keywords Everywhere for quick keyword lookups.
 
 ### CRM
 

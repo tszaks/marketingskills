@@ -40,10 +40,12 @@ Every CLI reads credentials from environment variables:
 | `adobe-analytics` | `ADOBE_CLIENT_ID`, `ADOBE_ACCESS_TOKEN` |
 | `amplitude` | `AMPLITUDE_API_KEY`, `AMPLITUDE_SECRET_KEY` |
 | `customer-io` | `CUSTOMERIO_APP_KEY` (App API), `CUSTOMERIO_SITE_ID` + `CUSTOMERIO_API_KEY` (Track API) |
+| `dataforseo` | `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD` |
 | `dub` | `DUB_API_KEY` |
 | `ga4` | `GA4_ACCESS_TOKEN` |
 | `google-ads` | `GOOGLE_ADS_TOKEN`, `GOOGLE_ADS_DEVELOPER_TOKEN` |
 | `google-search-console` | `GSC_ACCESS_TOKEN` |
+| `keywords-everywhere` | `KEYWORDS_EVERYWHERE_API_KEY` |
 | `kit` | `KIT_API_KEY`, `KIT_API_SECRET` |
 | `linkedin-ads` | `LINKEDIN_ACCESS_TOKEN` |
 | `mailchimp` | `MAILCHIMP_API_KEY` |
@@ -104,6 +106,8 @@ DOMAINS=$(rewardful affiliates list | jq -r '.data[].email')
 | `ahrefs.js` | SEO | [Ahrefs](https://ahrefs.com) |
 | `semrush.js` | SEO | [SEMrush](https://semrush.com) |
 | `google-search-console.js` | SEO | [Google Search Console](https://search.google.com/search-console) |
+| `dataforseo.js` | SEO | [DataForSEO](https://dataforseo.com) |
+| `keywords-everywhere.js` | SEO | [Keywords Everywhere](https://keywordseverywhere.com) |
 | `ga4.js` | Analytics | [Google Analytics 4](https://analytics.google.com) |
 | `mixpanel.js` | Analytics | [Mixpanel](https://mixpanel.com) |
 | `amplitude.js` | Analytics | [Amplitude](https://amplitude.com) |
