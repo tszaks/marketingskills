@@ -7,6 +7,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ab-test-setup | 1.0.0 | 2026-01-27 |
 | ad-creative | 1.0.0 | 2026-02-17 |
 | analytics-tracking | 1.0.0 | 2026-01-27 |
+| churn-prevention | 1.0.0 | 2026-02-18 |
 | cold-email | 1.0.0 | 2026-02-14 |
 | competitor-alternatives | 1.0.0 | 2026-01-27 |
 | content-strategy | 1.0.0 | 2026-01-27 |
@@ -33,6 +34,9 @@ Current versions of all skills. Agents can compare against local versions to che
 | social-content | 1.0.0 | 2026-01-27 |
 
 ## Recent Changes
+
+### 2026-02-18
+- Added `churn-prevention` skill for cancel flows, save offers, dunning, and payment recovery
 
 ### 2026-02-17
 - Added `ad-creative` skill for bulk ad creative generation and performance-based iteration
