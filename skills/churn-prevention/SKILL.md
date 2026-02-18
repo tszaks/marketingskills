@@ -360,6 +360,8 @@ Test one variable at a time:
 | Offer presentation (modal vs full page) | Full page gets more attention | Save rate |
 | Copy tone (empathetic vs direct) | Empathetic reduces friction | Save rate |
 
+**How to run cancel flow experiments:** Use the **ab-test-setup** skill to design statistically rigorous tests. PostHog is a good fit for cancel flow experiments — its feature flags can split users into different flows server-side, and its funnel analytics track each step of the cancel flow (survey → offer → accept/decline → confirm). See the [PostHog integration guide](../../tools/integrations/posthog.md) for setup.
+
 ---
 
 ## Common Mistakes
@@ -406,6 +408,7 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md).
 |------|---------|
 | `stripe` | Subscription management, dunning config, payment retries |
 | `customer-io` | Dunning email sequences, retention campaigns |
+| `posthog` | Cancel flow A/B tests via feature flags, funnel analytics |
 | `mixpanel` / `ga4` | Usage tracking, churn signal analysis |
 | `segment` | Event routing for health scoring |
 
