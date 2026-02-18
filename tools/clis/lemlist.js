@@ -112,7 +112,7 @@ async function main() {
         case 'get': {
           if (!args['campaign-id']) { result = { error: '--campaign-id required' }; break }
           if (!args.email) { result = { error: '--email required' }; break }
-          result = await api('GET', `/campaigns/${args['campaign-id']}/leads/${args.email}`)
+          result = await api('GET', `/campaigns/${args['campaign-id']}/leads/${encodeURIComponent(args.email)}`)
           break
         }
         case 'add': {
@@ -122,13 +122,13 @@ async function main() {
           if (args['first-name']) body.firstName = args['first-name']
           if (args['last-name']) body.lastName = args['last-name']
           if (args.company) body.companyName = args.company
-          result = await api('POST', `/campaigns/${args['campaign-id']}/leads/${args.email}`, body)
+          result = await api('POST', `/campaigns/${args['campaign-id']}/leads/${encodeURIComponent(args.email)}`, body)
           break
         }
         case 'delete': {
           if (!args['campaign-id']) { result = { error: '--campaign-id required' }; break }
           if (!args.email) { result = { error: '--email required' }; break }
-          result = await api('DELETE', `/campaigns/${args['campaign-id']}/leads/${args.email}`)
+          result = await api('DELETE', `/campaigns/${args['campaign-id']}/leads/${encodeURIComponent(args.email)}`)
           break
         }
         default:
@@ -147,12 +147,12 @@ async function main() {
         }
         case 'add': {
           if (!args.email) { result = { error: '--email required' }; break }
-          result = await api('POST', `/unsubscribes/${args.email}`)
+          result = await api('POST', `/unsubscribes/${encodeURIComponent(args.email)}`)
           break
         }
         case 'delete': {
           if (!args.email) { result = { error: '--email required' }; break }
-          result = await api('DELETE', `/unsubscribes/${args.email}`)
+          result = await api('DELETE', `/unsubscribes/${encodeURIComponent(args.email)}`)
           break
         }
         default:

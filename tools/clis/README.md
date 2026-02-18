@@ -37,7 +37,7 @@ Every CLI reads credentials from environment variables:
 | CLI | Environment Variable |
 |-----|---------------------|
 | `activecampaign` | `ACTIVECAMPAIGN_API_KEY`, `ACTIVECAMPAIGN_API_URL` |
-| `adobe-analytics` | `ADOBE_CLIENT_ID`, `ADOBE_ACCESS_TOKEN` |
+| `adobe-analytics` | `ADOBE_ACCESS_TOKEN`, `ADOBE_CLIENT_ID`, `ADOBE_COMPANY_ID` |
 | `ahrefs` | `AHREFS_API_KEY` |
 | `amplitude` | `AMPLITUDE_API_KEY`, `AMPLITUDE_SECRET_KEY` |
 | `apollo` | `APOLLO_API_KEY` |
@@ -52,7 +52,7 @@ Every CLI reads credentials from environment variables:
 | `dub` | `DUB_API_KEY` |
 | `g2` | `G2_API_TOKEN` |
 | `ga4` | `GA4_ACCESS_TOKEN` |
-| `google-ads` | `GOOGLE_ADS_TOKEN`, `GOOGLE_ADS_DEVELOPER_TOKEN` |
+| `google-ads` | `GOOGLE_ADS_TOKEN`, `GOOGLE_ADS_DEVELOPER_TOKEN`, `GOOGLE_ADS_CUSTOMER_ID` |
 | `google-search-console` | `GSC_ACCESS_TOKEN` |
 | `hotjar` | `HOTJAR_CLIENT_ID`, `HOTJAR_CLIENT_SECRET` |
 | `intercom` | `INTERCOM_API_KEY` |
@@ -63,13 +63,13 @@ Every CLI reads credentials from environment variables:
 | `livestorm` | `LIVESTORM_API_TOKEN` |
 | `mailchimp` | `MAILCHIMP_API_KEY` |
 | `mention-me` | `MENTIONME_API_KEY` |
-| `meta-ads` | `META_ACCESS_TOKEN` |
+| `meta-ads` | `META_ACCESS_TOKEN`, `META_AD_ACCOUNT_ID` |
 | `mixpanel` | `MIXPANEL_TOKEN` (ingestion), `MIXPANEL_API_KEY` + `MIXPANEL_SECRET` (query) |
 | `onesignal` | `ONESIGNAL_REST_API_KEY`, `ONESIGNAL_APP_ID` |
 | `optimizely` | `OPTIMIZELY_API_KEY` |
-| `paddle` | `PADDLE_API_KEY` |
+| `paddle` | `PADDLE_API_KEY`, `PADDLE_SANDBOX` (optional) |
 | `partnerstack` | `PARTNERSTACK_PUBLIC_KEY`, `PARTNERSTACK_SECRET_KEY` |
-| `plausible` | `PLAUSIBLE_API_KEY` |
+| `plausible` | `PLAUSIBLE_API_KEY`, `PLAUSIBLE_BASE_URL` (optional, for self-hosted) |
 | `postmark` | `POSTMARK_API_KEY` |
 | `resend` | `RESEND_API_KEY` |
 | `rewardful` | `REWARDFUL_API_KEY` |
@@ -77,7 +77,7 @@ Every CLI reads credentials from environment variables:
 | `segment` | `SEGMENT_WRITE_KEY` (tracking), `SEGMENT_ACCESS_TOKEN` (profile) |
 | `semrush` | `SEMRUSH_API_KEY` |
 | `sendgrid` | `SENDGRID_API_KEY` |
-| `tiktok-ads` | `TIKTOK_ACCESS_TOKEN` |
+| `tiktok-ads` | `TIKTOK_ACCESS_TOKEN`, `TIKTOK_ADVERTISER_ID` |
 | `tolt` | `TOLT_API_KEY` |
 | `trustpilot` | `TRUSTPILOT_API_KEY`, `TRUSTPILOT_API_SECRET`, `TRUSTPILOT_BUSINESS_UNIT_ID` |
 | `typeform` | `TYPEFORM_API_KEY` |

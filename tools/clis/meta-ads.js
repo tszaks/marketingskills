@@ -10,16 +10,17 @@ if (!TOKEN) {
 }
 
 async function api(method, path, body) {
-  const separator = path.includes('?') ? '&' : '?'
-  const url = `${BASE_URL}${path}${separator}access_token=${TOKEN}`
-  const opts = { method, headers: {} }
+  const url = `${BASE_URL}${path}`
+  const opts = {
+    method,
+    headers: { 'Authorization': `Bearer ${TOKEN}` },
+  }
   if (body) {
     opts.headers['Content-Type'] = 'application/json'
     opts.body = JSON.stringify(body)
   }
   if (args['dry-run']) {
-    const dryRunUrl = url.replace(TOKEN, '***')
-    return { _dry_run: true, method, url: dryRunUrl, headers: opts.headers, body: body || undefined }
+    return { _dry_run: true, method, url, headers: { ...opts.headers, Authorization: '***' }, body: body || undefined }
   }
   const res = await fetch(url, opts)
   const text = await res.text()

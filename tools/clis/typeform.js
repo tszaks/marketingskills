@@ -128,7 +128,7 @@ async function main() {
           if (!id) { result = { error: '--id required (form ID)' }; break }
           const responseIds = args['response-ids']
           if (!responseIds) { result = { error: '--response-ids required (comma-separated)' }; break }
-          result = await api('DELETE', `/forms/${id}/responses?included_response_ids=${responseIds}`)
+          result = await api('DELETE', `/forms/${id}/responses?included_response_ids=${encodeURIComponent(responseIds)}`)
           break
         }
         default:

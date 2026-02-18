@@ -122,7 +122,7 @@ async function main() {
         case 'web-links': {
           if (!businessUnitId) { result = { error: '--business-unit or TRUSTPILOT_BUSINESS_UNIT_ID required' }; break }
           const locale = args.locale || 'en-US'
-          result = await api('GET', `/business-units/${businessUnitId}/web-links?locale=${locale}`)
+          result = await api('GET', `/business-units/${businessUnitId}/web-links?locale=${encodeURIComponent(locale)}`)
           break
         }
         default:
@@ -134,10 +134,10 @@ async function main() {
       switch (sub) {
         case 'list': {
           if (!businessUnitId) { result = { error: '--business-unit or TRUSTPILOT_BUSINESS_UNIT_ID required' }; break }
-          const stars = args.stars ? `&stars=${args.stars}` : ''
-          const lang = args.language ? `&language=${args.language}` : ''
-          const orderBy = args['order-by'] || 'createdat.desc'
-          result = await api('GET', `/business-units/${businessUnitId}/reviews?perPage=${limit}&orderBy=${orderBy}${stars}${lang}`)
+          const reviewParams = new URLSearchParams({ perPage: String(limit), orderBy: args['order-by'] || 'createdat.desc' })
+          if (args.stars) reviewParams.set('stars', args.stars)
+          if (args.language) reviewParams.set('language', args.language)
+          result = await api('GET', `/business-units/${businessUnitId}/reviews?${reviewParams}`)
           break
         }
         case 'get': {
@@ -148,8 +148,9 @@ async function main() {
         }
         case 'private': {
           if (!businessUnitId) { result = { error: '--business-unit or TRUSTPILOT_BUSINESS_UNIT_ID required' }; break }
-          const stars = args.stars ? `&stars=${args.stars}` : ''
-          result = await api('GET', `/private/business-units/${businessUnitId}/reviews?perPage=${limit}${stars}`, null, 'bearer')
+          const privateParams = new URLSearchParams({ perPage: String(limit) })
+          if (args.stars) privateParams.set('stars', args.stars)
+          result = await api('GET', `/private/business-units/${businessUnitId}/reviews?${privateParams}`, null, 'bearer')
           break
         }
         case 'latest':

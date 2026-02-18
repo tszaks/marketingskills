@@ -72,7 +72,7 @@ async function main() {
         case 'list': {
           const type = args.type
           let qs = ''
-          if (type) qs = `?type=${type}`
+          if (type) qs = `?type=${encodeURIComponent(type)}`
           result = await api('GET', `/events${qs}`)
           break
         }

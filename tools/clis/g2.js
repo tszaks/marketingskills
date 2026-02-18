@@ -64,7 +64,7 @@ async function main() {
         case 'list': {
           let qs = `?page[size]=${perPage}&page[number]=${page}`
           if (productId) qs += `&filter[product_id]=${productId}`
-          if (args.state) qs += `&filter[state]=${args.state}`
+          if (args.state) qs += `&filter[state]=${encodeURIComponent(args.state)}`
           result = await api('GET', `/survey-responses${qs}`)
           break
         }
@@ -152,8 +152,8 @@ async function main() {
       switch (sub) {
         case 'visitors': {
           let qs = `?page[size]=${perPage}&page[number]=${page}`
-          if (args.start) qs += `&filter[start_date]=${args.start}`
-          if (args.end) qs += `&filter[end_date]=${args.end}`
+          if (args.start) qs += `&filter[start_date]=${encodeURIComponent(args.start)}`
+          if (args.end) qs += `&filter[end_date]=${encodeURIComponent(args.end)}`
           result = await api('GET', `/tracking-events${qs}`)
           break
         }
