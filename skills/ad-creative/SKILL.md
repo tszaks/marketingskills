@@ -117,7 +117,25 @@ For detailed specs and format variations, see [references/platform-specs.md](ref
 
 ---
 
-## Generating Ad Creative
+## Generating Ad Visuals
+
+For image and video ad creative, use generative AI tools and code-based video rendering. See [references/generative-tools.md](references/generative-tools.md) for the complete guide covering:
+
+- **Image generation** — Nano Banana Pro (Gemini), Flux, Ideogram for static ad images
+- **Video generation** — Veo, Kling, Runway, Sora, Higgsfield for video ads
+- **Code-based video** — Remotion for templated, data-driven video at scale
+- **Platform image specs** — Correct dimensions for every ad placement
+- **Cost comparison** — Pricing for 100+ ad variations across tools
+
+**Recommended workflow for scaled production:**
+1. Generate hero creative with AI tools (exploratory, high-quality)
+2. Build Remotion templates based on winning patterns
+3. Batch produce variations with Remotion using data feeds
+4. Iterate — AI for new angles, Remotion for scale
+
+---
+
+## Generating Ad Copy
 
 ### Step 1: Define Your Angles
 
