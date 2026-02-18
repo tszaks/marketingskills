@@ -15,7 +15,12 @@ if (!TOKEN && !API_KEY) {
 async function ingestApi(method, path, body) {
   const headers = { 'Content-Type': 'application/json' }
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers, body: body || undefined }
+    const maskedBody = body ? JSON.parse(JSON.stringify(body)) : undefined
+    if (Array.isArray(maskedBody)) maskedBody.forEach(item => {
+      if (item.properties && item.properties.token) item.properties.token = '***'
+      if (item.$token) item.$token = '***'
+    })
+    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers, body: maskedBody }
   }
   const res = await fetch(`${INGESTION_URL}${path}`, {
     method,

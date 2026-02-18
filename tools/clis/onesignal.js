@@ -16,7 +16,7 @@ if (!APP_ID) {
 
 async function api(method, path, body) {
   const headers = {
-    'Authorization': `Key ${REST_API_KEY}`,
+    'Authorization': `Basic ${REST_API_KEY}`,
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   }

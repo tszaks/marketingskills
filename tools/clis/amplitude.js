@@ -12,7 +12,9 @@ if (!API_KEY) {
 
 async function ingestApi(method, path, body) {
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers: { 'Content-Type': 'application/json' }, body: body || undefined }
+    const maskedBody = body ? JSON.parse(JSON.stringify(body)) : undefined
+    if (maskedBody && maskedBody.api_key) maskedBody.api_key = '***'
+    return { _dry_run: true, method, url: `${INGESTION_URL}${path}`, headers: { 'Content-Type': 'application/json' }, body: maskedBody }
   }
   const res = await fetch(`${INGESTION_URL}${path}`, {
     method,

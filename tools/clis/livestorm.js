@@ -10,7 +10,7 @@ if (!API_TOKEN) {
 
 async function api(method, path, body) {
   const headers = {
-    'Authorization': API_TOKEN,
+    'Authorization': `Bearer ${API_TOKEN}`,
     'Content-Type': 'application/vnd.api+json',
     'Accept': 'application/vnd.api+json',
   }
