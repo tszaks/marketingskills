@@ -381,6 +381,46 @@ Ultra-low latency voice generation built for real-time applications.
 
 ---
 
+### Voicebox (Open Source)
+
+Free, local-first voice synthesis studio powered by Qwen3-TTS. The open-source alternative to ElevenLabs.
+
+**Best for:** Free voice cloning, local/private generation, zero-cost batch production
+**API:** Local REST API at `http://localhost:8000`
+**Pricing:** Free (MIT license). Runs entirely on your machine.
+**Stack:** Tauri (Rust) + React + FastAPI (Python)
+
+**Capabilities:**
+- Voice cloning from short audio samples via Qwen3-TTS
+- Multi-language support (English, Chinese, more planned)
+- Multi-track timeline editor for composing conversations
+- 4-5x faster inference on Apple Silicon via MLX Metal acceleration
+- Local REST API for programmatic generation
+- No cloud dependency — all processing on-device
+
+**Ad creative use cases:**
+- Free voice cloning for brand spokesperson across all ad variations
+- Batch generate voiceovers without per-character costs
+- Private/local generation when ad content is sensitive or pre-launch
+- Prototype voice variations before committing to a paid service
+
+**API example:**
+```bash
+curl -X POST http://localhost:8000/generate \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Stop wasting hours on manual reporting.", "profile_id": "abc123", "language": "en"}'
+```
+
+**Install:** Desktop apps for macOS and Windows at [voicebox.sh](https://voicebox.sh), or build from source:
+```bash
+git clone https://github.com/jamiepine/voicebox.git
+cd voicebox && make setup && make dev
+```
+
+**Docs:** [GitHub](https://github.com/jamiepine/voicebox)
+
+---
+
 ### Other Voice Tools
 
 | Tool | Best For | Differentiator | API |
@@ -405,6 +445,7 @@ Ultra-low latency voice generation built for real-time applications.
 | **PlayHT** | Very good | Yes | 140+ | <300ms | ~$0.10-0.20 |
 | **Fish Audio** | Good | Yes | 13+ | ~200ms | ~$0.05-0.10 |
 | **WellSaid** | Very good | No (actor voices) | English | ~300ms | Custom pricing |
+| **Voicebox** | Good | Yes (local) | 2+ | Local | Free (open source) |
 
 ### Choosing a Voice Tool
 
@@ -417,6 +458,8 @@ Need voiceover for ads?
 ├── Need multilingual (same ad, many languages)?
 │   ├── Most languages → PlayHT (140+)
 │   └── Best quality → ElevenLabs (29+)
+├── Need free / open source / local?
+│   └── Voicebox (MIT, runs on your machine)
 ├── Need cheap, fast, good-enough?
 │   └── OpenAI TTS ($0.015/min)
 ├── Need commercially-safe licensing?
