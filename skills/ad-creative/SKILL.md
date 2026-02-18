@@ -96,13 +96,13 @@ Pull performance data → Identify winning patterns → Generate new variations 
 |---------|-------|-------|
 | Intro text | 150 chars recommended (600 max) | Above the image |
 | Headline | 70 chars recommended (200 max) | Below the image |
-| Description | 100 characters | Appears in some placements |
+| Description | 100 chars recommended (300 max) | Appears in some placements |
 
 ### TikTok Ads
 
 | Element | Limit | Notes |
 |---------|-------|-------|
-| Ad text | 100 characters recommended | Above the video |
+| Ad text | 80 chars recommended (100 max) | Above the video |
 | Display name | 40 characters | Brand name |
 
 ### Twitter/X Ads
@@ -254,10 +254,10 @@ Organize by angle, with character counts:
 ## Angle: [Pain Point — Manual Reporting]
 
 ### Headlines (30 char max)
-1. "Stop Building Reports by Hand" (30)
+1. "Stop Building Reports by Hand" (29)
 2. "Automate Your Weekly Reports" (28)
-3. "Reports Done in 5 Min, Not 5 Hr" (32) <- OVER LIMIT, trimmed below
-   -> "Reports in 5 Min, Not 5 Hours" (30)
+3. "Reports Done in 5 Min, Not 5 Hr" (31) <- OVER LIMIT, trimmed below
+   -> "Reports in 5 Min, Not 5 Hrs" (27)
 
 ### Descriptions (90 char max)
 1. "Marketing teams save 10+ hours/week with automated reporting. Start free." (73)

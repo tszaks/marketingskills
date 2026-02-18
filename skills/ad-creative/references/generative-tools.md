@@ -47,7 +47,7 @@ Google DeepMind's image generation model, available through the Gemini API.
 **API example:**
 ```bash
 # Using the Gemini API for image generation
-curl -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent" \
+curl -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent" \
   -H "Content-Type: application/json" \
   -H "x-goog-api-key: $GEMINI_API_KEY" \
   -d '{
@@ -363,7 +363,7 @@ Ultra-low latency voice generation built for real-time applications.
 
 **Best for:** Real-time voice, lowest latency, emotional expressiveness
 **API:** REST + WebSocket streaming
-**Pricing:** Pay-as-you-go from $0.0085/sec; starts at $5/month
+**Pricing:** Starts at $5/month; pay-as-you-go from $0.03/min
 
 **Capabilities:**
 - 40ms time-to-first-audio (fastest in class)
@@ -401,7 +401,7 @@ Ultra-low latency voice generation built for real-time applications.
 |------|---------|---------|-----------|---------|----------------|
 | **ElevenLabs** | Best | Yes (instant + pro) | 29+ | ~200ms | $0.12-0.30 |
 | **OpenAI TTS** | Good | No | 13+ | ~300ms | $0.015-0.030 |
-| **Cartesia Sonic** | Very good | No | 15+ | ~40ms | ~$0.008/sec |
+| **Cartesia Sonic** | Very good | No | 15+ | ~40ms | ~$0.03/min |
 | **PlayHT** | Very good | Yes | 140+ | <300ms | ~$0.10-0.20 |
 | **Fish Audio** | Good | Yes | 13+ | ~200ms | ~$0.05-0.10 |
 | **WellSaid** | Very good | No (actor voices) | English | ~300ms | Custom pricing |
