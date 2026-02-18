@@ -56,6 +56,7 @@ async function main() {
 
   switch (cmd) {
     case 'send': {
+      if (!args.from || !args.to || !args.subject) { result = { error: '--from, --to, and --subject required' }; break }
       const body = { from: args.from, to: args.to?.split(','), subject: args.subject }
       if (args.html) body.html = args.html
       if (args.text) body.text = args.text
@@ -156,6 +157,7 @@ async function main() {
 
     case 'contacts': {
       const audienceId = sub
+      if (!audienceId) { result = { error: 'Audience ID required as subcommand arg' }; break }
       const action = rest[0]
       const contactId = rest[1]
       switch (action) {
@@ -166,6 +168,7 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[1]) { result = { error: 'Contact ID required' }; break }
           result = await api('GET', `/audiences/${audienceId}/contacts/${contactId}`)
           break
         case 'create': {
@@ -177,6 +180,7 @@ async function main() {
           break
         }
         case 'update': {
+          if (!rest[1]) { result = { error: 'Contact ID required' }; break }
           const body = {}
           if (args['first-name']) body.first_name = args['first-name']
           if (args['last-name']) body.last_name = args['last-name']
@@ -185,6 +189,7 @@ async function main() {
           break
         }
         case 'delete':
+          if (!rest[1]) { result = { error: 'Contact ID required' }; break }
           result = await api('DELETE', `/audiences/${audienceId}/contacts/${contactId}`)
           break
         default:
@@ -216,7 +221,12 @@ async function main() {
       break
 
     case 'batch': {
-      const emails = JSON.parse(args.emails || '[]')
+      let emails
+      try {
+        emails = JSON.parse(args.emails || '[]')
+      } catch (e) {
+        result = { error: 'Invalid JSON for --emails: ' + e.message }; break
+      }
       result = await api('POST', '/emails/batch', emails)
       break
     }
@@ -241,7 +251,9 @@ async function main() {
           if (args.subject) body.subject = args.subject
           if (args['reply-to']) body.reply_to = args['reply-to']
           if (args.text) body.text = args.text
-          if (args.variables) body.variables = JSON.parse(args.variables)
+          if (args.variables) {
+            try { body.variables = JSON.parse(args.variables) } catch (e) { result = { error: 'Invalid JSON for --variables: ' + e.message }; break }
+          }
           result = await api('POST', '/templates', body)
           break
         }
@@ -254,7 +266,9 @@ async function main() {
           if (args.subject) body.subject = args.subject
           if (args['reply-to']) body.reply_to = args['reply-to']
           if (args.text) body.text = args.text
-          if (args.variables) body.variables = JSON.parse(args.variables)
+          if (args.variables) {
+            try { body.variables = JSON.parse(args.variables) } catch (e) { result = { error: 'Invalid JSON for --variables: ' + e.message }; break }
+          }
           result = await api('PATCH', `/templates/${rest[0]}`, body)
           break
         }

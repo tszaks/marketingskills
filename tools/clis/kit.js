@@ -91,12 +91,16 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'Subscriber ID required' }; break }
           result = await api('GET', `/subscribers/${rest[0]}`)
           break
         case 'update': {
+          if (!rest[0]) { result = { error: 'Subscriber ID required' }; break }
           const body = {}
           if (args['first-name']) body.first_name = args['first-name']
-          if (args.fields) body.fields = JSON.parse(args.fields)
+          if (args.fields) {
+            try { body.fields = JSON.parse(args.fields) } catch { result = { error: 'Invalid JSON in --fields' }; break }
+          }
           result = await api('PUT', `/subscribers/${rest[0]}`, body)
           break
         }
@@ -116,10 +120,14 @@ async function main() {
           result = await api('GET', '/forms', null, false)
           break
         case 'subscribe': {
+          if (!rest[0]) { result = { error: 'Form ID required' }; break }
+          if (!args.email) { result = { error: '--email required' }; break }
           const formId = rest[0]
           const body = { email: args.email }
           if (args['first-name']) body.first_name = args['first-name']
-          if (args.fields) body.fields = JSON.parse(args.fields)
+          if (args.fields) {
+            try { body.fields = JSON.parse(args.fields) } catch { result = { error: 'Invalid JSON in --fields' }; break }
+          }
           result = await api('POST', `/forms/${formId}/subscribe`, body, false)
           break
         }
@@ -134,10 +142,14 @@ async function main() {
           result = await api('GET', '/sequences', null, false)
           break
         case 'subscribe': {
+          if (!rest[0]) { result = { error: 'Sequence ID required' }; break }
+          if (!args.email) { result = { error: '--email required' }; break }
           const sequenceId = rest[0]
           const body = { email: args.email }
           if (args['first-name']) body.first_name = args['first-name']
-          if (args.fields) body.fields = JSON.parse(args.fields)
+          if (args.fields) {
+            try { body.fields = JSON.parse(args.fields) } catch { result = { error: 'Invalid JSON in --fields' }; break }
+          }
           result = await api('POST', `/sequences/${sequenceId}/subscribe`, body, false)
           break
         }
@@ -152,16 +164,22 @@ async function main() {
           result = await api('GET', '/tags', null, false)
           break
         case 'subscribe': {
+          if (!rest[0]) { result = { error: 'Tag ID required' }; break }
+          if (!args.email) { result = { error: '--email required' }; break }
           const tagId = rest[0]
           const body = { email: args.email }
           if (args['first-name']) body.first_name = args['first-name']
-          if (args.fields) body.fields = JSON.parse(args.fields)
+          if (args.fields) {
+            try { body.fields = JSON.parse(args.fields) } catch { result = { error: 'Invalid JSON in --fields' }; break }
+          }
           result = await api('POST', `/tags/${tagId}/subscribe`, body, false)
           break
         }
         case 'remove': {
+          if (!rest[0]) { result = { error: 'Tag ID required' }; break }
           const tagId = rest[0]
           const subscriberId = rest[1] || args['subscriber-id']
+          if (!subscriberId) { result = { error: 'Subscriber ID required' }; break }
           result = await api('DELETE', `/subscribers/${subscriberId}/tags/${tagId}`)
           break
         }
@@ -178,6 +196,7 @@ async function main() {
           break
         }
         case 'create': {
+          if (!args.subject || !args.content) { result = { error: '--subject and --content required' }; break }
           const body = {
             subject: args.subject,
             content: args.content,

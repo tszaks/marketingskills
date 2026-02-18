@@ -56,6 +56,7 @@ async function main() {
 
   switch (cmd) {
     case 'send': {
+      if (!args.from || !args.to || !args.subject) { result = { error: '--from, --to, and --subject required' }; break }
       const body = {
         personalizations: [{
           to: args.to.split(',').map(e => ({ email: e.trim() })),
@@ -66,7 +67,7 @@ async function main() {
       if (args['template-id']) {
         body.template_id = args['template-id']
         if (args['template-data']) {
-          body.personalizations[0].dynamic_template_data = JSON.parse(args['template-data'])
+          try { body.personalizations[0].dynamic_template_data = JSON.parse(args['template-data']) } catch (e) { result = { error: 'Invalid JSON for --template-data: ' + e.message }; break }
         }
       } else {
         const content = []
@@ -117,6 +118,7 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'Campaign ID required' }; break }
           result = await api('GET', `/marketing/campaigns/${rest[0]}`)
           break
         default:
@@ -172,6 +174,7 @@ async function main() {
     case 'validate':
       switch (sub) {
         case 'email': {
+          if (!args.email && !rest[0]) { result = { error: '--email required' }; break }
           const body = { email: args.email || rest[0] }
           result = await api('POST', '/validations/email', body)
           break

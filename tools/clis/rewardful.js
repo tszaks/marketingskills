@@ -65,6 +65,7 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'Affiliate ID required' }; break }
           result = await api('GET', `/affiliates/${rest[0]}`)
           break
         case 'search': {
@@ -74,6 +75,7 @@ async function main() {
           break
         }
         case 'update': {
+          if (!rest[0]) { result = { error: 'Affiliate ID required' }; break }
           const body = {}
           if (args['first-name']) body.first_name = args['first-name']
           if (args['last-name']) body.last_name = args['last-name']
@@ -114,6 +116,7 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'Commission ID required' }; break }
           result = await api('GET', `/commissions/${rest[0]}`)
           break
         default:
@@ -124,6 +127,7 @@ async function main() {
     case 'links':
       switch (sub) {
         case 'create': {
+          if (!args['affiliate-id']) { result = { error: '--affiliate-id required' }; break }
           const body = {}
           if (args.token) body.token = args.token
           if (args.url) body.url = args.url

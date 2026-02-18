@@ -129,6 +129,7 @@ async function main() {
           result = await api('GET', `/webmasters/v3/sites/${encodedSiteUrl}/sitemaps`)
           break
         case 'submit': {
+          if (!args['sitemap-url']) { result = { error: '--sitemap-url required' }; break }
           const sitemapUrl = encodeURIComponent(args['sitemap-url'])
           result = await api('PUT', `/webmasters/v3/sites/${encodedSiteUrl}/sitemaps/${sitemapUrl}`)
           if (!result.body && !result.error) {

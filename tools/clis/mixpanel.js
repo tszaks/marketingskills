@@ -118,7 +118,8 @@ async function main() {
           if (!TOKEN) { result = { error: 'MIXPANEL_TOKEN required for tracking' }; break }
           if (!args['distinct-id']) { result = { error: '--distinct-id required' }; break }
           if (!args.event) { result = { error: '--event required' }; break }
-          const properties = args.properties ? JSON.parse(args.properties) : {}
+          let properties
+          try { properties = args.properties ? JSON.parse(args.properties) : {} } catch { result = { error: 'Invalid JSON in --properties' }; break }
           properties.token = TOKEN
           properties.distinct_id = args['distinct-id']
           result = await ingestApi('POST', '/track', [{
@@ -137,7 +138,8 @@ async function main() {
         case 'set': {
           if (!TOKEN) { result = { error: 'MIXPANEL_TOKEN required for profiles' }; break }
           if (!args['distinct-id']) { result = { error: '--distinct-id required' }; break }
-          const properties = args.properties ? JSON.parse(args.properties) : {}
+          let properties
+          try { properties = args.properties ? JSON.parse(args.properties) : {} } catch { result = { error: 'Invalid JSON in --properties' }; break }
           result = await ingestApi('POST', '/engage', [{
             $token: TOKEN,
             $distinct_id: args['distinct-id'],

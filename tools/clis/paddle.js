@@ -203,7 +203,9 @@ async function main() {
           if (!id) { result = { error: '--id required' }; break }
           const body = {}
           if (args['proration-billing-mode']) body.proration_billing_mode = args['proration-billing-mode']
-          if (args['scheduled-change']) body.scheduled_change = JSON.parse(args['scheduled-change'])
+          if (args['scheduled-change']) {
+            try { body.scheduled_change = JSON.parse(args['scheduled-change']) } catch { result = { error: 'Invalid JSON in --scheduled-change' }; break }
+          }
           result = await api('PATCH', `/subscriptions/${id}`, body)
           break
         }
@@ -248,7 +250,9 @@ async function main() {
         case 'create': {
           const items = args.items
           if (!items) { result = { error: '--items required (JSON array of {price_id, quantity})' }; break }
-          const body = { items: JSON.parse(items) }
+          let parsedItems
+          try { parsedItems = JSON.parse(items) } catch { result = { error: 'Invalid JSON in --items' }; break }
+          const body = { items: parsedItems }
           if (args['customer-id']) body.customer_id = args['customer-id']
           result = await api('POST', '/transactions', body)
           break
@@ -304,11 +308,13 @@ async function main() {
           if (!action) { result = { error: '--action required (refund, credit, chargeback)' }; break }
           if (!reason) { result = { error: '--reason required' }; break }
           if (!items) { result = { error: '--items required (JSON array of {item_id, type, amount})' }; break }
+          let parsedItems
+          try { parsedItems = JSON.parse(items) } catch { result = { error: 'Invalid JSON in --items' }; break }
           result = await api('POST', '/adjustments', {
             transaction_id: transactionId,
             action,
             reason,
-            items: JSON.parse(items),
+            items: parsedItems,
           })
           break
         }

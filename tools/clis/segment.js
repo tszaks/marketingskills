@@ -93,7 +93,9 @@ async function main() {
             userId: args['user-id'],
             event: args.event,
           }
-          if (args.properties) body.properties = JSON.parse(args.properties)
+          if (args.properties) {
+            try { body.properties = JSON.parse(args.properties) } catch { result = { error: 'Invalid JSON in --properties' }; break }
+          }
           result = await trackApi('POST', '/track', body)
           break
         }
@@ -107,7 +109,9 @@ async function main() {
         case 'user': {
           if (!args['user-id']) { result = { error: '--user-id required' }; break }
           const body = { userId: args['user-id'] }
-          if (args.traits) body.traits = JSON.parse(args.traits)
+          if (args.traits) {
+            try { body.traits = JSON.parse(args.traits) } catch { result = { error: 'Invalid JSON in --traits' }; break }
+          }
           result = await trackApi('POST', '/identify', body)
           break
         }
@@ -122,7 +126,9 @@ async function main() {
           if (!args['user-id']) { result = { error: '--user-id required' }; break }
           const body = { userId: args['user-id'] }
           if (args.name) body.name = args.name
-          if (args.properties) body.properties = JSON.parse(args.properties)
+          if (args.properties) {
+            try { body.properties = JSON.parse(args.properties) } catch { result = { error: 'Invalid JSON in --properties' }; break }
+          }
           result = await trackApi('POST', '/page', body)
           break
         }
@@ -135,7 +141,8 @@ async function main() {
       switch (sub) {
         case 'send': {
           if (!args.events) { result = { error: '--events required (JSON array)' }; break }
-          const batch = JSON.parse(args.events)
+          let batch
+          try { batch = JSON.parse(args.events) } catch { result = { error: 'Invalid JSON in --events' }; break }
           result = await trackApi('POST', '/batch', { batch })
           break
         }

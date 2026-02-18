@@ -75,6 +75,7 @@ async function main() {
     case 'domain':
       switch (sub) {
         case 'overview': {
+          if (!args.domain) { result = { error: '--domain required' }; break }
           const params = new URLSearchParams({
             type: 'domain_ranks',
             export_columns: 'Db,Dn,Rk,Or,Ot,Oc,Ad,At,Ac',
@@ -84,6 +85,7 @@ async function main() {
           break
         }
         case 'organic': {
+          if (!args.domain) { result = { error: '--domain required' }; break }
           const params = new URLSearchParams({
             type: 'domain_organic',
             export_columns: 'Ph,Po,Pp,Pd,Nq,Cp,Ur,Tr,Tc,Co,Nr',
@@ -95,6 +97,7 @@ async function main() {
           break
         }
         case 'competitors': {
+          if (!args.domain) { result = { error: '--domain required' }; break }
           const params = new URLSearchParams({
             type: 'domain_organic_organic',
             export_columns: 'Dn,Cr,Np,Or,Ot,Oc,Ad',
@@ -113,6 +116,7 @@ async function main() {
     case 'keywords':
       switch (sub) {
         case 'overview': {
+          if (!args.phrase) { result = { error: '--phrase required' }; break }
           const params = new URLSearchParams({
             type: 'phrase_all',
             export_columns: 'Ph,Nq,Cp,Co,Nr',
@@ -123,6 +127,7 @@ async function main() {
           break
         }
         case 'related': {
+          if (!args.phrase) { result = { error: '--phrase required' }; break }
           const params = new URLSearchParams({
             type: 'phrase_related',
             export_columns: 'Ph,Nq,Cp,Co,Nr,Td',
@@ -134,6 +139,7 @@ async function main() {
           break
         }
         case 'difficulty': {
+          if (!args.phrase) { result = { error: '--phrase required' }; break }
           const params = new URLSearchParams({
             type: 'phrase_kdi',
             export_columns: 'Ph,Kd',

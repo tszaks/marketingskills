@@ -58,6 +58,7 @@ async function main() {
     case 'links':
       switch (sub) {
         case 'create': {
+          if (!args.url) { result = { error: '--url required' }; break }
           const body = {}
           if (args.url) body.url = args.url
           if (args.domain) body.domain = args.domain
@@ -95,7 +96,12 @@ async function main() {
           result = await api('DELETE', `/links/${args.id}`)
           break
         case 'bulk-create': {
-          const links = JSON.parse(args.links || '[]')
+          let links
+          try {
+            links = JSON.parse(args.links || '[]')
+          } catch {
+            result = { error: 'Invalid JSON in --links' }; break
+          }
           result = await api('POST', '/links/bulk', links)
           break
         }

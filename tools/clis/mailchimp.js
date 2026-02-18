@@ -69,6 +69,7 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'List ID required' }; break }
           result = await api('GET', `/lists/${rest[0]}`)
           break
         default:
@@ -91,6 +92,8 @@ async function main() {
           break
         }
         case 'add': {
+          if (!rest[0]) { result = { error: 'List ID required' }; break }
+          if (!args.email) { result = { error: '--email required' }; break }
           if (!args['list-id']) {
             result = { error: '--list-id is required for members add' }
             break
@@ -142,9 +145,11 @@ async function main() {
           break
         }
         case 'get':
+          if (!rest[0]) { result = { error: 'Campaign ID required' }; break }
           result = await api('GET', `/campaigns/${rest[0]}`)
           break
         case 'create': {
+          if (!args['list-id']) { result = { error: '--list-id required' }; break }
           const body = {
             type: args.type || 'regular',
             recipients: {
@@ -160,6 +165,7 @@ async function main() {
           break
         }
         case 'send':
+          if (!rest[0]) { result = { error: 'Campaign ID required' }; break }
           result = await api('POST', `/campaigns/${rest[0]}/actions/send`)
           break
         default:
@@ -170,6 +176,7 @@ async function main() {
     case 'reports':
       switch (sub) {
         case 'get':
+          if (!rest[0]) { result = { error: 'Campaign ID required' }; break }
           result = await api('GET', `/reports/${rest[0]}`)
           break
         default:

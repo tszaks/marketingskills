@@ -150,7 +150,14 @@ async function main() {
           if (!args['api-secret']) { result = { error: '--api-secret required' }; break }
           if (!args['client-id']) { result = { error: '--client-id required' }; break }
           if (!args['event-name']) { result = { error: '--event-name required' }; break }
-          const eventParams = args.params ? JSON.parse(args.params) : {}
+          let eventParams = {}
+          if (args.params) {
+            try {
+              eventParams = JSON.parse(args.params)
+            } catch {
+              result = { error: 'Invalid JSON in --params' }; break
+            }
+          }
           const body = {
             client_id: args['client-id'],
             events: [{
