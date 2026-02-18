@@ -10,7 +10,7 @@ Reference for using AI image generators, video generators, and code-based video 
 |------|---------------|----------|
 | Static ad images (banners, social) | Image generation | Nano Banana Pro, Flux, Ideogram |
 | Ad images with text overlays | Image generation (text-capable) | Ideogram, Nano Banana Pro |
-| Short video ads (6-30 sec) | Video generation | Veo, Kling, Runway, Sora |
+| Short video ads (6-30 sec) | Video generation | Veo, Kling, Runway, Sora, Seedance |
 | Product mockups and variations | Image generation + references | Flux (multi-image reference) |
 | Templated video ads at scale | Code-based video | Remotion |
 | Personalized video (name, data) | Code-based video | Remotion |
@@ -217,6 +217,31 @@ OpenAI's video generation model with synchronized audio.
 
 ---
 
+### Seedance 2.0 (ByteDance)
+
+ByteDance's video generation model with simultaneous audio-visual generation and multimodal inputs.
+
+**Best for:** Fast, affordable video ads with native audio, multimodal reference inputs
+**API:** BytePlus (official), Replicate, WaveSpeedAI, fal.ai (third-party); OpenAI-compatible API format
+**Pricing:** ~$0.10-0.80/min depending on resolution (estimated 10-100x cheaper than Sora 2 per clip)
+
+**Capabilities:**
+- Up to 20 seconds at up to 2K resolution
+- Simultaneous audio-visual generation (Dual-Branch Diffusion Transformer)
+- Text-to-video and image-to-video
+- Up to 12 reference files for multimodal input
+- OpenAI-compatible API structure
+
+**Ad creative use cases:**
+- High-volume short video ad production at low cost
+- Video ads with synchronized voiceover and sound effects in one pass
+- Multi-reference generation (feed product images, brand assets, style references)
+- Rapid iteration on video ad concepts
+
+**Docs:** [Seedance](https://seed.bytedance.com/en/seedance2_0)
+
+---
+
 ### Higgsfield
 
 Full-stack video creation platform with cinematic camera controls.
@@ -246,6 +271,7 @@ Full-stack video creation platform with cinematic camera controls.
 | **Kling 2.6** | 3 min | Native | 1080p | Third-party | Longer cinematic |
 | **Runway Gen-4** | 10 sec | No | 1080p | Official | Controlled, consistent |
 | **Sora 2** | 60 sec | Native | 1080p | Official | Dialogue-heavy |
+| **Seedance 2.0** | 20 sec | Native | 2K | Official + third-party | Affordable high-volume |
 | **Higgsfield** | Varies | Yes | 1080p | Web-based | Social, mobile-first |
 
 ---
@@ -347,9 +373,10 @@ Need video ads?
 ├── Templated, data-driven (same structure, different data)
 │   └── Use Remotion
 ├── Unique creative from prompts (exploratory)
-│   ├── Need dialogue/voiceover? → Sora 2, Veo 3.1, Kling 2.6
+│   ├── Need dialogue/voiceover? → Sora 2, Veo 3.1, Kling 2.6, Seedance 2.0
 │   ├── Need consistency across scenes? → Runway Gen-4
 │   ├── Need vertical social video? → Veo 3.1 (native 9:16)
+│   ├── Need high volume at low cost? → Seedance 2.0
 │   └── Need cinematic camera work? → Higgsfield, Kling
 └── Both → Use AI gen for hero creative, Remotion for variations
 
