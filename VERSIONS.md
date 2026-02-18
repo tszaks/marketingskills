@@ -33,6 +33,13 @@ Current versions of all skills. Agents can compare against local versions to che
 
 ## Recent Changes
 
+### 2026-02-17
+- Added 51 zero-dependency CLI tools for marketing platforms (`tools/clis/`)
+- Added 31 new integration guides (`tools/integrations/`)
+- Added 4 email outreach CLIs: hunter, snov, lemlist, instantly
+- Security hardening: header auth for meta-ads, URL encoding, input validation
+- All CLIs reviewed via independent codex audit (auth, security, error handling, consistency)
+
 ### 2026-01-27
 - Initial version tracking added
 - Added tools registry with 29 integration guides
