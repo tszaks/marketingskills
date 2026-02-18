@@ -11,6 +11,10 @@ Reference for using AI image generators, video generators, and code-based video 
 | Static ad images (banners, social) | Image generation | Nano Banana Pro, Flux, Ideogram |
 | Ad images with text overlays | Image generation (text-capable) | Ideogram, Nano Banana Pro |
 | Short video ads (6-30 sec) | Video generation | Veo, Kling, Runway, Sora, Seedance |
+| Video ads with voiceover | Video gen + voice | Veo/Sora (native), or Runway + ElevenLabs |
+| Voiceover tracks for ads | Voice generation | ElevenLabs, OpenAI TTS, Cartesia |
+| Multi-language ad versions | Voice generation | ElevenLabs, PlayHT |
+| Brand voice cloning | Voice generation | ElevenLabs, Resemble AI |
 | Product mockups and variations | Image generation + references | Flux (multi-image reference) |
 | Templated video ads at scale | Code-based video | Remotion |
 | Personalized video (name, data) | Code-based video | Remotion |
@@ -273,6 +277,166 @@ Full-stack video creation platform with cinematic camera controls.
 | **Sora 2** | 60 sec | Native | 1080p | Official | Dialogue-heavy |
 | **Seedance 2.0** | 20 sec | Native | 2K | Official + third-party | Affordable high-volume |
 | **Higgsfield** | Varies | Yes | 1080p | Web-based | Social, mobile-first |
+
+---
+
+## Voice & Audio Generation
+
+For layering realistic voiceovers onto video ads, adding narration to product demos, or generating audio for Remotion-rendered videos. These tools turn ad scripts into natural-sounding voice tracks.
+
+### When to Use Voice Tools
+
+Many video generators (Veo, Kling, Sora, Seedance) now include native audio. Use standalone voice tools when you need:
+
+- **Voiceover on silent video** — Runway Gen-4 and Remotion produce silent output
+- **Brand voice consistency** — Clone a specific voice for all ads
+- **Multi-language versions** — Same ad script in 20+ languages
+- **Script iteration** — Re-record voiceover without reshooting video
+- **Precise control** — Exact timing, emotion, and pacing
+
+---
+
+### ElevenLabs
+
+The market leader in realistic voice generation and voice cloning.
+
+**Best for:** Most natural-sounding voiceovers, brand voice cloning, multilingual
+**API:** REST API with streaming support
+**Pricing:** ~$0.12-0.30 per 1,000 characters depending on plan; starts at $5/month
+
+**Capabilities:**
+- 29+ languages with natural accent and intonation
+- Voice cloning from short audio clips (instant) or longer recordings (professional)
+- Emotion and style control
+- Streaming for real-time generation
+- Voice library with hundreds of pre-built voices
+
+**Ad creative use cases:**
+- Generate voiceover tracks for video ads
+- Clone your brand spokesperson's voice for all ad variations
+- Produce the same ad in 10+ languages from one script
+- A/B test different voice styles (authoritative vs. friendly vs. urgent)
+
+**API example:**
+```bash
+curl -X POST "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}" \
+  -H "xi-api-key: $ELEVENLABS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Stop wasting hours on manual reporting. Try DataFlow free for 14 days.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}
+  }' --output voiceover.mp3
+```
+
+**Docs:** [ElevenLabs API](https://elevenlabs.io/docs/api-reference/text-to-speech)
+
+---
+
+### OpenAI TTS
+
+Simple, affordable text-to-speech built into the OpenAI API.
+
+**Best for:** Quick voiceovers, cost-effective at scale, simple integration
+**API:** OpenAI API (same SDK as GPT/DALL-E)
+**Pricing:** $15/million chars (standard), $30/million chars (HD); ~$0.015/min with gpt-4o-mini-tts
+
+**Capabilities:**
+- 13 built-in voices (no custom cloning)
+- Multiple languages
+- Real-time streaming
+- HD quality option
+- Simple API — same SDK you already use for GPT
+
+**Ad creative use cases:**
+- Fast, cheap voiceover for draft/test ad versions
+- High-volume narration at low cost
+- Prototype ad audio before investing in premium voice
+
+**Docs:** [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech)
+
+---
+
+### Cartesia Sonic
+
+Ultra-low latency voice generation built for real-time applications.
+
+**Best for:** Real-time voice, lowest latency, emotional expressiveness
+**API:** REST + WebSocket streaming
+**Pricing:** Pay-as-you-go from $0.0085/sec; starts at $5/month
+
+**Capabilities:**
+- 40ms time-to-first-audio (fastest in class)
+- 15+ languages
+- Nonverbal expressiveness: laughter, breathing, emotional inflections
+- Sonic Turbo for even lower latency
+- Streaming API for real-time generation
+
+**Ad creative use cases:**
+- Real-time ad preview during creative iteration
+- Interactive demo videos with dynamic narration
+- Ads requiring natural laughter, sighs, or emotional reactions
+
+**Docs:** [Cartesia Sonic](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest)
+
+---
+
+### Other Voice Tools
+
+| Tool | Best For | Differentiator | API |
+|------|----------|---------------|-----|
+| **PlayHT** | Large voice library, low latency | 900+ voices, <300ms latency, ultra-realistic | [play.ht](https://play.ht/) |
+| **Resemble AI** | Enterprise voice cloning | On-premise deployment, real-time speech-to-speech | [resemble.ai](https://www.resemble.ai/) |
+| **WellSaid Labs** | Ethical, commercial-safe voices | Voices from compensated actors, safe for commercial use | [wellsaid.io](https://www.wellsaid.io/) |
+| **Fish Audio** | Budget-friendly, emotion control | ~50-70% cheaper than ElevenLabs, emotion tags | [fish.audio](https://fish.audio/) |
+| **Murf AI** | Non-technical teams | Browser-based studio, 200+ voices | [murf.ai](https://murf.ai/) |
+| **Google Cloud TTS** | Google ecosystem, scale | 220+ voices, 40+ languages, enterprise SLAs | [Google TTS](https://cloud.google.com/text-to-speech) |
+| **Amazon Polly** | AWS ecosystem, cost | Neural voices, SSML control, cheap at volume | [Amazon Polly](https://aws.amazon.com/polly/) |
+
+---
+
+### Voice Tool Comparison
+
+| Tool | Quality | Cloning | Languages | Latency | Price/1K chars |
+|------|---------|---------|-----------|---------|----------------|
+| **ElevenLabs** | Best | Yes (instant + pro) | 29+ | ~200ms | $0.12-0.30 |
+| **OpenAI TTS** | Good | No | 13+ | ~300ms | $0.015-0.030 |
+| **Cartesia Sonic** | Very good | No | 15+ | ~40ms | ~$0.008/sec |
+| **PlayHT** | Very good | Yes | 140+ | <300ms | ~$0.10-0.20 |
+| **Fish Audio** | Good | Yes | 13+ | ~200ms | ~$0.05-0.10 |
+| **WellSaid** | Very good | No (actor voices) | English | ~300ms | Custom pricing |
+
+### Choosing a Voice Tool
+
+```
+Need voiceover for ads?
+├── Need to clone a specific brand voice?
+│   ├── Best quality → ElevenLabs
+│   ├── Enterprise/on-premise → Resemble AI
+│   └── Budget-friendly → Fish Audio, PlayHT
+├── Need multilingual (same ad, many languages)?
+│   ├── Most languages → PlayHT (140+)
+│   └── Best quality → ElevenLabs (29+)
+├── Need cheap, fast, good-enough?
+│   └── OpenAI TTS ($0.015/min)
+├── Need commercially-safe licensing?
+│   └── WellSaid Labs (actor-compensated voices)
+└── Need real-time/interactive?
+    └── Cartesia Sonic (40ms TTFA)
+```
+
+### Workflow: Voice + Video
+
+```
+1. Write ad script (use ad-creative skill for copy)
+2. Generate voiceover with ElevenLabs/OpenAI TTS
+3. Generate or render video:
+   a. Silent video from Runway/Remotion → layer voice track
+   b. Or use Veo/Sora/Seedance with native audio (skip separate VO)
+4. Combine with ffmpeg if layering separately:
+   ffmpeg -i video.mp4 -i voiceover.mp3 -c:v copy -c:a aac output.mp4
+5. Generate variations (different scripts, voices, or languages)
+```
 
 ---
 
