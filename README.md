@@ -19,6 +19,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 |-------|-------------|
 | [ab-test-setup](skills/ab-test-setup/) | When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B... |
 | [ad-creative](skills/ad-creative/) | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad... |
+| [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics-tracking](skills/analytics-tracking/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement... |
 | [cold-email](skills/cold-email/) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails,... |
@@ -163,6 +164,7 @@ You can also invoke skills directly:
 
 ### SEO & Discovery
 - `seo-audit` - Technical and on-page SEO
+- `ai-seo` - AI search optimization (AEO, GEO, LLMO)
 - `programmatic-seo` - Scaled page generation
 - `competitor-alternatives` - Comparison and alternative pages
 - `schema-markup` - Structured data
