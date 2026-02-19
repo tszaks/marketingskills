@@ -1,265 +1,152 @@
-# Platform-Specific Ranking Factors
+# How Each AI Platform Picks Sources
 
-How each AI search platform selects sources and what to optimize for each.
+Each AI search platform has its own search index, ranking logic, and content preferences. This guide covers what matters for getting cited on each one.
 
-Sources: Princeton GEO study (KDD 2024), SE Ranking study (129K domains), Ziptie content-answer fit analysis (400K pages).
+Sources cited throughout: Princeton GEO study (KDD 2024), SE Ranking domain authority study, ZipTie content-answer fit analysis.
 
 ---
 
-## Quick Reference
+## The Fundamentals
 
-| Platform | Primary Index | Key Factor | Unique Requirement |
-|----------|--------------|------------|-------------------|
-| **Google AI Overviews** | Google | E-E-A-T + structured data | Knowledge Graph presence |
-| **ChatGPT** | Bing-based web | Domain authority + freshness | Content-answer fit |
-| **Perplexity** | Own + Google | Semantic relevance | FAQ Schema, PDF hosting |
-| **Copilot** | Bing | Bing indexing | Microsoft ecosystem presence |
-| **Claude** | Brave Search | Factual density | Brave Search indexing |
-| **Gemini** | Google | Google index + Knowledge Graph | Structured data |
+Every AI platform shares three baseline requirements:
+
+1. **Your content must be in their index** — Each platform uses a different search backend (Google, Bing, Brave, or their own). If you're not indexed, you can't be cited.
+2. **Your content must be crawlable** — AI bots need access via robots.txt. Block the bot, lose the citation.
+3. **Your content must be extractable** — AI systems pull passages, not pages. Clear structure and self-contained paragraphs win.
+
+Beyond these basics, each platform weights different signals. Here's what matters and where.
 
 ---
 
 ## Google AI Overviews
 
-Google's AI Overviews synthesize answers from multiple sources using a 5-stage pipeline.
+Google AI Overviews pull from Google's own index and lean heavily on E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness). They appear in roughly 45% of Google searches.
 
-### How Source Selection Works
+**What makes Google AI Overviews different:** They already have your traditional SEO signals — backlinks, page authority, topical relevance. The additional AI layer adds a preference for content with cited sources and structured data. Research shows that including authoritative citations in your content correlates with a 132% visibility boost, and writing with an authoritative (not salesy) tone adds another 89%.
 
-1. **Retrieval** — Identify candidate sources from Google index
-2. **Semantic ranking** — Evaluate topical relevance
-3. **LLM re-ranking** — Assess contextual fit using Gemini
-4. **E-E-A-T evaluation** — Filter for expertise, authority, trust
-5. **Data fusion** — Synthesize from multiple sources with citations
+**Importantly, AI Overviews don't just recycle the traditional Top 10.** Only about 15% of AI Overview sources overlap with conventional organic results. Pages that wouldn't crack page 1 in traditional search can still get cited if they have strong structured data and clear, extractable answers.
 
-### Key Stats
-
-| Signal | Impact |
-|--------|--------|
-| Authoritative citations in content | +132% visibility |
-| Authoritative tone | +89% visibility |
-| Structured data (Schema) | +30-40% visibility |
-| Overlap with traditional Top 10 | Only 15% (AI Overviews cite different pages) |
-
-### What to Optimize
-
-- Implement comprehensive Schema markup (Article, FAQPage, HowTo, Product)
-- Build topical authority with content clusters and internal linking
-- Include authoritative citations and references in content
-- Add E-E-A-T signals (author bios, credentials, experience)
-- Target informational "how-to" and "what is" queries
-- Ensure content is in Google's Knowledge Graph (Wikipedia helps)
+**What to focus on:**
+- Schema markup is the single biggest lever — Article, FAQPage, HowTo, and Product schemas give AI Overviews structured context to work with (30-40% visibility boost)
+- Build topical authority through content clusters with strong internal linking
+- Include named, sourced citations in your content (not just claims)
+- Author bios with real credentials matter — E-E-A-T is weighted heavily
+- Get into Google's Knowledge Graph where possible (an accurate Wikipedia entry helps)
+- Target "how to" and "what is" query patterns — these trigger AI Overviews most often
 
 ---
 
-## ChatGPT (with Search)
+## ChatGPT
 
-ChatGPT uses a Bing-based web index for real-time search, combined with its training data.
+ChatGPT's web search draws from a Bing-based index. It combines this with its training knowledge to generate answers, then cites the web sources it relied on.
 
-### How Source Selection Works
+**What makes ChatGPT different:** Domain authority matters more here than on other AI platforms. An SE Ranking analysis of 129,000 domains found that authority and credibility signals account for roughly 40% of what determines citation, with content quality at about 35% and platform trust at 25%. Sites with very high referring domain counts (350K+) average 8.4 citations per response, while sites with slightly lower trust scores (91-96 vs 97-100) drop from 8.4 to 6 citations.
 
-Two-phase system:
-1. **Pre-training knowledge** — Built from training data (Wikipedia, books, web)
-2. **Real-time retrieval** — Web browsing for current information
+**Freshness is a major differentiator.** Content updated within the last 30 days gets cited about 3.2x more often than older content. ChatGPT clearly favors recent information.
 
-### Ranking Factor Weights (SE Ranking Study, 129K Domains)
+**The most important signal is content-answer fit** — a ZipTie analysis of 400,000 pages found that how well your content's style and structure matches ChatGPT's own response format accounts for about 55% of citation likelihood. This is far more important than domain authority (12%) or on-page structure (14%) alone. Write the way ChatGPT would answer the question, and you're more likely to be the source it cites.
 
-| Factor | Weight |
-|--------|--------|
-| Authority & credibility | ~40% |
-| Content quality & utility | ~35% |
-| Platform trust | ~25% |
+**Where ChatGPT looks beyond your site:** Wikipedia accounts for 7.8% of all ChatGPT citations, Reddit for 1.8%, and Forbes for 1.1%. Brand official sites are cited frequently but third-party mentions carry significant weight.
 
-### Content-Answer Fit Analysis (400K Pages Study)
-
-| Factor | Relevance |
-|--------|-----------|
-| **Content-answer fit** | 55% — most important; match ChatGPT's response style |
-| **On-page structure** | 14% — clear headings, formatting |
-| **Domain authority** | 12% — helps retrieval, not citation |
-| **Query relevance** | 12% — match user intent |
-| **Content consensus** | 7% — agreement among sources |
-
-### Key Stats
-
-| Metric | Impact |
-|--------|--------|
-| >350K referring domains | 8.4 average citations |
-| Domain trust score 97-100 | 8.4 citations (vs 6 for 91-96) |
-| Content updated within 30 days | 3.2x more citations |
-| Branded vs third-party domains | Branded cited 11.1 points more |
-
-### Top Citation Sources
-
-1. Wikipedia (7.8%)
-2. Reddit (1.8%)
-3. Forbes (1.1%)
-4. Brand official sites (variable)
-5. Academic sources (variable)
-
-### What to Optimize
-
-- Build a strong backlink profile (quality over quantity, >350K referring domains is elite)
-- Update content frequently (within 30 days for competitive topics)
-- Match ChatGPT's conversational answer style in your content
-- Include verifiable statistics with citations
-- Use clear H1/H2/H3 heading structure
-- Build high domain trust score
+**What to focus on:**
+- Invest in backlinks and domain authority — it's the strongest baseline signal
+- Update competitive content at least monthly
+- Structure your content the way ChatGPT structures its answers (conversational, direct, well-organized)
+- Include verifiable statistics with named sources
+- Clean heading hierarchy (H1 > H2 > H3) with descriptive headings
 
 ---
 
-## Perplexity AI
+## Perplexity
 
-Perplexity always cites its sources with links. It uses Retrieval-Augmented Generation (RAG) with a 3-layer reranking system.
+Perplexity always cites its sources with clickable links, making it the most transparent AI search platform. It combines its own index with Google's and runs results through multiple reranking passes — initial relevance retrieval, then traditional ranking factor scoring, then ML-based quality evaluation that can discard entire result sets if they don't meet quality thresholds.
 
-### How Source Selection Works
+**What makes Perplexity different:** It's the most "research-oriented" AI search engine, and its citation behavior reflects that. Perplexity maintains curated lists of authoritative domains (Amazon, GitHub, major academic sites) that get inherent ranking boosts. It uses a time-decay algorithm that evaluates new content quickly, giving fresh publishers a real shot at citation.
 
-1. **Layer 1 (L1)** — Basic relevance retrieval
-2. **Layer 2 (L2)** — Traditional ranking factors scoring
-3. **Layer 3 (L3)** — ML models for quality evaluation (can discard entire result sets)
+**Perplexity has unique content preferences:**
+- **FAQ Schema (JSON-LD)** — Pages with FAQ structured data get cited noticeably more often
+- **PDF documents** — Publicly accessible PDFs (whitepapers, research reports) are prioritized. If you have authoritative PDF content gated behind a form, consider making a version public.
+- **Publishing velocity** — How frequently you publish matters more than keyword targeting
+- **Self-contained paragraphs** — Perplexity prefers atomic, semantically complete paragraphs it can extract cleanly
 
-### Key Ranking Signals
-
-| Signal | Details |
-|--------|---------|
-| Authoritative domain lists | Manual lists: Amazon, GitHub, academic sites get inherent boost |
-| Freshness | Time decay algorithm; new content evaluated quickly |
-| Semantic relevance | Content similarity to query (not keyword matching) |
-| Topical weighting | Tech, AI, Science topics get visibility multipliers |
-| Early engagement | First clicks on new posts significantly boost visibility |
-
-### Unique to Perplexity
-
-- **FAQ Schema (JSON-LD)** — Pages with FAQ blocks are cited more often
-- **PDF documents** — Publicly hosted PDFs are prioritized for citation
-- **Content velocity** — Speed of publishing matters more than keyword density
-- **Semantic payloads** — Clear, atomic paragraphs preferred (self-contained)
-
-### What to Optimize
-
+**What to focus on:**
 - Allow PerplexityBot in robots.txt
-- Implement FAQPage Schema markup
-- Create publicly accessible PDF resources (whitepapers, guides)
-- Use Article schema with timestamps
-- Focus on semantic relevance over keywords
-- Build topical authority in your niche
-- Write clear, self-contained paragraphs
+- Implement FAQPage schema on any page with Q&A content
+- Host PDF resources publicly (whitepapers, guides, reports)
+- Add Article schema with publication and modification timestamps
+- Write in clear, self-contained paragraphs that work as standalone answers
+- Build deep topical authority in your specific niche
 
 ---
 
 ## Microsoft Copilot
 
-Copilot is integrated into Edge, Windows, Microsoft 365, and Bing Search. It uses the **Bing Index** as its primary data source.
+Copilot is embedded across Microsoft's ecosystem — Edge, Windows, Microsoft 365, and Bing Search. It relies entirely on Bing's index, so if Bing hasn't indexed your content, Copilot can't cite it.
 
-### Key Ranking Signals
+**What makes Copilot different:** The Microsoft ecosystem connection creates unique optimization opportunities. Mentions and content on LinkedIn and GitHub provide ranking boosts that other platforms don't offer. Copilot also puts more weight on page speed — sub-2-second load times are a clear threshold.
 
-| Signal | Details |
-|--------|---------|
-| Bing indexing | Must be indexed by Bing (required baseline) |
-| Microsoft ecosystem | LinkedIn, GitHub mentions provide a boost |
-| Page speed | < 2 seconds load time |
-| Schema markup | Helps Copilot understand content context |
-| Entity clarity | Clear definitions of entities and concepts |
-
-### What to Optimize
-
-- Submit site to Bing Webmaster Tools
-- Use IndexNow for faster indexing of new content
-- Optimize page speed (< 2 seconds)
-- Write clear entity definitions in content
-- Build presence on LinkedIn and GitHub
-- Ensure Bingbot can crawl all important pages
+**What to focus on:**
+- Submit your site to Bing Webmaster Tools (many sites only submit to Google Search Console)
+- Use IndexNow protocol for faster indexing of new and updated content
+- Optimize page speed to under 2 seconds
+- Write clear entity definitions — when your content defines a term or concept, make the definition explicit and extractable
+- Build presence on LinkedIn (publish articles, maintain company page) and GitHub if relevant
+- Ensure Bingbot has full crawl access
 
 ---
 
-## Claude AI
+## Claude
 
-Claude uses **Brave Search** (not Google or Bing) when web search is enabled.
+Claude uses Brave Search as its search backend when web search is enabled — not Google, not Bing. This is a completely different index, which means your Brave Search visibility directly determines whether Claude can find and cite you.
 
-### Key Characteristics
+**What makes Claude different:** Claude is extremely selective about what it cites. While it processes enormous amounts of content, its citation rate is very low — it's looking for the most factually accurate, well-sourced content on a given topic. Data-rich content with specific numbers and clear attribution performs significantly better than general-purpose content.
 
-| Signal | Details |
-|--------|---------|
-| Brave Index | Must be indexed by Brave Search |
-| Factual density | Data-rich content strongly preferred |
-| Structural clarity | Easy to extract information |
-| Source authority | Trustworthy, well-sourced content |
-| Selectivity | Crawl-to-refer ratio of 38,065:1 (extremely selective) |
-
-Claude consumes vast amounts of content but cites very selectively. Quality and relevance are critical.
-
-### What to Optimize
-
-- Ensure Brave Search can find your content
-- Allow ClaudeBot and anthropic-ai in robots.txt
-- Create high factual density content (specific numbers, sources)
-- Use clear, extractable structure
-- Cite authoritative sources
-- Focus on being the most factually accurate source for your topic
+**What to focus on:**
+- Verify your content appears in Brave Search results (search for your brand and key terms at search.brave.com)
+- Allow ClaudeBot and anthropic-ai user agents in robots.txt
+- Maximize factual density — specific numbers, named sources, dated statistics
+- Use clear, extractable structure with descriptive headings
+- Cite authoritative sources within your content
+- Aim to be the most factually accurate source on your topic — Claude rewards precision
 
 ---
 
-## robots.txt Configuration
+## Allowing AI Bots in robots.txt
 
-Allow all major AI bots:
+If your robots.txt blocks an AI bot, that platform can't cite your content. Here are the user agents to allow:
 
 ```
-# Search engine bots
-User-agent: Googlebot
+User-agent: GPTBot           # OpenAI — powers ChatGPT search
+User-agent: ChatGPT-User     # ChatGPT browsing mode
+User-agent: PerplexityBot    # Perplexity AI search
+User-agent: ClaudeBot        # Anthropic Claude
+User-agent: anthropic-ai     # Anthropic Claude (alternate)
+User-agent: Google-Extended   # Google Gemini and AI Overviews
+User-agent: Bingbot          # Microsoft Copilot (via Bing)
 Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# AI search bots
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-# Sitemap
-Sitemap: https://example.com/sitemap.xml
 ```
 
-### Selective Blocking
-
-If you want to allow AI search citation but block AI training:
-- **GPTBot** — Used by OpenAI for both search and training. Blocking prevents ChatGPT citation.
-- **Google-Extended** — Controls Gemini/AI Overviews usage. Blocking this doesn't affect regular Google Search.
-- **CCBot** — Used by Common Crawl for AI training datasets. Safe to block if you only want search citation.
+**Training vs. search:** Some AI bots are used for both model training and search citation. If you want to be cited but don't want your content used for training, your options are limited — GPTBot handles both for OpenAI. However, you can safely block **CCBot** (Common Crawl) without affecting any AI search citations, since it's only used for training dataset collection.
 
 ---
 
-## Optimization Priority by Platform
+## Where to Start
 
-If you can't optimize for everything, prioritize by your audience:
+If you're optimizing for AI search for the first time, focus your effort where your audience actually is:
 
-| Priority | If Your Audience Uses | Focus On |
-|----------|----------------------|----------|
-| 1 | Google (everyone) | AI Overviews: Schema, E-E-A-T, topical authority |
-| 2 | ChatGPT (tech, business) | Domain authority, freshness, content-answer fit |
-| 3 | Perplexity (researchers, early adopters) | FAQ Schema, semantic relevance, PDFs |
-| 4 | Copilot (enterprise, Microsoft shops) | Bing indexing, LinkedIn presence |
-| 5 | Claude (developers, analysts) | Brave indexing, factual density |
+**Start with Google AI Overviews** — They reach the most users (45%+ of Google searches) and you likely already have Google SEO foundations in place. Add schema markup, include cited sources in your content, and strengthen E-E-A-T signals.
 
-### Universal Actions (Do These First)
+**Then address ChatGPT** — It's the most-used standalone AI search tool for tech and business audiences. Focus on freshness (update content monthly), domain authority, and matching your content structure to how ChatGPT formats its responses.
 
+**Then expand to Perplexity** — Especially valuable if your audience includes researchers, early adopters, or tech professionals. Add FAQ schema, publish PDF resources, and write in clear, self-contained paragraphs.
+
+**Copilot and Claude are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Claude). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
+
+**Actions that help everywhere:**
 1. Allow all AI bots in robots.txt
-2. Implement Schema markup (FAQPage, Article, Organization)
-3. Include statistics with citations in content
-4. Update content regularly (within 30 days for competitive topics)
+2. Implement schema markup (FAQPage, Article, Organization at minimum)
+3. Include statistics with named sources in your content
+4. Update content regularly — monthly for competitive topics
 5. Use clear heading structure (H1 > H2 > H3)
-6. Ensure page speed < 2 seconds
+6. Keep page load time under 2 seconds
 7. Add author bios with credentials

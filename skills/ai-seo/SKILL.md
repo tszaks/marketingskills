@@ -51,7 +51,7 @@ Gather this context (ask if not provided):
 | **Copilot** | Bing-powered AI search | Bing index + authoritative sources |
 | **Claude** | Brave Search (when enabled) | Training data + Brave search results |
 
-For detailed ranking factors per platform, see [references/platform-ranking-factors.md](references/platform-ranking-factors.md).
+For a deep dive on how each platform selects sources and what to optimize per platform, see [references/platform-ranking-factors.md](references/platform-ranking-factors.md).
 
 ### Key Difference from Traditional SEO
 
@@ -116,21 +116,17 @@ For each priority page, verify:
 
 ### Step 4: AI Bot Access Check
 
-Verify your robots.txt allows AI crawlers. If these bots are blocked, AI platforms can't cite you:
+Verify your robots.txt allows AI crawlers. Each AI platform has its own bot, and blocking it means that platform can't cite you:
 
-```
-# AI bots to allow in robots.txt
-User-agent: GPTBot           # OpenAI (ChatGPT)
-User-agent: ChatGPT-User     # ChatGPT with browsing
-User-agent: PerplexityBot    # Perplexity
-User-agent: ClaudeBot        # Anthropic (Claude)
-User-agent: anthropic-ai     # Anthropic (Claude)
-User-agent: Google-Extended   # Google AI (Gemini, AI Overviews)
-User-agent: Bingbot          # Microsoft Copilot
-Allow: /
-```
+- **GPTBot** and **ChatGPT-User** — OpenAI (ChatGPT)
+- **PerplexityBot** — Perplexity
+- **ClaudeBot** and **anthropic-ai** — Anthropic (Claude)
+- **Google-Extended** — Google Gemini and AI Overviews
+- **Bingbot** — Microsoft Copilot (via Bing)
 
-**Note:** Some companies block AI bots to prevent training on their content. That's a valid business decision — but if you block them, you won't get cited. You can selectively block training-only bots while allowing search bots.
+Check your robots.txt for `Disallow` rules targeting any of these. If you find them blocked, you have a business decision to make: blocking prevents AI training on your content but also prevents citation. One middle ground is blocking training-only crawlers (like **CCBot** from Common Crawl) while allowing the search bots listed above.
+
+See [references/platform-ranking-factors.md](references/platform-ranking-factors.md) for the full robots.txt configuration.
 
 ---
 
