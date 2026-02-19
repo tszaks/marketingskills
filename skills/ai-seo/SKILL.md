@@ -49,7 +49,9 @@ Gather this context (ask if not provided):
 | **Perplexity** | Always cites sources with links | Favors authoritative, recent, well-structured content |
 | **Gemini** | Google's AI assistant | Pulls from Google index + Knowledge Graph |
 | **Copilot** | Bing-powered AI search | Bing index + authoritative sources |
-| **Claude** | No live search (web search when enabled) | Training data + search results when available |
+| **Claude** | Brave Search (when enabled) | Training data + Brave search results |
+
+For detailed ranking factors per platform, see [references/platform-ranking-factors.md](references/platform-ranking-factors.md).
 
 ### Key Difference from Traditional SEO
 
@@ -110,6 +112,25 @@ For each priority page, verify:
 | Expert attribution (author name, credentials)? | |
 | Recently updated (within 6 months)? | |
 | Heading structure matches query patterns? | |
+| AI bots allowed in robots.txt? | |
+
+### Step 4: AI Bot Access Check
+
+Verify your robots.txt allows AI crawlers. If these bots are blocked, AI platforms can't cite you:
+
+```
+# AI bots to allow in robots.txt
+User-agent: GPTBot           # OpenAI (ChatGPT)
+User-agent: ChatGPT-User     # ChatGPT with browsing
+User-agent: PerplexityBot    # Perplexity
+User-agent: ClaudeBot        # Anthropic (Claude)
+User-agent: anthropic-ai     # Anthropic (Claude)
+User-agent: Google-Extended   # Google AI (Gemini, AI Overviews)
+User-agent: Bingbot          # Microsoft Copilot
+Allow: /
+```
+
+**Note:** Some companies block AI bots to prevent training on their content. That's a valid business decision — but if you block them, you won't get cited. You can selectively block training-only bots while allowing search bots.
 
 ---
 
@@ -147,15 +168,31 @@ For detailed templates for each block type, see [references/content-patterns.md]
 
 ### Pillar 2: Authority — Make Content Citable
 
-AI systems prefer sources they can trust. Build citation-worthiness:
+AI systems prefer sources they can trust. Build citation-worthiness.
 
-**Statistics and data** (40%+ citation boost)
+**The Princeton GEO research** (KDD 2024, studied across Perplexity.ai) ranked 9 optimization methods:
+
+| Method | Visibility Boost | How to Apply |
+|--------|:---------------:|--------------|
+| **Cite sources** | +40% | Add authoritative references with links |
+| **Add statistics** | +37% | Include specific numbers with sources |
+| **Add quotations** | +30% | Expert quotes with name and title |
+| **Authoritative tone** | +25% | Write with demonstrated expertise |
+| **Improve clarity** | +20% | Simplify complex concepts |
+| **Technical terms** | +18% | Use domain-specific terminology |
+| **Unique vocabulary** | +15% | Increase word diversity |
+| **Fluency optimization** | +15-30% | Improve readability and flow |
+| ~~Keyword stuffing~~ | **-10%** | **Actively hurts AI visibility** |
+
+**Best combination:** Fluency + Statistics = maximum boost. Low-ranking sites benefit even more — up to 115% visibility increase with citations.
+
+**Statistics and data** (+37-40% citation boost)
 - Include specific numbers with sources
 - Cite original research, not summaries of research
 - Add dates to all statistics
 - Original data beats aggregated data
 
-**Expert attribution** (25-30% citation boost)
+**Expert attribution** (+25-30% citation boost)
 - Named authors with credentials
 - Expert quotes with titles and organizations
 - "According to [Source]" framing for claims
@@ -324,6 +361,8 @@ Monthly manual check:
 - **Gating all content** — AI can't access gated content. Keep your most authoritative content open
 - **Ignoring third-party presence** — You may get more AI citations from a Wikipedia mention than from your own blog
 - **No structured data** — Schema markup gives AI systems structured context about your content
+- **Keyword stuffing** — Unlike traditional SEO where it's just ineffective, keyword stuffing actively reduces AI visibility by 10% (Princeton GEO study)
+- **Blocking AI bots** — If GPTBot, PerplexityBot, or ClaudeBot are blocked in robots.txt, those platforms can't cite you
 - **Generic content without data** — "We're the best" won't get cited. "Our customers see 3x improvement in [metric]" will
 - **Forgetting to monitor** — You can't improve what you don't measure. Check AI visibility monthly at minimum
 
