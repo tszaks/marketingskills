@@ -8,6 +8,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ad-creative | 1.0.0 | 2026-02-17 |
 | ai-seo | 1.0.0 | 2026-02-18 |
 | analytics-tracking | 1.0.0 | 2026-01-27 |
+| churn-prevention | 1.0.0 | 2026-02-18 |
 | cold-email | 1.0.0 | 2026-02-14 |
 | competitor-alternatives | 1.0.0 | 2026-01-27 |
 | content-strategy | 1.0.0 | 2026-01-27 |
@@ -38,6 +39,7 @@ Current versions of all skills. Agents can compare against local versions to che
 ### 2026-02-18
 - Added `ai-seo` skill for AI search optimization (AEO, GEO, LLMO, AI Overviews)
 - Moved AEO/GEO content patterns from `seo-audit` references to `ai-seo` skill
+- Added `churn-prevention` skill for cancel flows, save offers, dunning, and payment recovery
 
 ### 2026-02-17
 - Added `ad-creative` skill for bulk ad creative generation and performance-based iteration
