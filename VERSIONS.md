@@ -32,9 +32,13 @@ Current versions of all skills. Agents can compare against local versions to che
 | schema-markup | 1.0.0 | 2026-01-27 |
 | seo-audit | 1.0.0 | 2026-01-27 |
 | signup-flow-cro | 1.0.0 | 2026-01-27 |
+| site-architecture | 1.0.0 | 2026-02-21 |
 | social-content | 1.0.0 | 2026-01-27 |
 
 ## Recent Changes
+
+### 2026-02-21
+- Added `site-architecture` skill for website structure planning, page hierarchy, navigation design, URL structure, and internal linking strategy
 
 ### 2026-02-18
 - Added `ai-seo` skill for AI search optimization (AEO, GEO, LLMO, AI Overviews)
