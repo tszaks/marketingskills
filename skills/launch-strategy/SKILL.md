@@ -350,3 +350,4 @@ Even small changelog updates remind customers your product is evolving. This bui
 - **page-cro**: For optimizing launch landing pages
 - **marketing-psychology**: For psychology behind waitlists and exclusivity
 - **programmatic-seo**: For comparison pages mentioned in post-launch
+- **sales-enablement**: For launch sales collateral and enablement materials

@@ -306,3 +306,4 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key email
 - **copywriting**: For landing pages emails link to
 - **ab-test-setup**: For testing email elements
 - **popup-cro**: For email capture popups
+- **revops**: For lifecycle stages that trigger email sequences

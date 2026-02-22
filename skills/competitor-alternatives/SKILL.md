@@ -253,3 +253,4 @@ Recommended pages to create with priority order based on search volume.
 - **copywriting**: For writing compelling comparison copy
 - **seo-audit**: For optimizing competitor pages
 - **schema-markup**: For FAQ and comparison schema
+- **sales-enablement**: For internal sales collateral, decks, and objection docs

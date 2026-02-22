@@ -42,6 +42,8 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 | [product-marketing-context](skills/product-marketing-context/) | When the user wants to create or update their product marketing context document. Also use when the user mentions... |
 | [programmatic-seo](skills/programmatic-seo/) | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions... |
 | [referral-program](skills/referral-program/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.... |
+| [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff... |
+| [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts... |
 | [schema-markup](skills/schema-markup/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
 | [signup-flow-cro](skills/signup-flow-cro/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
@@ -190,6 +192,10 @@ You can also invoke skills directly:
 - `marketing-psychology` - Mental models and psychology
 - `launch-strategy` - Product launches and announcements
 - `pricing-strategy` - Pricing, packaging, and monetization
+
+### Sales & RevOps
+- `revops` - Lead lifecycle, scoring, routing, pipeline management
+- `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
 
 ## Contributing
 
