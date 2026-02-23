@@ -354,5 +354,6 @@ Visual or structured representation of how content interconnects.
 - **seo-audit**: For technical SEO and on-page optimization
 - **ai-seo**: For optimizing content for AI search engines and getting cited by LLMs
 - **programmatic-seo**: For scaled content generation
+- **site-architecture**: For page hierarchy, navigation design, and URL structure
 - **email-sequence**: For email-based content
 - **social-content**: For social media content
