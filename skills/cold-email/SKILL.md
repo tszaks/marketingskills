@@ -153,3 +153,4 @@ Use this data to inform your writing — not as a checklist to satisfy.
 - **email-sequence**: For lifecycle/nurture email sequences (not cold outreach)
 - **social-content**: For LinkedIn and social posts
 - **product-marketing-context**: For establishing foundational positioning
+- **revops**: For lead scoring, routing, and pipeline management

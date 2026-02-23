@@ -227,3 +227,5 @@ Identifies which features customers value most:
 - **copywriting**: For pricing page copy
 - **marketing-psychology**: For pricing psychology principles
 - **ab-test-setup**: For testing pricing changes
+- **revops**: For deal desk processes and pipeline pricing
+- **sales-enablement**: For proposal templates and pricing presentations

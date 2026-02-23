@@ -29,6 +29,8 @@ Current versions of all skills. Agents can compare against local versions to che
 | product-marketing-context | 1.0.0 | 2026-01-27 |
 | programmatic-seo | 1.0.0 | 2026-01-27 |
 | referral-program | 1.0.0 | 2026-01-27 |
+| revops | 1.0.0 | 2026-02-22 |
+| sales-enablement | 1.0.0 | 2026-02-22 |
 | schema-markup | 1.0.0 | 2026-01-27 |
 | seo-audit | 1.0.0 | 2026-01-27 |
 | signup-flow-cro | 1.0.0 | 2026-01-27 |
@@ -36,6 +38,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | social-content | 1.0.0 | 2026-01-27 |
 
 ## Recent Changes
+
+### 2026-02-22
+- Added `revops` skill for revenue operations, lead lifecycle, scoring, routing, pipeline management, and CRM automation
+- Added `sales-enablement` skill for sales decks, one-pagers, objection handling, demo scripts, and sales playbooks
 
 ### 2026-02-21
 - Added `site-architecture` skill for website structure planning, page hierarchy, navigation design, URL structure, and internal linking strategy
