@@ -2,15 +2,51 @@
 
 A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want Claude Code (or similar AI coding assistants) to help with conversion optimization, copywriting, SEO, analytics, and growth engineering.
 
-Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills).
+Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
 
 New to the terminal and coding agents? Check out the companion guide [Coding for Marketers](https://codingformarketers.com?ref=marketingskills).
 
 **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
 
+Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help.
+
 ## What are Skills?
 
 Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, Claude Code can recognize when you're working on a marketing task and apply the right frameworks and best practices.
+
+## How Skills Work Together
+
+Skills reference each other and build on shared context. The `product-marketing-context` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
+
+```
+                          ┌──────────────────────────────────────┐
+                          │      product-marketing-context       │
+                          │    (read by all other skills first)  │
+                          └──────────────────┬───────────────────┘
+                                             │
+    ┌─────────────┬────────────┬─────────────┼────────────┬─────────────┬──────────────┐
+    ▼             ▼            ▼             ▼            ▼             ▼              ▼
+┌────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐
+│SEO &   │ │   CRO    │ │Content & │ │  Paid &   │ │ Growth & │ │Sales &   │ │ Strategy  │
+│Content │ │          │ │  Copy    │ │Measuremnt│ │Retention │ │  GTM     │ │           │
+├────────┤ ├──────────┤ ├──────────┤ ├───────────┤ ├──────────┤ ├──────────┤ ├───────────┤
+│seo-    │ │page-cro  │ │copywritng│ │paid-ads   │ │referral  │ │revops    │ │mktg-ideas │
+│ audit  │ │signup-cro│ │copy-edit │ │ad-creative│ │free-tool │ │sales-    │ │mktg-psych │
+│ai-seo  │ │onboard   │ │cold-emal │ │ab-test   │ │churn-    │ │ enable   │ │           │
+│programm│ │form-cro  │ │email-seq │ │analytics  │ │ prevent  │ │launch    │ │           │
+│schema  │ │popup-cro │ │social    │ │           │ │          │ │pricing   │ │           │
+│content │ │paywall   │ │          │ │           │ │          │ │competitr │ │           │
+└───┬────┘ └────┬─────┘ └────┬─────┘ └─────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬─────┘
+    │           │            │             │            │             │              │
+    └───────────┴─────┬──────┴─────────────┴────────────┴─────────────┴──────────────┘
+                      │
+       Skills cross-reference each other:
+         copywriting ↔ page-cro ↔ ab-test-setup
+         revops ↔ sales-enablement ↔ cold-email
+         seo-audit ↔ schema-markup ↔ ai-seo
+```
+
+See each skill's **Related Skills** section for the full dependency map.
 
 ## Available Skills
 
