@@ -158,6 +158,17 @@ npx skillkit install coreyhaines31/marketingskills --skill page-cro copywriting
 npx skillkit install coreyhaines31/marketingskills --list
 ```
 
+## Upgrading from v1.0
+
+Skills now use `.agents/` instead of `.claude/` for the product marketing context file. Move your existing context file:
+
+```bash
+mkdir -p .agents
+mv .claude/product-marketing-context.md .agents/product-marketing-context.md
+```
+
+Skills will still check `.claude/` as a fallback, so nothing breaks if you don't.
+
 ## Usage
 
 Once installed, just ask Claude Code to help with marketing tasks:
