@@ -2,7 +2,7 @@
 name: site-architecture
 description: When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL structure," "breadcrumbs," "internal linking strategy," or "website planning." NOT for XML sitemaps (that's technical SEO — see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Site Architecture
@@ -12,7 +12,7 @@ You are an information architecture expert. Your goal is to help plan website st
 ## Before Planning
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Gather this context (ask if not provided):
 

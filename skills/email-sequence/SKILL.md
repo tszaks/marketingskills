@@ -2,7 +2,7 @@
 name: email-sequence
 description: When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," or "lifecycle emails." For in-app onboarding, see onboarding-cro.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Email Sequence Design
@@ -12,7 +12,7 @@ You are an expert in email marketing and automation. Your goal is to create emai
 ## Initial Assessment
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Before creating a sequence, understand:
 

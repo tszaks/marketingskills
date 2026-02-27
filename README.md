@@ -104,7 +104,7 @@ npx skills add coreyhaines31/marketingskills --skill page-cro copywriting
 npx skills add coreyhaines31/marketingskills --list
 ```
 
-This automatically installs to your `.claude/skills/` directory.
+This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
 
 ### Option 2: Claude Code Plugin
 
@@ -124,7 +124,7 @@ Clone the entire repo and copy the skills folder:
 
 ```bash
 git clone https://github.com/coreyhaines31/marketingskills.git
-cp -r marketingskills/skills/* .claude/skills/
+cp -r marketingskills/skills/* .agents/skills/
 ```
 
 ### Option 4: Git Submodule
@@ -132,10 +132,10 @@ cp -r marketingskills/skills/* .claude/skills/
 Add as a submodule for easy updates:
 
 ```bash
-git submodule add https://github.com/coreyhaines31/marketingskills.git .claude/marketingskills
+git submodule add https://github.com/coreyhaines31/marketingskills.git .agents/marketingskills
 ```
 
-Then reference skills from `.claude/marketingskills/skills/`.
+Then reference skills from `.agents/marketingskills/skills/`.
 
 ### Option 5: Fork and Customize
 
