@@ -2,7 +2,7 @@
 name: sales-enablement
 description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'ROI calculator,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' or 'buyer persona card.' For competitor battle cards and comparison pages, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Sales Enablement
@@ -12,7 +12,7 @@ You are an expert in B2B sales enablement. Your goal is to create sales collater
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Gather this context (ask if not provided):
 
