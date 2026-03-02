@@ -19,31 +19,31 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 Skills reference each other and build on shared context. The `product-marketing-context` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
 
 ```
-                          ┌──────────────────────────────────────┐
-                          │      product-marketing-context       │
-                          │    (read by all other skills first)  │
-                          └──────────────────┬───────────────────┘
-                                             │
-    ┌─────────────┬────────────┬─────────────┼────────────┬─────────────┬──────────────┐
-    ▼             ▼            ▼             ▼            ▼             ▼              ▼
-┌────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌──────────┐ ┌──────────┐ ┌───────────┐
-│SEO &   │ │   CRO    │ │Content & │ │  Paid &   │ │ Growth & │ │Sales &   │ │ Strategy  │
-│Content │ │          │ │  Copy    │ │Measuremnt│ │Retention │ │  GTM     │ │           │
-├────────┤ ├──────────┤ ├──────────┤ ├───────────┤ ├──────────┤ ├──────────┤ ├───────────┤
-│seo-    │ │page-cro  │ │copywritng│ │paid-ads   │ │referral  │ │revops    │ │mktg-ideas │
-│ audit  │ │signup-cro│ │copy-edit │ │ad-creative│ │free-tool │ │sales-    │ │mktg-psych │
-│ai-seo  │ │onboard   │ │cold-emal │ │ab-test   │ │churn-    │ │ enable   │ │           │
-│programm│ │form-cro  │ │email-seq │ │analytics  │ │ prevent  │ │launch    │ │           │
-│schema  │ │popup-cro │ │social    │ │           │ │          │ │pricing   │ │           │
-│content │ │paywall   │ │          │ │           │ │          │ │competitr │ │           │
-└───┬────┘ └────┬─────┘ └────┬─────┘ └─────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬─────┘
-    │           │            │             │            │             │              │
-    └───────────┴─────┬──────┴─────────────┴────────────┴─────────────┴──────────────┘
-                      │
-       Skills cross-reference each other:
-         copywriting ↔ page-cro ↔ ab-test-setup
-         revops ↔ sales-enablement ↔ cold-email
-         seo-audit ↔ schema-markup ↔ ai-seo
+                            ┌──────────────────────────────────────┐
+                            │      product-marketing-context       │
+                            │    (read by all other skills first)  │
+                            └──────────────────┬───────────────────┘
+                                               │
+    ┌──────────────┬─────────────┬─────────────┼─────────────┬──────────────┬──────────────┐
+    ▼              ▼             ▼             ▼             ▼              ▼              ▼
+┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────┐ ┌──────────┐ ┌─────────────┐ ┌───────────┐
+│  SEO &   │ │   CRO    │ │Content & │ │  Paid &    │ │ Growth & │ │  Sales &    │ │ Strategy  │
+│ Content  │ │          │ │   Copy   │ │Measurement │ │Retention │ │    GTM      │ │           │
+├──────────┤ ├──────────┤ ├──────────┤ ├────────────┤ ├──────────┤ ├─────────────┤ ├───────────┤
+│seo-audit │ │page-cro  │ │copywritng│ │paid-ads    │ │referral  │ │revops       │ │mktg-ideas │
+│ai-seo    │ │signup-cro│ │copy-edit │ │ad-creative │ │free-tool │ │sales-enable │ │mktg-psych │
+│site-arch │ │onboard   │ │cold-email│ │ab-test     │ │churn-    │ │launch       │ │           │
+│programm  │ │form-cro  │ │email-seq │ │analytics   │ │ prevent  │ │pricing      │ │           │
+│schema    │ │popup-cro │ │social    │ │            │ │          │ │competitor   │ │           │
+│content   │ │paywall   │ │          │ │            │ │          │ │             │ │           │
+└────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬──────┘ └────┬─────┘ └──────┬──────┘ └─────┬─────┘
+     │            │            │              │             │              │              │
+     └────────────┴─────┬──────┴──────────────┴─────────────┴──────────────┴──────────────┘
+                        │
+         Skills cross-reference each other:
+           copywriting ↔ page-cro ↔ ab-test-setup
+           revops ↔ sales-enablement ↔ cold-email
+           seo-audit ↔ schema-markup ↔ ai-seo
 ```
 
 See each skill's **Related Skills** section for the full dependency map.
