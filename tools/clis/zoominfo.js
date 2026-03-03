@@ -22,11 +22,16 @@ async function authenticate() {
     body: JSON.stringify({ username, password }),
   })
   const text = await res.text()
+  if (!res.ok) {
+    throw new Error(`Authentication failed (${res.status}): ${text}`)
+  }
   try {
     const data = JSON.parse(text)
+    if (!data.jwt) throw new Error('No JWT in response')
     ACCESS_TOKEN = data.jwt
     return ACCESS_TOKEN
-  } catch {
+  } catch (e) {
+    if (e.message === 'No JWT in response') throw e
     throw new Error(`Authentication failed: ${text}`)
   }
 }
@@ -82,6 +87,10 @@ async function main() {
 
   switch (cmd) {
     case 'auth': {
+      if (args['dry-run']) {
+        result = { _dry_run: true, action: 'authenticate', url: `${BASE_URL}/authenticate`, jwt: '***' }
+        break
+      }
       const token = await authenticate()
       result = { jwt: token }
       break

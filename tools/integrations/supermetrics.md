@@ -22,7 +22,7 @@ Marketing data pipeline that connects 200+ marketing platforms. Pulls data from 
 ### Query a Data Source
 
 ```bash
-POST https://api.supermetrics.com/enterprise/v2/query
+POST https://api.supermetrics.com/enterprise/v2/query/data/json
 
 {
   "ds_id": "GA4",
@@ -39,7 +39,7 @@ POST https://api.supermetrics.com/enterprise/v2/query
 ### Query with Filters
 
 ```bash
-POST https://api.supermetrics.com/enterprise/v2/query
+POST https://api.supermetrics.com/enterprise/v2/query/data/json
 
 {
   "ds_id": "AW",

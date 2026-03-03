@@ -76,7 +76,7 @@ async function main() {
       if (args['max-rows']) body.max_rows = parseInt(args['max-rows'], 10)
       if (args['start-date']) body.start_date = args['start-date']
       if (args['end-date']) body.end_date = args['end-date']
-      result = await api('POST', '/query', body)
+      result = await api('POST', '/query/data/json', body)
       break
     }
 

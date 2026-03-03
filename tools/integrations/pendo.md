@@ -46,7 +46,7 @@ GET https://app.pendo.io/api/v1/page/{pageId}
 ### List Guides
 
 ```bash
-GET https://app.pendo.io/api/v1/guide?state=published
+GET https://app.pendo.io/api/v1/guide?state=public
 ```
 
 ### Get Guide Details

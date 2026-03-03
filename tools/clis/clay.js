@@ -104,8 +104,9 @@ async function main() {
           if (args.linkedin) body.linkedin_url = args.linkedin
           if (args['first-name']) body.first_name = args['first-name']
           if (args['last-name']) body.last_name = args['last-name']
-          if (!args.email && !args.linkedin) {
-            result = { error: '--email or --linkedin required' }
+          if (args['first-name'] && args['last-name'] && args.domain) body.domain = args.domain
+          if (!args.email && !args.linkedin && !(args['first-name'] && args['last-name'] && args.domain)) {
+            result = { error: '--email or --linkedin required (or --first-name + --last-name + --domain)' }
             break
           }
           result = await api('POST', '/people/enrich', body)
@@ -140,7 +141,7 @@ async function main() {
             'add-row': 'tables add-row --id <table_id> --data <json>',
           },
           people: {
-            enrich: 'people enrich --email <email> | --linkedin <url>',
+            enrich: 'people enrich --email <email> | --linkedin <url> | --first-name <n> --last-name <n> --domain <d>',
           },
           companies: {
             enrich: 'companies enrich --domain <domain>',

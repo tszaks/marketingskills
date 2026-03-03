@@ -2,7 +2,7 @@
 
 const API_KEY = process.env.AIROPS_API_KEY
 const WORKSPACE_ID = process.env.AIROPS_WORKSPACE_ID
-const BASE_URL = 'https://api.airops.com/v1'
+const BASE_URL = 'https://api.airops.com/public_api/v1'
 
 if (!API_KEY) {
   console.error(JSON.stringify({ error: 'AIROPS_API_KEY environment variable required' }))

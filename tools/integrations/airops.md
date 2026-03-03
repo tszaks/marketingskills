@@ -23,19 +23,19 @@ AI content platform for crafting content that wins AI search. Build and execute 
 ### List Flows
 
 ```bash
-GET https://api.airops.com/v1/workspaces/{workspace_id}/flows
+GET https://api.airops.com/public_api/v1/workspaces/{workspace_id}/flows
 ```
 
 ### Get Flow Details
 
 ```bash
-GET https://api.airops.com/v1/workspaces/{workspace_id}/flows/{flow_id}
+GET https://api.airops.com/public_api/v1/workspaces/{workspace_id}/flows/{flow_id}
 ```
 
 ### Execute a Flow
 
 ```bash
-POST https://api.airops.com/v1/workspaces/{workspace_id}/flows/{flow_id}/execute
+POST https://api.airops.com/public_api/v1/workspaces/{workspace_id}/flows/{flow_id}/execute
 
 {
   "inputs": {
@@ -48,25 +48,25 @@ POST https://api.airops.com/v1/workspaces/{workspace_id}/flows/{flow_id}/execute
 ### List Runs for a Flow
 
 ```bash
-GET https://api.airops.com/v1/workspaces/{workspace_id}/flows/{flow_id}/runs
+GET https://api.airops.com/public_api/v1/workspaces/{workspace_id}/flows/{flow_id}/runs
 ```
 
 ### Get Run Status
 
 ```bash
-GET https://api.airops.com/v1/workspaces/{workspace_id}/runs/{run_id}
+GET https://api.airops.com/public_api/v1/workspaces/{workspace_id}/runs/{run_id}
 ```
 
 ### List Workflows
 
 ```bash
-GET https://api.airops.com/v1/workspaces/{workspace_id}/workflows
+GET https://api.airops.com/public_api/v1/workspaces/{workspace_id}/workflows
 ```
 
 ### Execute a Workflow
 
 ```bash
-POST https://api.airops.com/v1/workspaces/{workspace_id}/workflows/{workflow_id}/execute
+POST https://api.airops.com/public_api/v1/workspaces/{workspace_id}/workflows/{workflow_id}/execute
 
 {
   "inputs": {

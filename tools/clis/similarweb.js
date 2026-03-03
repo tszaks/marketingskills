@@ -67,7 +67,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.granularity) params.set('granularity', args.granularity)
-          result = await api('GET', `/website/${domain}/total-traffic-and-engagement/visits?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/total-traffic-and-engagement/visits?${params.toString()}`)
           break
         }
         case 'pages-per-visit': {
@@ -78,7 +78,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.granularity) params.set('granularity', args.granularity)
-          result = await api('GET', `/website/${domain}/total-traffic-and-engagement/pages-per-visit?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/total-traffic-and-engagement/pages-per-visit?${params.toString()}`)
           break
         }
         case 'avg-duration': {
@@ -89,7 +89,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.granularity) params.set('granularity', args.granularity)
-          result = await api('GET', `/website/${domain}/total-traffic-and-engagement/average-visit-duration?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/total-traffic-and-engagement/average-visit-duration?${params.toString()}`)
           break
         }
         case 'bounce-rate': {
@@ -100,7 +100,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.granularity) params.set('granularity', args.granularity)
-          result = await api('GET', `/website/${domain}/total-traffic-and-engagement/bounce-rate?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/total-traffic-and-engagement/bounce-rate?${params.toString()}`)
           break
         }
         case 'sources': {
@@ -110,7 +110,7 @@ async function main() {
           if (!args.end) { result = { error: '--end required (YYYY-MM)' }; break }
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
-          result = await api('GET', `/website/${domain}/traffic-sources/overview?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/traffic-sources/overview?${params.toString()}`)
           break
         }
         default:
@@ -125,7 +125,7 @@ async function main() {
       if (!args.end) { result = { error: '--end required (YYYY-MM)' }; break }
       const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
       if (args.country) params.set('country', args.country)
-      result = await api('GET', `/website/${domain}/traffic-sources/referrals?${params.toString()}`)
+      result = await api('GET', `/website/${encodeURIComponent(domain)}/traffic-sources/referrals?${params.toString()}`)
       break
     }
 
@@ -139,7 +139,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/website/${domain}/search/organic-search-keywords?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/search/organic-search-keywords?${params.toString()}`)
           break
         }
         case 'keywords-paid': {
@@ -150,7 +150,7 @@ async function main() {
           const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
           if (args.country) params.set('country', args.country)
           if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/website/${domain}/search/paid-search-keywords?${params.toString()}`)
+          result = await api('GET', `/website/${encodeURIComponent(domain)}/search/paid-search-keywords?${params.toString()}`)
           break
         }
         default:
@@ -161,14 +161,14 @@ async function main() {
     case 'competitors': {
       const domain = args.domain
       if (!domain) { result = { error: '--domain required' }; break }
-      result = await api('GET', `/website/${domain}/similar-sites/similarsites`)
+      result = await api('GET', `/website/${encodeURIComponent(domain)}/similar-sites/similarsites`)
       break
     }
 
     case 'category-rank': {
       const domain = args.domain
       if (!domain) { result = { error: '--domain required' }; break }
-      result = await api('GET', `/website/${domain}/category-rank/category-rank`)
+      result = await api('GET', `/website/${encodeURIComponent(domain)}/category-rank/category-rank`)
       break
     }
 
@@ -178,7 +178,7 @@ async function main() {
       if (!args.start) { result = { error: '--start required (YYYY-MM)' }; break }
       if (!args.end) { result = { error: '--end required (YYYY-MM)' }; break }
       const params = new URLSearchParams({ start_date: args.start, end_date: args.end })
-      result = await api('GET', `/website/${domain}/geo/traffic-by-country?${params.toString()}`)
+      result = await api('GET', `/website/${encodeURIComponent(domain)}/geo/traffic-by-country?${params.toString()}`)
       break
     }
 

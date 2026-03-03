@@ -116,8 +116,8 @@ async function main() {
             data: {
               type: 'sequenceState',
               relationships: {
-                prospect: { data: { type: 'prospect', id: parseInt(prospectId) } },
-                sequence: { data: { type: 'sequence', id: parseInt(sequenceId) } },
+                prospect: { data: { type: 'prospect', id: prospectId } },
+                sequence: { data: { type: 'sequence', id: sequenceId } },
               },
             },
           }

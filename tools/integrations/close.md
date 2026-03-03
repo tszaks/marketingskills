@@ -181,7 +181,7 @@ POST https://api.close.com/api/v1/task/
 
 - Rate limits based on organization plan
 - Standard: ~100 requests/minute
-- Responses include `X-Rate-Limit-Limit` and `X-Rate-Limit-Remaining` headers
+- Responses include `ratelimit-limit` and `ratelimit-remaining` headers
 - 429 responses include `Retry-After` header
 
 ## Relevant Skills
