@@ -161,7 +161,7 @@ Every field reduces conversion. For each field, ask:
 
 ### Microcopy
 - Placeholder text: Use for examples, not labels
-- Labels: Always visible (not just placeholders)
+- Labels: Keep visible (not just placeholders) — placeholders disappear when typing, leaving users unsure what they're filling in
 - Help text: Only when needed, placed close to field
 
 ---

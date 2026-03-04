@@ -64,7 +64,7 @@ Pull performance data → Identify winning patterns → Generate new variations 
 
 ## Platform Specs
 
-**Always enforce these limits.** Never deliver creative that exceeds platform character limits.
+Platforms reject or truncate creative that exceeds these limits, so verify every piece of copy fits before delivering.
 
 ### Google Ads (Responsive Search Ads)
 
@@ -320,7 +320,7 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 - **Writing headlines that only work together** — RSA headlines get combined randomly
 - **Ignoring character limits** — Platforms truncate without warning
 - **All variations sound the same** — Vary angles, not just word choice
-- **No CTA headlines** — Always include action-oriented headlines
+- **No CTA headlines** — RSAs need action-oriented headlines to drive clicks; include at least 2-3
 - **Generic descriptions** — "Learn more about our solution" wastes the slot
 - **Iterating without data** — Gut feelings are less reliable than metrics
 - **Testing too many things at once** — Change one variable per test cycle

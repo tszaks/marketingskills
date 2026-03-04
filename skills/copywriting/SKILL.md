@@ -67,7 +67,7 @@ Each section should advance one argument. Build a logical flow down the page.
 3. **Active over passive** — "We generate reports" not "Reports are generated"
 4. **Confident over qualified** — Remove "almost," "very," "really"
 5. **Show over tell** — Describe the outcome instead of using adverbs
-6. **Honest over sensational** — Never fabricate statistics or testimonials
+6. **Honest over sensational** — Fabricated statistics or testimonials erode trust and create legal liability
 
 ### Quick Quality Check
 

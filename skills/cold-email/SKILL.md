@@ -100,7 +100,7 @@ See [subject-lines.md](references/subject-lines.md) for the full data.
 
 ## Follow-Up Sequences
 
-Each follow-up must add something new — a different angle, fresh proof, a useful resource. Never "just checking in."
+Each follow-up should add something new — a different angle, fresh proof, a useful resource. "Just checking in" gives the reader no reason to respond.
 
 - 3-5 total emails, increasing gaps between them
 - Each email should stand alone (they may not have read the previous ones)

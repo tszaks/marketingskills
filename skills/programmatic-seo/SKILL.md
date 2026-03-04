@@ -49,7 +49,7 @@ Hierarchy of data defensibility:
 5. Public (anyone can use—weakest)
 
 ### 3. Clean URL Structure
-**Always use subfolders, not subdomains**:
+**Use subfolders, not subdomains** — subfolders consolidate domain authority while subdomains split it:
 - Good: `yoursite.com/templates/resume/`
 - Bad: `templates.yoursite.com/resume/`
 

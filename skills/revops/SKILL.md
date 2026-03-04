@@ -133,7 +133,7 @@ Define response times and document them:
 ### Routing Rules Essentials
 
 - Route to the **most specific match** first, then fall back to general
-- Always include a **fallback owner** — no lead should go unassigned
+- Include a **fallback owner** — unassigned leads go cold fast and waste pipeline
 - Round-robin should account for **rep capacity and availability** (PTO, quota attainment)
 - Log every routing decision for audit and optimization
 

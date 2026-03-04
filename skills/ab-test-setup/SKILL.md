@@ -180,7 +180,7 @@ We'll know this is true when [metrics].
 - Check segment quality
 - Document external factors
 
-**DON'T:**
+**Avoid:**
 - Peek at results and stop early
 - Make changes to variants
 - Add traffic from new sources

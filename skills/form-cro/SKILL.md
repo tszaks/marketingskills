@@ -120,7 +120,7 @@ For each field, ask:
 4. Logical grouping if many fields
 
 ### Labels and Placeholders
-- Labels: Always visible (not just placeholder)
+- Labels: Keep visible (not just placeholder) — placeholders disappear when typing, leaving users unsure what they're filling in
 - Placeholders: Examples, not labels
 - Help text: Only when genuinely helpful
 
