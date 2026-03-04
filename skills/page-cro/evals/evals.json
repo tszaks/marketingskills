@@ -1,0 +1,35 @@
+{
+  "skill_name": "page-cro",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's my SaaS landing page: https://example.com/product. We get about 5,000 visitors/month from Google Ads but only 1.2% convert to free trial signups. Can you help me figure out what's wrong?",
+      "expected_output": "Should check for product-marketing-context.md first. Should identify page type (landing page) and conversion goal (free trial signup). Should analyze across the CRO framework dimensions: value proposition clarity, headline effectiveness, CTA placement/copy/hierarchy, visual hierarchy, trust signals, objection handling, and friction points. Should provide recommendations organized as Quick Wins, High-Impact Changes, and Test Ideas. Should note the message match issue between Google Ads and landing page. Should provide 2-3 headline and CTA copy alternatives with rationale.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our pricing page has three tiers but nobody picks the middle one. 60% choose the cheapest plan and 30% bounce entirely. What should we change?",
+      "expected_output": "Should apply the Pricing Page CRO framework. Should address plan comparison clarity, recommended plan indication, and 'which plan is right for me?' anxiety. Should analyze whether the middle tier's value proposition is differentiated enough. Should recommend trust signals and social proof near pricing. Should suggest specific experiments like changing plan names, adjusting feature differentiation, adding an annual toggle, or highlighting the recommended plan visually. Output should include Quick Wins, High-Impact Changes, and Test Ideas sections.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "this page isn't converting. can you take a look? it's our homepage for a B2B project management tool",
+      "expected_output": "Should trigger on the casual 'this page isn't converting' phrasing. Should identify this as a Homepage CRO analysis. Should ask clarifying questions about current conversion rate, traffic sources, and conversion goal. Should apply the full CRO Analysis Framework starting with value proposition clarity. Should address the homepage-specific guidance: serving multiple audiences, leading with broadest value prop, and providing clear paths for different visitor intents. Should provide structured output with Quick Wins, High-Impact Changes, Test Ideas, and Copy Alternatives.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I want to A/B test some changes on my feature page. What should I test first?",
+      "expected_output": "Should apply the Feature Page CRO framework (connect feature to benefit, use cases, clear path to try/buy). Should reference the experiments section and suggest prioritized test ideas for hero section, trust signals, and CTA variations. Should recommend testing one variable at a time. Should cross-reference ab-test-setup skill for proper test implementation. Output should include specific, actionable hypotheses — not vague suggestions.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "We redesigned our landing page and conversions dropped from 4.2% to 2.8%. Here's the new page. What went wrong?",
+      "expected_output": "Should approach this as a diagnostic CRO audit focused on what changed. Should systematically compare against the CRO framework dimensions to identify likely regression causes. Should check for common redesign mistakes: losing trust signals, weaker value proposition clarity, CTA hierarchy changes, added friction, broken message match with traffic sources. Should provide specific fixes organized by likely impact. Should recommend reverting high-risk changes while testing others.",
+      "files": []
+    }
+  ]
+}

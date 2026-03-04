@@ -1,0 +1,35 @@
+{
+  "skill_name": "seo-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you do an SEO audit of our SaaS website? We're getting about 2,000 organic visits/month but feel like we should be getting more. URL: https://example.com",
+      "expected_output": "Should check for product-marketing-context.md first. Should ask clarifying questions about priority keywords, Search Console access, recent changes, and competitors. Should follow the audit framework priority order: Crawlability & Indexation, Technical Foundations, On-Page Optimization, Content Quality, Authority & Links. Should check robots.txt, XML sitemap, site architecture. Should evaluate title tags, meta descriptions, heading structure, and content optimization. Should NOT report on schema markup based solely on web_fetch (must note the detection limitation). Output should follow the Audit Report Structure: Executive Summary, Technical SEO Findings, On-Page SEO Findings, Content Findings, and Prioritized Action Plan.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Why am I not ranking for 'project management software'? We have a page targeting that keyword but it's stuck on page 3.",
+      "expected_output": "Should trigger on the casual 'why am I not ranking' phrasing. Should investigate both on-page and off-page factors. On-page: check title tag, H1, URL alignment with keyword; evaluate content depth vs competitors; check for keyword cannibalization. Technical: check indexation status, canonical tags, crawlability. Content quality: assess E-E-A-T signals, content depth, user engagement. Should provide specific, actionable fixes organized by priority. Should mention competitive analysis against current top-ranking pages.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We just migrated from WordPress to Next.js and our organic traffic dropped 40% in the last month. Help!",
+      "expected_output": "Should treat this as an urgent migration diagnostic. Should immediately check: redirect mapping (301s from old URLs to new), canonical tags on new pages, robots.txt not blocking crawlers, XML sitemap submitted and updated, meta tags preserved. Should check for common migration issues: redirect chains/loops, soft 404s, lost internal links, changed URL structures without redirects. Should reference Search Console coverage report for indexation issues. Should provide a prioritized recovery plan with critical fixes first. Should mention monitoring timeline expectations (recovery can take weeks).",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Review the technical SEO of our e-commerce site. We have about 50,000 products and use faceted navigation.",
+      "expected_output": "Should focus on e-commerce-specific technical issues: faceted navigation creating duplicate content, crawl budget management for large product catalog, parameterized URLs, product schema markup (with the caveat about detection limitations). Should check for thin category pages, duplicate product descriptions, out-of-stock page handling. Should address crawl budget issues: pagination, infinite scroll handling, session IDs in URLs. Should provide structured findings with Impact ratings and specific fixes.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Can you check our blog posts for on-page SEO issues? We publish 4 posts per week but traffic has been flat for 6 months.",
+      "expected_output": "Should apply the Content/Blog Sites framework: check for outdated content not refreshed, keyword cannibalization, missing topical clustering, poor internal linking, missing author pages. Should audit on-page elements: title tags, meta descriptions, heading structure, keyword targeting per post. Should assess E-E-A-T signals for blog content. Should check for content depth issues and whether posts answer search intent. Should recommend a content audit process and provide a prioritized action plan for the existing content library.",
+      "files": []
+    }
+  ]
+}
