@@ -63,7 +63,7 @@
     {
       "id": 5,
       "prompt": "I need to generate a big batch of ad variations for a multi-platform campaign launching next week. We're a meal delivery service targeting busy professionals. Need ads for Google, Meta, and TikTok.",
-      "expected_output": "Should activate the batch generation workflow. Should generate creative for all three platforms respecting each platform's character limits: Google RSA (30/90), Meta (125/40/30), TikTok (≤80 chars). Should identify 3-5 angles that work across platforms (convenience, health, time savings, variety, cost vs eating out). Should generate variations per angle per platform. Should note platform-specific creative considerations (TikTok needs video concepts, not just text). Should organize output clearly by platform.",
+      "expected_output": "Should activate the batch generation workflow. Should generate creative for all three platforms respecting each platform's character limits: Google RSA (30/90), Meta (125/40/30), TikTok (80 chars recommended, 100 max). Should identify 3-5 angles that work across platforms (convenience, health, time savings, variety, cost vs eating out). Should generate variations per angle per platform. Should note platform-specific creative considerations (TikTok needs video concepts, not just text). Should organize output clearly by platform.",
       "assertions": [
         "Activates batch generation workflow",
         "Generates for all three platforms",
