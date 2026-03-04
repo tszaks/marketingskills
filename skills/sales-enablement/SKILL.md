@@ -205,7 +205,7 @@ For each objection, document:
 
 ### Key Principles
 
-- **Never demo without discovery.** If you don't know their pain, you're guessing which features matter.
+- **Demo after discovery, not before.** If you don't know their pain, you're guessing which features matter.
 - **Customize to their use case.** Use their terminology, their data (if possible), their workflow.
 - **Leave time for questions.** A demo where the prospect doesn't talk is a demo that doesn't close.
 

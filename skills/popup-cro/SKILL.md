@@ -182,7 +182,7 @@ Before providing recommendations, understand:
 - Leave space to close (visible X, click outside)
 
 ### Close Button
-- Always visible (top right is convention)
+- Keep visible (top right is convention) — users who can't find the close button will bounce entirely
 - Large enough to tap on mobile
 - "No thanks" text link as alternative
 - Click outside to close

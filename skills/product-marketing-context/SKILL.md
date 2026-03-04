@@ -47,7 +47,7 @@ For each section:
 3. Confirm accuracy
 4. Move to the next
 
-**Important:** Push for verbatim customer language. Exact phrases are more valuable than polished descriptions.
+Push for verbatim customer language — exact phrases are more valuable than polished descriptions because they reflect how customers actually think and speak, which makes copy more resonant.
 
 ---
 

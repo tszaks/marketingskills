@@ -35,7 +35,7 @@ Before auditing, understand:
 
 ## Audit Framework
 
-### ⚠️ Important: Schema Markup Detection Limitation
+### Schema Markup Detection Limitation
 
 **`web_fetch` and `curl` cannot reliably detect structured data / schema markup.**
 
@@ -46,7 +46,7 @@ Many CMS plugins (AIOSEO, Yoast, RankMath) inject JSON-LD via client-side JavaSc
 2. **Google Rich Results Test** — https://search.google.com/test/rich-results
 3. **Screaming Frog export** — if the client provides one, use it (SF renders JavaScript)
 
-**Never report "no schema found" based solely on `web_fetch` or `curl`.** This has led to false audit findings in production.
+Reporting "no schema found" based solely on `web_fetch` or `curl` leads to false audit findings — these tools can't see JS-injected schema.
 
 ### Priority Order
 1. **Crawlability & Indexation** (can Google find and index it?)
@@ -382,7 +382,7 @@ Same format as above
 - Mobile-Friendly Test
 - Schema Validator
 
-> **Note on schema detection:** `web_fetch` strips `<script>` tags (including JSON-LD) and cannot detect JS-injected schema. Always use the browser tool, Rich Results Test, or Screaming Frog for schema checks. See the warning at the top of the Audit Framework section.
+> **Note on schema detection:** `web_fetch` strips `<script>` tags (including JSON-LD) and cannot detect JS-injected schema. Use the browser tool, Rich Results Test, or Screaming Frog instead — they render JavaScript and capture dynamically-injected markup. See the Schema Markup Detection Limitation section above.
 
 **Paid Tools** (if available)
 - Screaming Frog
