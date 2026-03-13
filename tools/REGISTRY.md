@@ -85,6 +85,7 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | sanity | Headless CMS | ✓ | - | ✓ | ✓ | [sanity.md](integrations/sanity.md) |
 | contentful | Headless CMS | ✓ | - | ✓ | ✓ | [contentful.md](integrations/contentful.md) |
 | strapi | Headless CMS | ✓ | - | ✓ | ✓ | [strapi.md](integrations/strapi.md) |
+| composio | Integration Layer | ✓ | ✓ | ✓ | ✓ | [composio.md](integrations/composio.md) |
 
 ---
 
@@ -427,6 +428,16 @@ These tools have Model Context Protocol servers available, enabling direct agent
 - **crossbeam** - Partner ecosystem data
 
 To use MCP tools, ensure the appropriate MCP server is configured in your environment.
+
+### Composio Integration
+
+[Composio](integrations/composio.md) provides managed OAuth and pre-built connectors for 500+ tools via a single MCP server. It adds MCP access to tools that don't have native MCP servers, including HubSpot, Salesforce, Meta Ads, LinkedIn Ads, Google Sheets, Slack, Notion, and more.
+
+- **Setup**: `npx @composio/mcp@latest setup`
+- **Quick start**: See [tools/composio/README.md](composio/README.md)
+- **Marketing tool mapping**: See [tools/composio/marketing-tools.md](composio/marketing-tools.md)
+
+Use Composio when you need MCP access to OAuth-heavy tools. Prefer native MCP servers (GA4, Stripe, Mailchimp, etc.) when available — they have deeper coverage.
 
 ---
 
