@@ -24,6 +24,11 @@ prioritized action plan.
 - User wants to compare their app against competitors
 - User asks about app store ranking, visibility, or download conversion
 
+## Before Auditing
+
+**Check for product marketing context first:**
+If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
 ## Phase 1 — Identify Store & Fetch
 
 ### Detect store type from URL
