@@ -279,7 +279,7 @@ Track your experimentation rate as a leading indicator of growth:
 | Metric | Target |
 |--------|--------|
 | Experiments launched per month | 4-8 for most teams |
-| Win rate | 20-30% is healthy (if higher, you're not being bold enough) |
+| Win rate | 20-30% is common for mature programs (sustained higher rates may indicate conservative hypotheses) |
 | Average test duration | 2-4 weeks |
 | Backlog depth | 20+ hypotheses queued |
 | Cumulative lift | Compound gains from all winners |
@@ -292,17 +292,21 @@ When a test wins, don't just implement it — document the pattern:
 ## [Experiment Name]
 **Date**: [date]
 **Hypothesis**: [the hypothesis]
-**Result**: [winner/loser] — [primary metric] improved by [X%] (p=[value])
-**Why it worked**: [analysis of why]
+**Sample size**: [n per variant]
+**Result**: [winner/loser/inconclusive] — [primary metric] changed by [X%] (95% CI: [range], p=[value])
+**Guardrails**: [any guardrail metrics and their outcomes]
+**Segment deltas**: [notable differences by device, segment, or cohort]
+**Why it worked/failed**: [analysis]
 **Pattern**: [the reusable insight — e.g., "social proof near pricing CTAs increases plan selection"]
 **Apply to**: [other pages/flows where this pattern might work]
+**Status**: [implemented / parked / needs follow-up test]
 ```
 
 Over time, your playbook becomes a library of proven growth patterns specific to your product and audience.
 
 ### Experiment Cadence
 
-**Weekly (30 min)**: Review running experiments for technical issues. Don't analyze results — just check they're collecting data correctly.
+**Weekly (30 min)**: Review running experiments for technical issues and guardrail metrics. Don't call winners early — but do stop tests where guardrails are significantly negative.
 
 **Bi-weekly**: Conclude completed experiments. Analyze results, update playbook, launch next experiment from backlog.
 
