@@ -15,51 +15,41 @@ Revenue intelligence platform that records, transcribes, and analyzes sales conv
 
 - **Type**: Basic Auth (Access Key + Secret) or OAuth2 for published apps
 - **Get key**: Admin-only — Settings > API at https://app.gong.io
-- **Base URL**: `https://api.gong.io/v2/`
+- **Base URL**: Tenant-specific — retrieve from your Gong API settings (typically `https://{tenant}.api.gong.io/v2/`)
+- **Docs**: https://help.gong.io/docs/what-the-gong-api-provides
 
 ## API Endpoints
+
+Most Gong API endpoints use **POST** with JSON request bodies for filtering. Check the [official API docs](https://gong.app.gong.io/settings/api/documentation) for current endpoint availability.
 
 ### Calls
 
 ```bash
-# List calls
-GET https://api.gong.io/v2/calls
+# List calls (with date/user filters)
+POST /v2/calls/extensive
 
-# Get call transcript
-GET https://api.gong.io/v2/calls/{id}/transcript
-
-# Get call details (participants, duration, topics)
-GET https://api.gong.io/v2/calls/{id}
+# Get call transcripts (batch, by call IDs)
+POST /v2/calls/transcript
 ```
 
 ### Users & Stats
 
 ```bash
 # List users
-GET https://api.gong.io/v2/users
+GET /v2/users
 
-# Get user stats (talk ratio, questions asked, longest monologue)
-GET https://api.gong.io/v2/stats/activity/day-by-day
+# Get activity stats (talk ratio, questions asked, longest monologue)
+POST /v2/stats/activity/day-by-day
 ```
 
-### CRM & Deals
-
-```bash
-# Get deals
-GET https://api.gong.io/v2/deals
-
-# Get deal activity
-GET https://api.gong.io/v2/deals/{id}/activity
-```
-
-### Engage (Outreach Automation)
+### Engagement Flows
 
 ```bash
 # List flows
-GET https://api.gong.io/v2/engage/flows
+GET /v2/flows
 
 # Get flow analytics
-GET https://api.gong.io/v2/engage/flows/{id}/analytics
+GET /v2/flows/{id}/analytics
 ```
 
 ## Key Data Points
@@ -137,7 +127,7 @@ GET https://api.gong.io/v2/engage/flows/{id}/analytics
 - Transcript quality depends on call audio quality
 - Rate limits (10k/day) may constrain large-scale analysis
 - Pricing is enterprise-level (not publicly listed, typically $100+/user/month)
-- Requires team adoption — only records calls made through Gong
+- Requires team adoption — records calls via integrations, but also supports uploading calls from non-integrated telephony systems
 
 ## Relevant Skills
 
@@ -146,3 +136,9 @@ GET https://api.gong.io/v2/engage/flows/{id}/analytics
 - competitor-alternatives
 - revops
 - cold-email
+
+## Sources
+
+- [Gong API overview](https://help.gong.io/docs/what-the-gong-api-provides)
+- [Gong API documentation](https://gong.app.gong.io/settings/api/documentation)
+- [Call upload support](https://help.gong.io/docs/uploading-calls-from-a-non-integrated-telephony-system)

@@ -6,25 +6,29 @@ Website visitor identification platform that de-anonymizes B2B website traffic, 
 
 | Integration | Available | Notes |
 |-------------|-----------|-------|
-| API | ✓ | Pro plan and above |
+| API | Limited | API Partner Program (separate from standard app) |
 | MCP | - | Not available |
 | CLI | - | Not available |
-| SDK | - | REST API only |
+| SDK | - | Not available |
+
+Most teams use RB2B via its native integrations (Slack, CRM push, Zapier, webhooks) rather than direct API access. A separate [API Partner Program](https://www.rb2b.com/apis) exists for programmatic access.
 
 ## Authentication
 
-- **Type**: API Key (Pro plan required for API access)
-- **Get key**: Settings > API at https://app.rb2b.com
-- **Free tier**: 150 credits/month with Slack alerts only
+- **Type**: Native integrations (no API key needed for standard use)
+- **API Partner Program**: Separate credentials via https://www.rb2b.com/apis
+- **Free tier**: Limited credits/month with Slack alerts
 
 ## Pricing Tiers
 
-| Plan | Price | Credits/Month | Key Features |
-|------|-------|---------------|-------------|
-| Free | $0 | 150 | Slack alerts, LinkedIn profiles |
-| Pro | $129/mo (annual) | 300 | CSV export, CRM push, validated emails |
-| Pro+ | $299/mo (annual) | 1,000 | All integrations, priority support |
-| Scale | $849/mo | 12,500 | High-volume identification |
+Pricing changes frequently — verify at https://www.rb2b.com/pricing.
+
+| Plan | Approx. Price | Key Features |
+|------|--------------|-------------|
+| Free | $0 | Limited credits, Slack alerts, LinkedIn profiles |
+| Starter | ~$79/mo | Person-level ID, basic integrations |
+| Pro | ~$129-349/mo | CSV export, CRM push, validated emails |
+| Pro+ | ~$299+/mo | All integrations, higher credit volume |
 
 ## Key Integrations
 
@@ -98,3 +102,9 @@ Prevent outreach to:
 - revops
 - customer-research
 - paid-ads
+
+## Sources
+
+- [RB2B pricing](https://www.rb2b.com/pricing)
+- [RB2B plans comparison](https://support.rb2b.com/en/articles/9173659-rb2b-plans-side-by-side-comparisons)
+- [RB2B API Partner Program](https://support.rb2b.com/en/articles/12579420-rb2b-apis-rb2b-s-api-partner-program)

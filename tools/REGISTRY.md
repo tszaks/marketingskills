@@ -369,7 +369,7 @@ Sales conversation analytics, call recording, and deal intelligence.
 
 | Tool | Best For | Notes |
 |------|----------|-------|
-| **gong** | Call recording, transcript analysis, deal insights | REST API, 10k calls/day |
+| **gong** | Call recording, transcript analysis, deal insights | REST API, 10k API calls/day |
 
 **Agent recommendation**: Gong for mining sales call transcripts for customer research, competitive intelligence, and coaching insights. Essential for revenue attribution and win/loss analysis.
 
