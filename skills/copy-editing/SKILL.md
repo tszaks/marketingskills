@@ -258,7 +258,7 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 ## Expert Panel Scoring
 
-For high-stakes copy (landing pages, launch emails, sales pages), use a multi-persona expert review to catch issues that a single perspective misses.
+Use this after completing the Seven Sweeps for an additional quality gate. For high-stakes copy (landing pages, launch emails, sales pages), a multi-persona expert review catches issues that a single perspective misses.
 
 ### How It Works
 
@@ -266,7 +266,7 @@ For high-stakes copy (landing pages, launch emails, sales pages), use a multi-pe
 2. **Each persona scores the copy 1-10** on their area of expertise
 3. **Collect specific critiques** — not just scores, but what to fix
 4. **Revise based on feedback** — address the lowest-scoring areas first
-5. **Re-score after revisions** — iterate until all scores hit 8+
+5. **Re-score after revisions** — iterate until all personas score 7+, with an average of 8+ across the panel
 
 ### Recommended Expert Panels
 
