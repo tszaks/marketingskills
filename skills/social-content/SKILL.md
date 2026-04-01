@@ -121,7 +121,7 @@ Turn one piece of content into many. The best social content isn't created from 
 
 ### Podcast / Video → Social Content
 
-Extract "content atoms" — self-contained moments that work on their own:
+Extract "content atoms" — self-contained moments from any long-form content that work on their own:
 
 | Atom Type | What to Look For | Best Platform |
 |-----------|-----------------|---------------|
@@ -137,11 +137,11 @@ Extract "content atoms" — self-contained moments that work on their own:
 2. **Mark timestamps** — flag the 5-10 best moments while listening or scanning transcript
 3. **Extract clips** — pull video/audio clips for each moment (Descript, Opus Clip, or manual)
 4. **Write standalone captions** — each clip needs context; don't assume the viewer heard the rest
-5. **Add subtitles** — 85% of social video is watched without sound
+5. **Add subtitles** — most social video is watched without sound
 6. **Schedule across 1-2 weeks** — spread a single episode across multiple posts
 
 **Per episode, aim for:**
-- 3-5 short video clips (15-60 sec) for Reels/TikTok/Shorts
+- 3-5 short video clips or audiograms (15-60 sec) for Reels/TikTok/Shorts
 - 1-2 LinkedIn text posts from key insights
 - 1 Twitter/X thread of takeaways
 - 1 carousel summarizing the main framework or list
