@@ -450,6 +450,6 @@ When facing a marketing challenge, consider:
 
 - **page-cro**: Apply psychology to page optimization
 - **copywriting**: Write copy using psychological principles
-- **popup-cro**: Use triggers and psychology in popups
+- **popups**: Use triggers and psychology in popups
 - **pricing-page optimization**: See page-cro for pricing psychology
-- **ab-test-setup**: Test psychological hypotheses
+- **ab-testing**: Test psychological hypotheses

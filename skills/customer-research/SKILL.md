@@ -262,7 +262,7 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 |-----------------|-------|
 | Writing copy informed by the research | `copywriting` |
 | Optimizing a page using VOC insights | `page-cro` |
-| Building a competitor comparison page | `competitor-alternatives` |
+| Building a competitor comparison page | `competitors` |
 | Creating a churn prevention strategy from churn research | `churn-prevention` |
 | Planning paid ads informed by research | `paid-ads` |
 | Writing cold email using research on pain/trigger | `cold-email` |

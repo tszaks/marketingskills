@@ -1,5 +1,5 @@
 ---
-name: popup-cro
+name: popups
 description: When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.
 metadata:
   version: 1.1.0
@@ -450,5 +450,5 @@ Ideas to A/B test with expected outcomes
 - **lead-magnets**: For planning lead magnets to promote via popups
 - **form-cro**: For optimizing the form inside the popup
 - **page-cro**: For the page context around popups
-- **email-sequence**: For what happens after popup conversion
-- **ab-test-setup**: For testing popup variations
+- **emails**: For what happens after popup conversion
+- **ab-testing**: For testing popup variations

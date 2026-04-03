@@ -433,7 +433,7 @@ This iterative process ensures each edit doesn't create new problems while respe
 - **copywriting**: For writing new copy from scratch (use this skill to edit after your first draft is complete)
 - **page-cro**: For broader page optimization beyond copy
 - **marketing-psychology**: For understanding why certain edits improve conversion
-- **ab-test-setup**: For testing copy variations
+- **ab-testing**: For testing copy variations
 
 ---
 

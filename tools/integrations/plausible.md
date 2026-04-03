@@ -170,7 +170,7 @@ GET https://plausible.io/api/v1/sites
 
 ## Relevant Skills
 
-- analytics-tracking
+- analytics
 - content-strategy
 - programmatic-seo
 - page-cro

@@ -141,7 +141,7 @@ Authorization: Bearer {access_token}
 ## Relevant Skills
 
 - page-cro
-- ab-test-setup
-- analytics-tracking
+- ab-testing
+- analytics
 - ux-audit
 - landing-page

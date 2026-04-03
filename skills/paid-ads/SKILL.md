@@ -310,6 +310,6 @@ For tracking, see also: [ga4.md](../../tools/integrations/ga4.md), [segment.md](
 
 - **ad-creative**: For generating and iterating ad headlines, descriptions, and creative at scale
 - **copywriting**: For landing page copy that converts ad traffic
-- **analytics-tracking**: For proper conversion tracking setup
-- **ab-test-setup**: For landing page testing to improve ROAS
+- **analytics**: For proper conversion tracking setup
+- **ab-testing**: For landing page testing to improve ROAS
 - **page-cro**: For optimizing post-click conversion rates
