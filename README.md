@@ -30,10 +30,10 @@ Skills reference each other and build on shared context. The `product-marketing-
 │  SEO &   │ │   CRO    │ │Content & │ │  Paid &    │ │ Growth & │ │  Sales &    │ │ Strategy  │
 │ Content  │ │          │ │   Copy   │ │Measurement │ │Retention │ │    GTM      │ │           │
 ├──────────┤ ├──────────┤ ├──────────┤ ├────────────┤ ├──────────┤ ├─────────────┤ ├───────────┤
-│seo-audit │ │page-cro  │ │copywritng│ │paid-ads    │ │referral  │ │revops       │ │mktg-ideas │
+│seo-audit │ │cro  │ │copywritng│ │paid-ads    │ │referral  │ │revops       │ │mktg-ideas │
 │ai-seo    │ │signup-cro│ │copy-edit │ │ad-creative │ │free-tool │ │sales-enable │ │mktg-psych │
 │site-arch │ │onboard   │ │cold-email│ │ab-test     │ │churn-    │ │launch       │ │customer-  │
-│programm  │ │form-cro  │ │email-seq │ │analytics   │ │ prevent  │ │pricing      │ │research   │
+│programm  │ │cro  │ │email-seq │ │analytics   │ │ prevent  │ │pricing      │ │research   │
 │schema    │ │popups │ │social    │ │            │ │          │ │competitor   │ │           │
 │content   │ │paywall   │ │          │ │            │ │          │ │             │ │           │
 └────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬──────┘ └────┬─────┘ └──────┬──────┘ └─────┬─────┘
@@ -41,10 +41,10 @@ Skills reference each other and build on shared context. The `product-marketing-
      └────────────┴─────┬──────┴──────────────┴─────────────┴──────────────┴──────────────┘
                         │
          Skills cross-reference each other:
-           copywriting ↔ page-cro ↔ ab-testing
+           copywriting ↔ cro ↔ ab-testing
            revops ↔ sales-enablement ↔ cold-email
            seo-audit ↔ schema ↔ ai-seo
-           customer-research → copywriting, page-cro, competitors
+           customer-research → copywriting, cro, competitors
 ```
 
 See each skill's **Related Skills** section for the full dependency map.
@@ -66,14 +66,14 @@ See each skill's **Related Skills** section for the full dependency map.
 | [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages,... |
 | [customer-research](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research — including interview transcripts, surveys, support tickets, review mining, Reddit/G2/forum research, persona generation, and voice of customer (VOC)... |
 | [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
-| [form-cro](skills/form-cro/) | When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms,... |
+| [cro](skills/cro/) | When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms,... |
 | [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
 | [launch](skills/launch/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user... |
 | [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the... |
 | [marketing-ideas](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the... |
 | [marketing-psychology](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when... |
 | [onboarding](skills/onboarding/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also... |
-| [page-cro](skills/page-cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing... |
+| [cro](skills/cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing... |
 | [paid-ads](skills/paid-ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X,... |
 | [paywalls](skills/paywalls/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use... |
 | [popups](skills/popups/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also... |
@@ -101,7 +101,7 @@ Use [npx skills](https://github.com/vercel-labs/skills) to install skills direct
 npx skills add coreyhaines31/marketingskills
 
 # Install specific skills
-npx skills add coreyhaines31/marketingskills --skill page-cro copywriting
+npx skills add coreyhaines31/marketingskills --skill cro copywriting
 
 # List available skills
 npx skills add coreyhaines31/marketingskills --list
@@ -155,7 +155,7 @@ Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across mu
 npx skillkit install coreyhaines31/marketingskills
 
 # Install specific skills
-npx skillkit install coreyhaines31/marketingskills --skill page-cro copywriting
+npx skillkit install coreyhaines31/marketingskills --skill cro copywriting
 
 # List available skills
 npx skillkit install coreyhaines31/marketingskills --list
@@ -178,7 +178,7 @@ Once installed, just ask your agent to help with marketing tasks:
 
 ```
 "Help me optimize this landing page for conversions"
-→ Uses page-cro skill
+→ Uses cro skill
 
 "Write homepage copy for my SaaS"
 → Uses copywriting skill
@@ -193,7 +193,7 @@ Once installed, just ask your agent to help with marketing tasks:
 You can also invoke skills directly:
 
 ```
-/page-cro
+/cro
 /emails
 /seo-audit
 ```
@@ -201,10 +201,10 @@ You can also invoke skills directly:
 ## Skill Categories
 
 ### Conversion Optimization
-- `page-cro` - Any marketing page
+- `cro` - Any marketing page
 - `signup` - Registration flows
 - `onboarding` - Post-signup activation
-- `form-cro` - Lead capture forms
+- `cro` - Lead capture forms
 - `popups` - Modals and overlays
 - `paywalls` - In-app upgrade moments
 

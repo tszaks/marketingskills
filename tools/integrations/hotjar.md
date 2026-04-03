@@ -140,7 +140,7 @@ Authorization: Bearer {access_token}
 
 ## Relevant Skills
 
-- page-cro
+- cro
 - ab-testing
 - analytics
 - ux-audit

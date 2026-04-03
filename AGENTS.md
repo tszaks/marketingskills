@@ -74,7 +74,7 @@ description: What this skill does and when to use it. Include trigger phrases.
 - No consecutive hyphens (`--`)
 - Must match parent directory name exactly
 
-**Valid**: `page-cro`, `emails`, `ab-testing`
+**Valid**: `cro`, `emails`, `ab-testing`
 **Invalid**: `Page-CRO`, `-page`, `page--cro`
 
 ### Optional Skill Directories
@@ -151,7 +151,7 @@ See [Claude Code plugins documentation](https://code.claude.com/docs/en/plugins.
 Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
 - `feat: add skill-name skill`
-- `fix: improve clarity in page-cro`
+- `fix: improve clarity in cro`
 - `docs: update README`
 
 ### Pull Request Checklist

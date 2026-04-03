@@ -33,7 +33,7 @@
     {
       "id": 3,
       "prompt": "our signup form is just email and password but we still only get 35% of visitors to complete it. what else could be wrong?",
-      "expected_output": "Should trigger on casual phrasing. Should investigate beyond just form fields since the form is already minimal. Should apply trust and friction reduction guidance: is there a 'No credit card required' message? Privacy assurance? Testimonial near the form? Should check form-level issues: error handling, password requirements clarity, submit button copy. Should also look at pre-form factors: is the value proposition clear? Is the page optimized? (cross-reference page-cro). Should provide diagnostic checklist and recommendations.",
+      "expected_output": "Should trigger on casual phrasing. Should investigate beyond just form fields since the form is already minimal. Should apply trust and friction reduction guidance: is there a 'No credit card required' message? Privacy assurance? Testimonial near the form? Should check form-level issues: error handling, password requirements clarity, submit button copy. Should also look at pre-form factors: is the value proposition clear? Is the page optimized? (cross-reference cro). Should provide diagnostic checklist and recommendations.",
       "assertions": [
         "Triggers on casual phrasing",
         "Investigates beyond form fields",

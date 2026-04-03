@@ -156,4 +156,4 @@ LIMIT 10
 
 - paid-ads
 - analytics
-- page-cro
+- cro

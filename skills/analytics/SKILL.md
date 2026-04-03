@@ -305,5 +305,5 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key analy
 
 - **ab-testing**: For experiment tracking
 - **seo-audit**: For organic traffic analysis
-- **page-cro**: For conversion optimization (uses this data)
+- **cro**: For conversion optimization (uses this data)
 - **revops**: For pipeline metrics, CRM tracking, and revenue attribution

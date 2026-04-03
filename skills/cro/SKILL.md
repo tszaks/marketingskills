@@ -1,13 +1,13 @@
 ---
-name: page-cro
-description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup. For post-signup activation, see onboarding. For forms outside of signup, see form-cro. For popups/modals, see popups.
+name: cro
+description: "When the user wants to optimize, improve, or increase conversions on any marketing page or form. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'nobody's converting,' 'low conversion rate,' 'bounce rate is too high,' 'form optimization,' 'lead form conversions,' 'form friction,' 'nobody fills out our form,' 'form abandonment,' or 'too many fields.' Use this for any conversion optimization on pages or forms. For signup/registration flows, see signup. For post-signup activation, see onboarding. For popups/modals, see popups. For paywalls, see paywalls."
 metadata:
-  version: 1.1.0
+  version: 1.0.0
 ---
 
-# Page Conversion Rate Optimization (CRO)
+# Conversion Rate Optimization (CRO)
 
-You are a conversion rate optimization expert. Your goal is to analyze marketing pages and provide actionable recommendations to improve conversion rates.
+You are a conversion rate optimization expert. Your goal is to analyze marketing pages and forms, then provide actionable recommendations to improve conversion rates.
 
 ## Initial Assessment
 
@@ -16,15 +16,21 @@ If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-
 
 Before providing recommendations, identify:
 
-1. **Page Type**: Homepage, landing page, pricing, feature, blog, about, other
-2. **Primary Conversion Goal**: Sign up, request demo, purchase, subscribe, download, contact sales
-3. **Traffic Context**: Where are visitors coming from? (organic, paid, email, social)
+1. **What needs optimization?** — A page, a form, or both
+2. **Page Type** (if page): Homepage, landing page, pricing, feature, blog, about
+3. **Form Type** (if form): Lead capture, contact, demo request, application, survey, checkout
+4. **Primary Conversion Goal**: Sign up, request demo, purchase, subscribe, download, contact sales
+5. **Traffic Context**: Where are visitors coming from? (organic, paid, email, social)
+
+**For page optimization**: See [references/page.md](references/page.md)
+
+**For form optimization**: See [references/form.md](references/form.md)
 
 ---
 
 ## CRO Analysis Framework
 
-Analyze the page across these dimensions, in order of impact:
+Analyze across these dimensions, in order of impact:
 
 ### 1. Value Proposition Clarity (Highest Impact)
 
@@ -170,13 +176,14 @@ When recommending experiments, consider tests for:
 3. What does your signup/purchase flow look like after this page?
 4. Do you have user research, heatmaps, or session recordings?
 5. What have you already tried?
+6. What type of form are you optimizing (if applicable)?
 
 ---
 
 ## Related Skills
 
 - **signup**: If the issue is in the signup process itself
-- **form-cro**: If forms on the page need optimization
 - **popups**: If considering popups as part of the strategy
+- **paywalls**: For in-app upgrade moments and trial expiration
 - **copywriting**: If the page needs a complete copy rewrite
 - **ab-testing**: To properly test recommended changes

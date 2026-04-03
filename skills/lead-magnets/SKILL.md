@@ -147,7 +147,7 @@ Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion 
 - Add social proof: "Downloaded by 5,000+ marketers"
 - Reduce risk: "No spam. Unsubscribe anytime."
 
-**For form optimization**: See **form-cro** skill
+**For form optimization**: See **cro** skill
 **For popup implementation**: See **popups** skill
 
 ---
@@ -163,7 +163,7 @@ Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion 
 5. **Form** — Minimal fields, clear CTA button
 6. **FAQ** — Address hesitations (Is it really free? What format?)
 
-**For landing page optimization**: See **page-cro** skill
+**For landing page optimization**: See **cro** skill
 
 ### Delivery Methods
 
@@ -301,9 +301,9 @@ When creating a lead magnet strategy, provide:
 - **free-tools**: For interactive tools as lead magnets (calculators, graders, quizzes)
 - **copywriting**: For writing the lead magnet content itself
 - **emails**: For nurture sequences after lead capture
-- **page-cro**: For optimizing lead magnet landing pages
+- **cro**: For optimizing lead magnet landing pages
 - **popups**: For popup-based lead capture
-- **form-cro**: For optimizing capture forms
+- **cro**: For optimizing capture forms
 - **content-strategy**: For content planning and topic selection
 - **analytics**: For measuring lead magnet performance
 - **paid-ads**: For paid promotion of lead magnets

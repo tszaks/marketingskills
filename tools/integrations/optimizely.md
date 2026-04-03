@@ -165,7 +165,7 @@ GET https://api.optimizely.com/v2/pages?project_id={project_id}
 ## Relevant Skills
 
 - ab-testing
-- page-cro
+- cro
 - landing-page
 - personalization
 - analytics

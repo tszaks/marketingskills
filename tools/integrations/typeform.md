@@ -185,6 +185,6 @@ GET https://api.typeform.com/workspaces/{workspace_id}
 
 - lead-generation
 - customer-research
-- page-cro
+- cro
 - signup
 - customer-feedback

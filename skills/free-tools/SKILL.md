@@ -173,7 +173,7 @@ Rate each factor 1-5:
 ## Related Skills
 
 - **lead-magnets**: For downloadable content lead magnets (ebooks, checklists, templates)
-- **page-cro**: For optimizing the tool's landing page
+- **cro**: For optimizing the tool's landing page
 - **seo-audit**: For SEO-optimizing the tool
 - **analytics**: For measuring tool usage
 - **emails**: For nurturing leads from the tool

@@ -144,4 +144,4 @@ access_token={access_token}
 
 - paid-ads
 - analytics
-- page-cro
+- cro

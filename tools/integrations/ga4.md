@@ -123,4 +123,4 @@ POST https://www.google-analytics.com/mp/collect?measurement_id={measurement_id}
 - analytics
 - ab-testing
 - seo-audit
-- page-cro
+- cro
