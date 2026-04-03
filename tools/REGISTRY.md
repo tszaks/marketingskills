@@ -75,6 +75,8 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | similarweb | Competitive Intelligence | ✓ | - | [✓](clis/similarweb.js) | - | [similarweb.md](integrations/similarweb.md) |
 | firehose | Competitive Intelligence | ✓ | - | - | - | [firehose.md](integrations/firehose.md) |
 | sparktoro | Audience Research | - | - | - | - | [sparktoro.md](integrations/sparktoro.md) |
+| rb2b | Visitor Identification | ✓ | - | - | - | [rb2b.md](integrations/rb2b.md) |
+| gong | Revenue Intelligence | ✓ | - | - | - | [gong.md](integrations/gong.md) |
 | airops | AI Content | ✓ | - | [✓](clis/airops.js) | - | [airops.md](integrations/airops.md) |
 | buffer | Social | ✓ | - | [✓](clis/buffer.js) | - | [buffer.md](integrations/buffer.md) |
 | wistia | Video | ✓ | - | [✓](clis/wistia.js) | - | [wistia.md](integrations/wistia.md) |
@@ -350,6 +352,26 @@ Audience intelligence and behavioral research tools.
 | **sparktoro** | Audience affinities, behavioral data | Clickstream + social data |
 
 **Agent recommendation**: SparkToro for discovering where your ICP spends time — what they read, watch, listen to, follow, and search for. Essential for customer research, content strategy, and media buying decisions.
+
+### Visitor Identification
+
+Website visitor de-anonymization for B2B sales and marketing.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **rb2b** | Person-level visitor ID, intent signals | LinkedIn profiles, emails, page-level data |
+
+**Agent recommendation**: RB2B for identifying anonymous B2B website visitors and routing high-intent visitors to outreach tools. Pairs well with Clay for enrichment and Instantly/Lemlist for cold email.
+
+### Revenue Intelligence
+
+Sales conversation analytics, call recording, and deal intelligence.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **gong** | Call recording, transcript analysis, deal insights | REST API, 10k API calls/day |
+
+**Agent recommendation**: Gong for mining sales call transcripts for customer research, competitive intelligence, and coaching insights. Essential for revenue attribution and win/loss analysis.
 
 ### AI Content
 
