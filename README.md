@@ -33,9 +33,10 @@ Skills reference each other and build on shared context. The `product-marketing-
 │seo-audit │ │page-cro  │ │copywritng│ │paid-ads    │ │referral  │ │revops       │ │mktg-ideas │
 │ai-seo    │ │signup-cro│ │copy-edit │ │ad-creative │ │free-tool │ │sales-enable │ │mktg-psych │
 │site-arch │ │onboard   │ │cold-email│ │ab-test     │ │churn-    │ │launch       │ │customer-  │
-│programm  │ │form-cro  │ │email-seq │ │analytics   │ │ prevent  │ │pricing      │ │research   │
-│schema    │ │popup-cro │ │social    │ │            │ │          │ │competitor   │ │           │
-│content   │ │paywall   │ │          │ │            │ │          │ │             │ │           │
+│programm  │ │form-cro  │ │email-seq │ │analytics   │ │ prevent  │ │pricing      │ │ research  │
+│schema    │ │popup-cro │ │social    │ │            │ │community │ │comp-alts    │ │           │
+│content   │ │paywall   │ │          │ │            │ │lead-magnt│ │comp-profile │ │           │
+│aso-audit │ │          │ │          │ │            │ │          │ │directory    │ │           │
 └────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬──────┘ └────┬─────┘ └──────┬──────┘ └─────┬─────┘
      │            │            │              │             │              │              │
      └────────────┴─────┬──────┴──────────────┴─────────────┴──────────────┴──────────────┘
