@@ -46,18 +46,16 @@ Current versions of all skills. Agents can compare against local versions to che
 ## Recent Changes
 
 ### 2026-04-21
-- Added `aso-audit` skill for App Store and Google Play optimization
-- Added `community-marketing` skill for community-led growth
-- Added `customer-research` skill for customer interviews, surveys, and voice-of-customer analysis
 - Added `directory-submissions` skill for Product Hunt, G2, AI directories, and backlink strategy
 - Added `competitor-profiling` skill for competitive intelligence research
 - Added international SEO & localization section to `seo-audit` (1.2.0)
 - Added conversion tracking reference to `paid-ads` (cross-platform pixel setup)
 - Added Zapier SDK integration for 8,000+ app access
-- Fixed plugin loading: removed `./` prefix from marketplace.json skill paths
+- Fixed plugin loading: removed `./` prefix from marketplace.json skill paths (#243)
 - Hardened CLI tools: Supermetrics API key moved to header, ZoomInfo JWT masked by default
-- Fixed community-marketing YAML frontmatter
-- Fixed Zapier webhook URL validation
+- Fixed community-marketing YAML frontmatter (#240)
+- Fixed Zapier webhook URL validation (#247)
+- Added missing skills to VERSIONS.md (aso-audit, community-marketing, customer-research — shipped in prior releases)
 - Total skills: 38
 
 ### 2026-03-14
