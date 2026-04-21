@@ -245,6 +245,8 @@ Before launching campaigns, ensure proper tracking and account setup.
 
 **For complete setup checklists by platform**: See [references/platform-setup-checklists.md](references/platform-setup-checklists.md)
 
+**For conversion pixel installation and event setup**: See [references/conversion-tracking.md](references/conversion-tracking.md)
+
 ### Universal Pre-Launch Checklist
 - [ ] Conversion tracking tested with real conversion
 - [ ] Landing page loads fast (<3 sec)
@@ -302,7 +304,7 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key adver
 | **LinkedIn Ads** | B2B, job title targeting | - | [linkedin-ads.md](../../tools/integrations/linkedin-ads.md) |
 | **TikTok Ads** | Younger demographics, video | - | [tiktok-ads.md](../../tools/integrations/tiktok-ads.md) |
 
-For tracking, see also: [ga4.md](../../tools/integrations/ga4.md), [segment.md](../../tools/integrations/segment.md)
+For tracking setup, see [references/conversion-tracking.md](references/conversion-tracking.md), [ga4.md](../../tools/integrations/ga4.md), [segment.md](../../tools/integrations/segment.md)
 
 ---
 
