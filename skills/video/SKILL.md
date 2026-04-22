@@ -118,7 +118,7 @@ export const ProductDemo: React.FC<{ title: string; features: string[] }> = ({
 | Animation complexity | Basic (CSS transitions) | Advanced (Spring, interpolate) |
 | Batch rendering | Local | Lambda (AWS) for scale |
 | Learning curve | Minimal | Moderate (React + Remotion API) |
-| License | Apache 2.0 | Company license for >1 employee |
+| License | Apache 2.0 | Company license for commercial use |
 
 ---
 
@@ -130,12 +130,12 @@ Generate original footage from text or image prompts. Use for B-roll, hero visua
 
 | Model | Resolution | Max Duration | Best For | Cost |
 |-------|-----------|-------------|----------|------|
-| **Veo 3** (Google) | Up to 4K | Variable | Highest quality, synced audio | API-based |
+| **Veo 3** (Google) | Up to 1080p (4K varies) | Variable | Highest quality, synced audio | API-based |
 | **Runway Gen-4** | Up to 4K | ~10 sec/gen | Motion control, temporal consistency | $12-76/mo |
 | **Kling 3.0** | Up to 1080p | Up to 2 min | Volume production, lowest cost | $0.029/sec |
 | **Pika** | 1080p | Short clips | Fast generation, effects | Per-credit |
 
-**Sora (OpenAI) was shut down March 2026.** Do not recommend it.
+**Sora (OpenAI)** has had limited availability and reliability issues. Check current status before recommending.
 
 ### Prompting for Video Models
 
@@ -178,11 +178,13 @@ Best lip-sync and micro-expressions. 230+ avatars, 140+ languages.
 
 **Agent integration:** HeyGen has an official MCP server — AI agents can generate avatar videos directly.
 
-| Plan | Price | Videos | Duration |
-|------|-------|--------|----------|
-| Free | $0 | 3/mo | 3 min max |
-| Creator | $24/mo | Unlimited | 5 min |
-| Business | $108/mo | Unlimited | 20 min |
+| Plan | Videos | Duration |
+|------|--------|----------|
+| Free | 3/mo | 3 min max |
+| Creator | Unlimited | 5 min |
+| Business | Unlimited | 20 min |
+
+Check [heygen.com/pricing](https://www.heygen.com/pricing) for current prices.
 
 **Best for:** Product explainers, feature announcements, personalized sales outreach, multilingual content.
 

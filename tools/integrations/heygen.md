@@ -103,12 +103,14 @@ Upload a 2-5 minute video of yourself speaking to create a digital twin:
 
 ## Pricing
 
-| Plan | Price | Videos/mo | Max Duration |
-|------|-------|-----------|-------------|
-| Free | $0 | 3 | 3 min |
-| Creator | $24/mo | Unlimited | 5 min |
-| Business | $108/mo | Unlimited | 20 min |
-| Enterprise | Custom | Unlimited | Custom |
+| Plan | Videos/mo | Max Duration |
+|------|-----------|-------------|
+| Free | 3 | 3 min |
+| Creator | Unlimited | 5 min |
+| Business | Unlimited | 20 min |
+| Enterprise | Unlimited | Custom |
+
+Check [heygen.com/pricing](https://www.heygen.com/pricing) for current prices — they change frequently.
 
 ## Rate Limits
 

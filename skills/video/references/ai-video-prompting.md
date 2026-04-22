@@ -100,7 +100,7 @@ Use these terms — video models understand them:
 - Excels at photorealism and complex scenes
 - Supports audio generation synced to video
 - Best with detailed, descriptive prompts
-- Specify "4K" or "high resolution" for max quality
+- Specify "high resolution" or "1080p" for best quality
 - Can handle multiple subjects and scene transitions
 
 ### Runway Gen-4

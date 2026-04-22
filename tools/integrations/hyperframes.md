@@ -24,7 +24,7 @@ Open-source programmatic video framework from HeyGen. Create videos from HTML/CS
 npm install hyperframes
 ```
 
-Requires: Node.js 18+, Chrome/Chromium (for rendering)
+Requires: Node.js 22+, Chrome/Chromium (for rendering)
 
 ## Quick Start
 
@@ -166,7 +166,7 @@ const frames = metrics.map(m => ({
 | Agent compatibility | Better (plain HTML) | Good (needs React knowledge) |
 | Animation | CSS transitions/keyframes | Spring physics, interpolation |
 | Cloud rendering | Not built-in | Lambda (AWS) |
-| License | Apache 2.0 (free) | Company license required (>1 employee) |
+| License | Apache 2.0 (free) | Company license for commercial use |
 | Ecosystem | New, growing | Mature, large community |
 
 **Use Hyperframes when:** AI agent is generating the video, simple animations, batch templated content, cost-sensitive.
