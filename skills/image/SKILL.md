@@ -1,6 +1,6 @@
 ---
 name: image
-description: "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Midjourney,' 'DALL-E,' 'Ideogram,' 'Gemini image,' 'Nano Banana,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
+description: "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'Ideogram,' 'Gemini image,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
 metadata:
   version: 1.0.0
 ---
@@ -55,22 +55,24 @@ Generate original images from text prompts. The fastest way to create unique mar
 
 | Model | Best For | Text in Images | API | Cost |
 |-------|----------|:-:|-----|------|
-| **Gemini / Nano Banana Pro** | All-around, editing, text rendering | Good | Gemini API | ~$0.04-0.24/image |
-| **Flux** (Black Forest Labs) | Photorealism, brand consistency, batch | Limited | Replicate, BFL, fal.ai | ~$0.01-0.06/image |
-| **Ideogram** | Typography, branded graphics | Best (~90%) | Ideogram API | ~$0.009-0.06/image |
-| **DALL-E 3** (OpenAI) | General purpose, ChatGPT integration | Good | OpenAI API | ~$0.04-0.08/image |
+| **Gemini Image** (Google) | All-around, editing, text rendering | Good | [Gemini API](https://ai.google.dev/gemini-api/docs/image-generation) | Check [pricing](https://ai.google.dev/gemini-api/docs/pricing) |
+| **Flux** (Black Forest Labs) | Photorealism, brand consistency, batch | Limited | [BFL API](https://docs.bfl.ai/), Replicate, fal.ai | Check [pricing](https://docs.bfl.ai/quick_start/pricing) |
+| **Ideogram** | Typography, branded graphics | Best | [Ideogram API](https://developer.ideogram.ai/) | Check [pricing](https://about.ideogram.ai/api-pricing) |
+| **GPT Image** (OpenAI) | General purpose, ChatGPT integration | Good | [OpenAI API](https://platform.openai.com/docs/guides/image-generation) | Check [pricing](https://platform.openai.com/docs/pricing) |
 | **Midjourney** | Artistic, high-aesthetic | Poor | No official API | Subscription-based |
 | **Stable Diffusion** | Self-hosted, customizable | Varies | Open source | Free (GPU costs) |
+
+**Note:** DALL-E 3 is deprecated. OpenAI's current image models are the GPT Image family (`gpt-image-1`, etc.).
 
 ### When to Use Which
 
 ```
 Need text/headlines in the image?
-├── Yes → Ideogram (best), Gemini (good), DALL-E 3 (decent)
+├── Yes → Ideogram (best), Gemini (good), GPT Image (decent)
 └── No ↓
 
 Need product/brand consistency across images?
-├── Yes → Flux (multi-image reference, up to 8 refs)
+├── Yes → Flux (multi-image reference)
 └── No ↓
 
 Need to edit an existing image?
@@ -194,7 +196,7 @@ Banners for profiles, directory listings, and marketplace pages. Often the first
 | Platform | Size | Notes |
 |----------|------|-------|
 | LinkedIn personal cover | 1584x396 | 4:1, safe zone center |
-| LinkedIn company cover | 1128x191 | 5.9:1, narrow — keep text centered |
+| LinkedIn company cover | 1128x191 | 5.9:1; LinkedIn recommends up to 4200x700 |
 | Twitter/X header | 1500x500 | 3:1, partially obscured by avatar |
 | Product Hunt gallery | 1270x760 | 5:3, up to 6 images |
 | G2 profile | 1280x720 | 16:9, product screenshots preferred |
@@ -238,8 +240,8 @@ Every image on your site affects page speed, which affects SEO and conversions.
 
 | Format | Best For | Compression | Browser Support |
 |--------|----------|-------------|:---:|
-| **WebP** | Photos, graphics — default choice | Lossy + lossless | 97%+ |
-| **AVIF** | Highest compression, newest | Better than WebP | ~93% |
+| **WebP** | Photos, graphics — default choice | Lossy + lossless | ~96% |
+| **AVIF** | Highest compression, newest | Better than WebP | ~94% |
 | **JPEG** | Fallback for older browsers | Lossy only | Universal |
 | **PNG** | Transparency, screenshots | Lossless | Universal |
 | **SVG** | Logos, icons, illustrations | Vector (scales) | Universal |

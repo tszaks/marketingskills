@@ -128,7 +128,7 @@ modern SaaS product presentation style,
 
 ## Model-Specific Tips
 
-### Gemini / Nano Banana Pro
+### Gemini Image (Google)
 
 - Best all-around for marketing images — good quality, reasonable cost
 - Supports **image editing** — upload an existing image and describe changes
@@ -139,7 +139,7 @@ modern SaaS product presentation style,
 
 ### Flux (Black Forest Labs)
 
-- **Multi-image reference** is the killer feature — upload product screenshots, brand assets, or style references (up to 8)
+- **Multi-image reference** is the killer feature — upload product screenshots, brand assets, or style references
 - Best for **brand consistency** across a set of images
 - Use Flux Pro for final assets, Flux Dev for rapid iteration
 - Flux Klein for high-volume batch generation (cheapest)
@@ -148,15 +148,16 @@ modern SaaS product presentation style,
 
 ### Ideogram
 
-- **Best text rendering** of any model (~90% accuracy)
+- **Best text rendering** of any model (industry-leading accuracy)
 - Use when you need headlines, taglines, or brand names in the image
 - Style reference system (up to 3 images) for brand consistency
 - Supports "Magic Prompt" auto-enhancement
 - Keep text requests simple — 3-5 words max for reliability
 - Best for social graphics and banners that need text baked in
 
-### DALL-E 3
+### GPT Image (OpenAI)
 
+- Current models: `gpt-image-1` and variants (DALL-E 3 is deprecated)
 - Integrated with ChatGPT — conversational image generation
 - Good at following detailed prompts
 - Decent text rendering (behind Ideogram, comparable to Gemini)
